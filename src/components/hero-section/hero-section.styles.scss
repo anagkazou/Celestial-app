@@ -1,0 +1,17 @@
+@import "../../scss/variables.styles.scss";
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_sub {
+    font-size: 3.2rem;
+  }
+  .center-text {
+    text-align: center;
+  }
+}
