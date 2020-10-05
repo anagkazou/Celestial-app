@@ -3,7 +3,7 @@
 .hero {
   max-height: 110vh;
   width: 100vw;
-  overflow: unset;
+  overflow-x: unset;
   background-color: $color-primary;
   position: relative;
   &__container {

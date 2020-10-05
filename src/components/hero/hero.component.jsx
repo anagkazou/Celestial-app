@@ -6,9 +6,7 @@ const Hero = () => (
   <div className="position-relative-wrap">
     <div className="hero">
       <div className="hero__container center-text">
-        <h1>
-          We are <span>Celestial,</span>{" "}
-        </h1>
+        <h1>We are Celestial,</h1>
         <p className="hero__sub">
           we design and manufacture furniture fit for gods
         </p>

@@ -63,14 +63,6 @@ export default class SlickSlider extends React.Component {
             }}
           ></div>
         </div>
-        <div className="slider__item">
-          <div
-            className="slider__img large"
-            style={{
-              backgroundImage: `url(${second})`,
-            }}
-          ></div>
-        </div>
       </Slider>
     );
   }

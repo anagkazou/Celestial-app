@@ -1,3 +1,5 @@
+@import "./variables.styles.scss";
+
 h1,
 h2,
 h3,
@@ -11,4 +13,9 @@ h1 {
   & span {
     font-weight: 600;
   }
+}
+
+.title {
+  font-size: 6.4rem;
+  line-height: 100%;
 }
