@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import "./scss/main.scss";
-import Hero from "./components/hero-section/hero-section.component";
+import Homepage from "./pages/homepage";
 function App() {
-  return <Hero />;
+  return <Homepage />;
 }
 
 export default App;

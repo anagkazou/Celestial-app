@@ -1,0 +1,9 @@
+@import "../scss/variables.styles.scss";
+
+.section {
+  &__about {
+    height: 100vh;
+    width: 100vw;
+    background-color: $color-secondary;
+  }
+}

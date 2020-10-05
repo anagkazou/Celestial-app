@@ -1,12 +1,21 @@
 @import "../../scss/variables.styles.scss";
 
 .hero {
-  height: 100vh;
+  max-height: 110vh;
   width: 100vw;
+  overflow: unset;
   background-color: $color-primary;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  &__container {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   &__sub {
     font-size: 2.2rem;
@@ -19,6 +28,9 @@
     font-weight: bold;
     font-size: $font-size-button;
     margin-top: 2.6rem;
+  }
+  &__slider {
+    padding-top: 80vh;
   }
   .center-text {
     text-align: center;
