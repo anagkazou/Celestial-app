@@ -1,51 +1,77 @@
 @import "../scss/variables.styles.scss";
 
-.section {
-  &__about {
-    padding: 50rem 0 20rem 0;
-    min-height: 100vh;
-    max-width: 100vw;
-    background-color: $color-secondary;
+.section__about {
+  padding: 50rem 0 20rem 0;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: $color-secondary;
 
-    .about__content {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 0 15%;
+  .about__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15%;
 
-      &--text {
-        width: 20rem;
-      }
-      .title {
-        color: white;
-        margin-bottom: 2.6rem;
-      }
-      .paragraph {
-        color: $color-primary;
-        font-size: $font-size-small;
-        line-height: 1.6em;
-      }
+    &--text {
+      width: 20rem;
+    }
+    .title {
+      color: white;
+      margin-bottom: 2.6rem;
+    }
+    .paragraph {
+      color: $color-primary;
+      font-size: $font-size-small;
+      line-height: 1.6em;
+    }
 
-      &--img {
-        margin-left: auto;
-        width: fit-content;
-        position: relative;
-      }
+    &--img {
+      margin-left: auto;
+      width: fit-content;
+      position: relative;
+    }
 
-      .img {
-        &-1 {
-          width: auto;
-          height: 60rem;
-        }
-        &-2 {
-          position: absolute;
-          width: 22rem;
-          height: 36rem;
-          left: -25%;
-          bottom: 20%;
-          z-index: 2;
-        }
+    .img {
+      &-1 {
+        width: auto;
+        height: 60rem;
       }
+      &-2 {
+        position: absolute;
+        width: 22rem;
+        height: 36rem;
+        left: -25%;
+        bottom: 20%;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.section__browse-collections {
+  width: 100vw;
+  height: 90vh;
+  background-color: $color-secondary;
+  .title {
+    text-align: center;
+  }
+  .preview {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    &__text {
+      width: 30%;
+      height: 100%;
+      background-color: tan;
+    }
+
+    &__left,
+    &__right {
+      width: 35%;
+      height: 100%;
+      position: relative;
+      background-color: rosybrown;
     }
   }
 }

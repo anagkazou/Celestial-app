@@ -2,6 +2,8 @@ import React from "react";
 import "./homepage.scss";
 import Hero from "../components/hero/hero.component";
 import { imgAbout1, imgAbout2 } from "../assets/img/images";
+
+import CollectionPreview from "../components/collections-preview/collections-preview.component";
 const HomePage = () => (
   <div>
     <Hero />
@@ -21,15 +23,13 @@ const HomePage = () => (
           </p>
         </div>
 
-        {/* <section className="section__browse-collections">
-
-    </section> */}
         <div className="about__content--img img">
           <img src={imgAbout1} alt="" className="img-1" />
           <img src={imgAbout2} alt="" className="img-2" />
         </div>
       </div>
     </section>
+    <CollectionPreview />
   </div>
 );
 

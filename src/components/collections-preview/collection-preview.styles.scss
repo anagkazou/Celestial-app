@@ -1,0 +1,29 @@
+@import "../../scss/variables.styles.scss";
+
+.section__browse-collections {
+  width: 100vw;
+  height: 90vh;
+  background-color: $color-secondary;
+  .title {
+    text-align: center;
+  }
+  .preview {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    &__text {
+      width: 30%;
+      height: 100%;
+      background-color: tan;
+    }
+
+    &__left,
+    &__right {
+      width: 35%;
+      height: 100%;
+      position: relative;
+      background-color: rosybrown;
+    }
+  }
+}
