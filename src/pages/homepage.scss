@@ -10,10 +10,11 @@
     .about__content {
       display: flex;
       flex-direction: row;
+      align-items: center;
       padding: 0 15%;
 
       &--text {
-        width: 26rem;
+        width: 20rem;
       }
       .title {
         color: white;
@@ -22,7 +23,7 @@
       .paragraph {
         color: $color-primary;
         font-size: $font-size-small;
-        line-height: 1.4em;
+        line-height: 1.6em;
       }
 
       &--img {
@@ -33,15 +34,15 @@
 
       .img {
         &-1 {
-          width: 38rem;
-          height: auto;
+          width: auto;
+          height: 60rem;
         }
         &-2 {
           position: absolute;
-          width: 18rem;
-          height: auto;
+          width: 22rem;
+          height: 36rem;
           left: -25%;
-          bottom: 30%;
+          bottom: 20%;
           z-index: 2;
         }
       }

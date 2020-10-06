@@ -16,6 +16,32 @@ h1 {
 }
 
 .title {
-  font-size: 6.4rem;
-  line-height: 100%;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.3em;
+
+  &__sub {
+    color: $color-primary;
+    line-height: 100%;
+    font-size: 5rem;
+    line-height: 90%;
+    margin-bottom: 4rem;
+    font-weight: 200;
+    position: relative;
+
+    &::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 6.4rem;
+      height: 1px;
+      background-color: $color-primary;
+      bottom: -1rem;
+    }
+    span {
+      font-style: italic;
+    }
+  }
 }
