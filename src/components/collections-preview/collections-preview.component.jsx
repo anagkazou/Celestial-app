@@ -19,13 +19,13 @@ class CollectionPreview extends React.Component {
               src={imgChair.second}
               className="img__small"
               style={{ left: "50%", top: "12%", opacity: "1" }}
-              id="2"
+              id="1"
             />
             <img
               src={imgChair.third}
               className="img__small"
               style={{ bottom: "20%", left: "20%", opacity: "1" }}
-              id="2"
+              id="1"
             />{" "}
             <img
               src={imgLight.third}
@@ -36,7 +36,7 @@ class CollectionPreview extends React.Component {
                 transform: "translateX(50%)",
                 opacity: "0",
               }}
-              id="1"
+              id="2"
             />{" "}
           </div>
 
@@ -71,19 +71,19 @@ class CollectionPreview extends React.Component {
                 transform: "translateX(50%)",
                 opacity: "1",
               }}
-              id="2"
+              id="1"
             />{" "}
             <img
               src={imgLight.first}
               className="img__small"
               style={{ bottom: "20%", right: "20%", opacity: "0" }}
-              id="1"
+              id="2"
             />{" "}
             <img
               src={imgLight.second}
               className="img__small"
               style={{ right: "50%", top: "12%", opacity: "0" }}
-              id="1"
+              id="2"
             />{" "}
           </div>
         </div>
