@@ -45,8 +45,10 @@
   .collection-title {
     display: block;
     text-align: center;
-    transition: font-style 0.4 ease;
 
+    &:not(:last-child) {
+      padding-bottom: 1rem;
+    }
     &:hover {
       font-style: italic;
     }
@@ -62,5 +64,9 @@
     &:hover {
       letter-spacing: 0.2em;
     }
+  }
+
+  .mouseentered {
+    opacity: 0;
   }
 }

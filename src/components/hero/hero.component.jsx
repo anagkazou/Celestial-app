@@ -10,7 +10,7 @@ const Hero = () => (
         <p className="hero__sub">
           we design and manufacture furniture fit for gods
         </p>
-        <Link to="/shop" className="hero__cta">
+        <Link to="/#" className="hero__cta">
           Discover Our Collections
         </Link>
       </div>
