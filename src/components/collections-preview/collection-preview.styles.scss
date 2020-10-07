@@ -2,28 +2,65 @@
 
 .section__browse-collections {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   background-color: $color-secondary;
   .title {
     text-align: center;
   }
   .preview {
     width: inherit;
-    height: inherit;
+    height: 100%;
     display: flex;
     flex-direction: row;
     &__text {
-      width: 30%;
+      display: flex;
+      width: 20%;
       height: 100%;
-      background-color: tan;
+      flex-direction: column;
+      padding-top: 4rem;
     }
 
     &__left,
     &__right {
-      width: 35%;
+      width: 40%;
       height: 100%;
       position: relative;
-      background-color: rosybrown;
+
+      & > * {
+        position: absolute;
+      }
+
+      .img__large {
+        width: 45%;
+        height: auto;
+      }
+
+      .img__small {
+        width: 35%;
+        height: auto;
+      }
+    }
+  }
+
+  .collection-title {
+    display: block;
+    text-align: center;
+    transition: font-style 0.4 ease;
+
+    &:hover {
+      font-style: italic;
+    }
+  }
+
+  .btn__text {
+    margin-top: 4rem;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.1em;
+    transition: letter-spacing 0.3s ease;
+
+    &:hover {
+      letter-spacing: 0.2em;
     }
   }
 }

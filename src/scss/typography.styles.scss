@@ -3,7 +3,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+.collection-title {
   font-family: "Cormorant", serif;
   font-weight: 300;
 }
@@ -44,4 +45,10 @@ h1 {
       font-style: italic;
     }
   }
+}
+
+.collection-title {
+  font-size: $font-size-large;
+  color: $color-primary;
+  font-family: "Cormorant", serif;
 }
