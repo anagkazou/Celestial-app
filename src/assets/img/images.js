@@ -17,15 +17,18 @@ export const imgLight = {
   second: require("./light-2.jpg"),
   third: require("./light-3.jpg"),
 };
-// export const imgSofa = {
-//   first: require("./sofa-1.jpg"),
-//   second: require("./sofa-2.jpg"),
-//   third: require("./sofa-3.jpg"),
-//   fourth: require("./sofa-4.jpg"),
-// };
-// export const imgTable = {
-//   first: require("./table-1.jpg"),
-//   second: require("./table-2.jpg"),
-//   third: require("./table-3.jpg"),
-//   fourth: require("./table-4.jpg"),
-// };
+export const imgSofa = {
+  first: require("./sofa-1.jpg"),
+  second: require("./sofa-2.jpg"),
+  third: require("./sofa-3.jpg"),
+};
+export const imgStool = {
+  first: require("./stool-1.jpg"),
+  second: require("./stool-2.jpg"),
+  third: require("./stool-3.jpg"),
+};
+export const imgOtto = {
+  first: require("./otto-1.jpg"),
+  second: require("./otto-2.jpg"),
+  third: require("./otto-3.jpg"),
+};

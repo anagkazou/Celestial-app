@@ -4,7 +4,7 @@
   max-height: 110vh;
   width: 100vw;
   overflow-x: unset;
-  background-color: $color-primary;
+  background-color: $color-secondary;
   position: relative;
   &__container {
     // display: flex;
@@ -19,11 +19,12 @@
 
   &__sub {
     font-size: 2.2rem;
+    color: white;
   }
   &__cta {
     display: inline-block;
-    background-color: $color-secondary;
-    color: white;
+    background-color: $color-primary;
+    color: black;
     padding: 2rem 6rem;
     font-weight: bold;
     font-size: $font-size-button;

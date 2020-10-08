@@ -21,7 +21,7 @@ const InitPreviewAnimation = () => {
       });
       gsap.to($thisPreviewImages, {
         opacity: 1,
-        y: 0,
+        y: -30,
         ease: "Power1.easeOut",
         duration: 0.8,
       });
