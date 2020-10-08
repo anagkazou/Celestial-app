@@ -9,7 +9,7 @@ export default class SlickSlider extends React.Component {
   render() {
     const settings = {
       infinite: true,
-      speed: 5000,
+      speed: 10000,
       autoplay: true,
       autoplaySpeed: 0,
       slidesToShow: 4,
