@@ -1,5 +1,5 @@
 import React from "react";
-import InitPreviewAnimation from "./collection-preview";
+import { InitPreviewAnimation } from "../../js/animations";
 
 import "./collection-preview.styles.scss";
 import { Link } from "react-router-dom";

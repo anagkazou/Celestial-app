@@ -1,0 +1,67 @@
+@import "../../scss/variables.styles.scss";
+
+.header {
+  width: 100vw;
+  height: 10rem;
+  position: fixed;
+  background-color: transparent;
+  top: 0;
+  display: flex;
+  z-index: 4;
+  padding: 0 6%;
+
+  align-items: center;
+
+  &__right {
+    display: inherit;
+    justify-content: center;
+    margin-left: auto;
+
+    .hamburger {
+      &:hover {
+        cursor: pointer;
+      }
+      & .line {
+        width: 3.2rem;
+        height: 1px;
+        background-color: #ecf0f1;
+        display: block;
+
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+        &:nth-child(2) {
+          margin: 0.6rem 0;
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-size: $font-size-small;
+    color: $color-primary;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+}
+
+#hamburger.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(0.8rem) rotate(45deg);
+  -ms-transform: translateY(0.8rem) rotate(45deg);
+  -o-transform: translateY(0.8rem) rotate(45deg);
+  transform: translateY(0.8rem) rotate(45deg);
+}
+
+#hamburger.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-0.6rem) rotate(-45deg);
+  -ms-transform: translateY(-0.6rem) rotate(-45deg);
+  -o-transform: translateY(-0.6rem) rotate(-45deg);
+  transform: translateY(-0.6rem) rotate(-45deg);
+}

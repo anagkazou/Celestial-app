@@ -2,7 +2,6 @@ import React from "react";
 import "./homepage.scss";
 import Hero from "../components/hero/hero.component";
 import { imgAbout1, imgAbout2 } from "../assets/img/images";
-
 import CollectionPreview from "../components/collections-preview/collections-preview.component";
 const HomePage = () => (
   <div>
@@ -13,7 +12,6 @@ const HomePage = () => (
         <div className="about__content--text">
           <p className="title">Who We Are</p>
           <h2 className="title__sub">
-            {" "}
             <span>True</span> furniture Masters
           </h2>
           <p className="paragraph">

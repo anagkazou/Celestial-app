@@ -1,7 +1,7 @@
 import $ from "jquery";
 import { gsap } from "gsap";
 
-const InitPreviewAnimation = () => {
+export function InitPreviewAnimation() {
   $(".collection-title").each(function (index, el) {
     const $this = $(el);
     const thisId = el.id;
@@ -31,6 +31,14 @@ const InitPreviewAnimation = () => {
       });
     });
   });
-};
+}
 
-export default InitPreviewAnimation;
+export function InitHamburgerAnimation() {
+  $(document).ready(function () {
+    $(".hamburger").click(function () {
+      $(this).toggleClass("is-active");
+    });
+  });
+}
+
+export default { InitHamburgerAnimation, InitPreviewAnimation };
