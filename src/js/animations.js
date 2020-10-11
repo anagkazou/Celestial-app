@@ -23,7 +23,7 @@ export function InitPreviewAnimation() {
         opacity: 1,
         y: -30,
         ease: "Power1.easeOut",
-        duration: 0.8,
+        duration: 0.5,
       });
 
       gsap.to($otherImages, {
