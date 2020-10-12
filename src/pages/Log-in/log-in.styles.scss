@@ -1,0 +1,34 @@
+.LogIn {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    h2 {
+      text-align: left;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+    .group {
+      width: 50%;
+      // background-color: brown;
+      text-align: center;
+      color: white;
+      h2 {
+        color: white;
+      }
+    }
+  }
+
+  .right {
+    height: 100%;
+  }
+}

@@ -14,6 +14,7 @@ class Header extends React.Component {
           <Link className="header__link ">Home</Link>
           <Link className="header__link">Shop</Link>
           <Link className="header__link">About</Link>
+          <Link to="/LogIn" className="header__link">Login</Link>
           <div className="hamburger" id="hamburger">
             <span className="line"></span>
             <span className="line"></span>

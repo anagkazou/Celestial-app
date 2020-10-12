@@ -1,0 +1,19 @@
+@import "../../scss/variables.styles.scss";
+.form-input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid $color-dark-grey;
+  padding: 1rem;
+  color: $color-primary;
+  width: 100%;
+
+  margin-bottom: 4rem;
+
+  //   &:not(:last-child) {
+  //     margin-bottom: 2rem;
+  //   }
+
+  &:focus {
+    outline: none;
+  }
+}

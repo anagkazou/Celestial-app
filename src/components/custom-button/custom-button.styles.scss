@@ -1,0 +1,31 @@
+@import "../../scss/variables.styles.scss";
+.custom-button {
+  //padding: 2rem 5rem;
+  outline: none;
+  height: 4rem;
+  border-radius: 1rem;
+  width: 100%;
+
+  border: 1px solid $color-primary;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 2rem;
+
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+
+  & + .google-sign-in {
+    margin: 2rem 0 0 0;
+    .container img {
+      width: 1.2rem;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+    .btn-txt {
+      vertical-align: middle;
+    }
+  }
+}
