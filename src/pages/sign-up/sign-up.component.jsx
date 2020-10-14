@@ -1,14 +1,11 @@
 import React from 'react';
-import './log-in.styles.scss';
+import './sign-up.styles.scss';
 
 import FormInput from '../../components/form-input/form-input.component'
 import CustomButton from '../../components/custom-button/custom-button.component'
 import googleLogo from '../../assets/svg/google.svg'
 import banner from '../../assets/img/login-banner.jpg'
-
-import {signInWithGoogle} from '../../firebase/firebase.utils'
-
-class LogIn extends React.Component {
+class SignUp extends React.Component {
 
     constructor(props){
         super(props);
@@ -22,34 +19,33 @@ class LogIn extends React.Component {
 
     render(){
         return(
-            <div className="LogIn">
-        
+            <div className="sign-up">
+      
         <div className="left">
             <div className="group">
-                 <h2>Good to see you again!</h2>
+                 <h2>Sign Up</h2>
+                    <FormInput type = "text" placeholder= "Full Name"/>
                     <FormInput type = "email" placeholder= "Email"/>
                     <FormInput type = "password" placeholder= "Password"/>
 
-                    <CustomButton >Login</CustomButton>
+                    <CustomButton >Signup</CustomButton>
                     Or
-                    <CustomButton  isGoogleSignIn onClick= {signInWithGoogle}>
+                    <CustomButton  isGoogleSignIn>
                         <div className="container">
                             <img src={googleLogo} alt=""/>
                             <span className= "btn-txt">Continue with Google</span>
                         </div>
                     </CustomButton>
             </div>
-           
-
         </div>
 
+        
         <div className="right" style = {{
             backgroundImage: `url(${banner})`,
             backgroundSize:"cover",
             width:"50%"
         }}
         />
-
     </div>
         )
     }
@@ -57,4 +53,4 @@ class LogIn extends React.Component {
     
 
 
-export default LogIn;
+export default SignUp;

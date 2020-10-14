@@ -2,8 +2,15 @@ import React from "react";
 import "./header.styles.scss";
 import { InitHamburgerAnimation } from "../../js/animations";
 import { Link } from "react-router-dom";
+import {auth} from '../../firebase/firebase.utils'
+
 
 class Header extends React.Component {
+  constructor({currentUser}){
+    super({currentUser})
+
+    
+  }
   componentDidMount() {
     InitHamburgerAnimation();
   }
@@ -14,8 +21,14 @@ class Header extends React.Component {
           <Link className="header__link ">Home</Link>
           <Link className="header__link">Shop</Link>
           <Link className="header__link">About</Link>
-          <Link to="/LogIn" className="header__link">Login</Link>
-          <div className="hamburger" id="hamburger">
+          {    console.log(this.props.currentUser)
+}
+{         this.props.currentUser ?
+<div className="header__link" onClick= {() => auth.signOut()}>
+Logout
+</div>:
+ <Link to="/login" className="header__link">Login </Link>
+}          <div className="hamburger" id="hamburger">
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
