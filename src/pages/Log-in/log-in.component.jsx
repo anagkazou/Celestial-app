@@ -6,7 +6,7 @@ import CustomButton from '../../components/custom-button/custom-button.component
 import googleLogo from '../../assets/svg/google.svg'
 import banner from '../../assets/img/login-banner.jpg'
 
-import {signInWithGoogle} from '../../firebase/firebase.utils'
+import {auth,signInWithGoogle} from '../../firebase/firebase.utils'
 
 class LogIn extends React.Component {
 
@@ -17,20 +17,49 @@ class LogIn extends React.Component {
         this.state= {
             email:"",
             password:""
-        }
+        };
     }
 
+    handleSubmit = async (event) => {
+        event.preventDefault();
+        const { email, password } = this.state;
+        this.setState({ email: "", password: "" });
+    
+        try {
+          await auth.signInWithEmailAndPassword(email, password);
+          this.state = {
+            email: "",
+            password: "",
+          };
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
+      handleChange = (event) => {
+        const { value, name } = event.target;
+        this.setState({ [name]: value });
+      };
+      
     render(){
         return(
             <div className="LogIn">
         
         <div className="left">
-            <div className="group">
+            <form className="group" onSubmit={this.handleSubmit}>
                  <h2>Good to see you again!</h2>
-                    <FormInput type = "email" placeholder= "Email"/>
-                    <FormInput type = "password" placeholder= "Password"/>
+                    <FormInput type = "email" placeholder= "Email"
+                                value={this.state.email}
+                                handleChange={this.handleChange}
+                                required
 
-                    <CustomButton >Login</CustomButton>
+                                />
+                    <FormInput type = "password" placeholder= "Password"
+                    value={this.state.password}
+                    handleChange={this.handleChange} 
+                    required/>
+
+                    <CustomButton  >Login</CustomButton>
                     Or
                     <CustomButton  isGoogleSignIn onClick= {signInWithGoogle}>
                         <div className="container">
@@ -38,7 +67,7 @@ class LogIn extends React.Component {
                             <span className= "btn-txt">Continue with Google</span>
                         </div>
                     </CustomButton>
-            </div>
+            </form>
            
 
         </div>
