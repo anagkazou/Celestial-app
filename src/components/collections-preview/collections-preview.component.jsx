@@ -12,6 +12,34 @@ import {
 } from "../../assets/img/images";
 
 class CollectionPreview extends React.Component {
+  constructor(){
+    super();
+
+    this.state = {
+      collections: [
+        {
+            id:1,
+            urlTitle: "chairs"
+        },
+        {
+            id:2,
+            urlTitle: "lights"
+        },
+        {
+            id:3,
+            urlTitle: "sofas"
+        },
+        {
+            id:4,
+            urlTitle: "stools"
+        },
+        {
+            id:5,
+            urlTitle: "ottomans"
+        },
+    ]
+    }
+  }
   componentDidMount() {
     InitPreviewAnimation();
   }
@@ -97,7 +125,7 @@ class CollectionPreview extends React.Component {
           </div>
 
           <div className="preview__text">
-            <Link to="/#" className="collection-title" id="1">
+            {/* <Link to="/#" className="collection-title" id="1">
               Chairs
             </Link>
             <Link to="/#" className="collection-title" id="2">
@@ -111,8 +139,12 @@ class CollectionPreview extends React.Component {
             </Link>
             <Link to="/#" className="collection-title" id="5">
               Ottomans
-            </Link>
-
+            </Link> */}
+{
+  this.state.collections.map(({id, urlTitle }) => {
+  return <Link to={`/${urlTitle}`} id= {id} key= {id} className= "collection-title" >{urlTitle}</Link>
+  })
+}
             <Link to="/#" className="btn btn__text">
               View everything
             </Link>

@@ -6,6 +6,7 @@ import Header from "./components/header/header.component";
 import Homepage from "./pages/homepage";
 import LogIn from './pages/log-in/log-in.component'
 import SignUp from './pages/sign-up/sign-up.component'
+import Collection from './pages/shop/shop.component'
 
 import {auth, createUserProfileDocument} from './firebase/firebase.utils'
 
@@ -59,6 +60,7 @@ componentWillUnmount(){
         <Route exact path= "/"component= {Homepage} />
         <Route  path= "/login" component= {LogIn} />
         <Route  path= "/signup" component= {SignUp} />
+        <Route path= "/collection" component= {Collection} />
       </Switch>
       </div>
     );

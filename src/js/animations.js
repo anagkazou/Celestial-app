@@ -3,7 +3,6 @@ import { gsap } from "gsap";
 
 export function InitPreviewAnimation() {
   $(".collection-title").each(function (index, el) {
-    const $this = $(el);
     const thisId = el.id;
     const $thisPreviewImages = $(".preview__left, .preview__right").find(
       `img[id="${thisId}"]`
@@ -14,7 +13,6 @@ export function InitPreviewAnimation() {
       .not(`[id="${thisId}"]`);
 
     $(el).on("mouseenter", (el) => {
-      console.log($this);
       // $($otherImages).addClass(".mouseentered");
       gsap.set($allImages, {
         y: 100,

@@ -1,0 +1,23 @@
+@import "../../scss/variables.styles.scss";
+
+.header-container {
+  margin: 0 calc(100vw / 20 * 4);
+  padding-top: 15vw;
+}
+
+.shop__title {
+  font-size: 4.4vw;
+  color: white;
+  text-transform: none;
+
+  &--sub {
+    color: white;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    letter-spacing: 0.3em;
+    line-height: 90%;
+    font-family: "Libre Franklin", sans-serif;
+    margin-bottom: 2.4vw;
+  }
+}

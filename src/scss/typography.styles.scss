@@ -15,7 +15,7 @@ h1 {
 }
 
 .title {
-  font-size: 0.8rem;
+  font-size: 0.8vw;
   margin-bottom: 2rem;
   text-transform: uppercase;
   color: white;
@@ -24,7 +24,7 @@ h1 {
   &__sub {
     color: $color-primary;
     line-height: 100%;
-    font-size: 5rem;
+    font-size: 4.4vw;
     line-height: 90%;
     margin-bottom: 4rem;
     font-weight: 200;

@@ -18,9 +18,9 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="header__right">
-          <Link className="header__link ">Home</Link>
-          <Link className="header__link">Shop</Link>
-          <Link className="header__link">About</Link>
+          <Link to= "/#"  className="header__link ">Home</Link>
+          <Link to= "/collection" className="header__link">Collection</Link>
+          <Link to= "/#" className="header__link">About</Link>
           {    console.log(this.props.currentUser)
 }
 {         this.props.currentUser ?

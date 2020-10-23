@@ -45,7 +45,7 @@
   .collection-title {
     display: block;
     text-align: center;
-
+    text-transform: capitalize;
     &:not(:last-child) {
       margin-bottom: 1rem;
     }

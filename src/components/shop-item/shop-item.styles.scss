@@ -1,0 +1,18 @@
+.furniture-item {
+  width: calc(100vw / 20 * 3);
+  height: 20vw;
+  margin: 0 2.5vw;
+  cursor: pointer;
+
+  &:nth-child(4n + 1) {
+    margin-left: 0;
+  }
+  &:nth-child(4n + 4) {
+    margin-right: 0;
+  }
+
+  &__img {
+    height: 70%;
+    background-size: cover;
+  }
+}

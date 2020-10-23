@@ -1,0 +1,18 @@
+.filter {
+  position: fixed;
+  left: calc(100vw / 20);
+  width: calc(100vw / 20 * 3);
+  margin-top: 9.375vw;
+
+  ul > li > a {
+    font-family: "Cormorant", serif;
+    font-size: 1.4vw;
+  }
+}
+
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100vw / 20 * 15);
+  margin: 9.375vw calc(100vw / 20 * 1) 9.375vw calc(100vw / 20 * 4);
+}

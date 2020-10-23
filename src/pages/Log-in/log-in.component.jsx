@@ -16,7 +16,8 @@ class LogIn extends React.Component {
 
         this.state= {
             email:"",
-            password:""
+            password:"", 
+          
         };
     }
 
@@ -40,7 +41,7 @@ class LogIn extends React.Component {
         const { value, name } = event.target;
         this.setState({ [name]: value });
       };
-      
+
     render(){
         return(
             <div className="LogIn">
