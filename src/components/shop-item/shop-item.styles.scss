@@ -1,6 +1,7 @@
+@import "../../scss/variables.styles.scss";
 .furniture-item {
   width: calc(100vw / 20 * 3);
-  height: 20vw;
+  height: 30vw;
   margin: 0 2.5vw;
   cursor: pointer;
 
@@ -12,7 +13,37 @@
   }
 
   &__img {
-    height: 70%;
+    height: 50%;
     background-size: cover;
+  }
+
+  &__category {
+    color: $color-dark-grey;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 10%;
+  }
+
+  &__details {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 10%;
+    font-size: $font-size-medium;
+  }
+  &__name {
+    display: inline-block;
+    color: $color-primary;
+    font-family: "Cormorant", serif;
+    align-self: flex-end;
+    line-height: 1;
+  }
+
+  &__price {
+    display: inline-block;
+    color: $color-primary;
+    font-size: 1.2vw;
+    margin-left: auto;
+    align-self: flex-end;
   }
 }

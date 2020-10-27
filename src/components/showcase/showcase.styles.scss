@@ -2,11 +2,11 @@
   position: fixed;
   left: calc(100vw / 20);
   width: calc(100vw / 20 * 3);
-  margin-top: 9.375vw;
+  margin-top: 6vw;
 
   ul > li > a {
     font-family: "Cormorant", serif;
-    font-size: 1.4vw;
+    font-size: 1.8vw;
   }
 }
 
@@ -14,5 +14,5 @@
   display: flex;
   flex-wrap: wrap;
   width: calc(100vw / 20 * 15);
-  margin: 9.375vw calc(100vw / 20 * 1) 9.375vw calc(100vw / 20 * 4);
+  margin: 6vw calc(100vw / 20 * 1) 6vw calc(100vw / 20 * 4);
 }

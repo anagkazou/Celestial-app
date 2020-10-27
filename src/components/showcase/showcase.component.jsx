@@ -24,21 +24,15 @@ componentDidMount(){
 <React.Fragment>      
           <div className="filter">
                 <ul>
-                <li>
-                    <Link to= "/#">Everything</Link>
-                </li>
-                <li>
-                    <Link to= "/#">Everything</Link>
-                </li>
-                <li>
-                    <Link to= "/#">Everything</Link>
-                </li>
-                <li>
-                    <Link to= "/#">Everything</Link>
-                </li>
-                <li>
-                    <Link to= "/#">Everything</Link>
-                </li>
+                    <li><Link to= "/collection">Everything</Link></li>
+                    {
+                        this.state.furniture.map(({category})=>(
+                        <li>   <Link to= {`/${category}`}>{category}</Link></li>
+
+                        ))
+                    }
+                
+                
                 </ul>
             </div>
             <div className="showcase">
@@ -51,8 +45,8 @@ componentDidMount(){
 
                     {
                         this.state.furniture.map(el =>(
-                             el.items.map(({id, imageUrl})=>{
-                           return     <ShopItem key= {id} imageUrl= {imageUrl} ></ShopItem>
+                             el.items.map(({id, imageUrl, name,price})=>{
+                           return     <ShopItem key= {id} imageUrl= {imageUrl} category = {el.category} name = {name} price = {price} ></ShopItem>
                       
                                                    }) 
 

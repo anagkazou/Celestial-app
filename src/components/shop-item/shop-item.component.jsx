@@ -10,6 +10,16 @@ const ShopItem = (props) =>{
 <div className="furniture-item__img" style= {{
     backgroundImage:`url(${props.imageUrl})`
 }}/>
+
+<p className="furniture-item__category">
+    {props.category}
+</p>
+
+<div className="furniture-item__details">
+    <p className="furniture-item__name">{props.name}</p>
+<p className="furniture-item__price">{`₦${props.price}`}</p>
+</div>
+
     </div>
             </React.Fragment>
         )

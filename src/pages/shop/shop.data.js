@@ -1,7 +1,7 @@
 const SHOP_DATA= [
     {
         id:1,
-        title: "Chairs", 
+        category: "Chairs", 
         routeName:"chairs", 
         items: [
             {
@@ -34,6 +34,7 @@ const SHOP_DATA= [
                 imageUrl: "https://i.ibb.co/ygCfR8J/morpha.jpg",
                 price: 25,
          },
+
         ]
     },
 
@@ -50,6 +51,30 @@ const SHOP_DATA= [
     //         }
     //     ]
     // }
+    {
+        id:2,
+        category: "Lights", 
+        routeName:"lights", 
+        items: []
+    },
+    {
+        id:3,
+        category: "Sofas", 
+        routeName:"sofas", 
+        items: []
+    },
+    {
+        id:4,
+        category: "Stools", 
+        routeName:"stools", 
+        items: []
+    },
+    {
+        id:5,
+        category: "Ottomans", 
+        routeName:"ottomans", 
+        items: []
+    },
 ]
 
 
