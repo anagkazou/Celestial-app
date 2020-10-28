@@ -1,13 +1,13 @@
 import React from 'react';
 import './shop-title.styles.scss';
 
-const ShopTitle = () =>(
+const ShopTitle = (props) =>(
             <div className="header-container">
             <h2 className="shop__title--sub">
                 Collection
             </h2>
             <h3 className="shop__title">
-                Everything
+                {props.category}
             </h3>
                         </div>
 );

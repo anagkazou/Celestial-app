@@ -4,11 +4,16 @@ import "./scss/main.scss";
 import {Switch, Route, withRouter} from 'react-router-dom';
 import Header from "./components/header/header.component";
 import Homepage from "./pages/homepage";
-import LogIn from './pages/log-in/log-in.component'
-import SignUp from './pages/sign-up/sign-up.component'
-import Collection from './pages/shop/shop.component'
+import LogIn from './pages/log-in/log-in.component';
+import SignUp from './pages/sign-up/sign-up.component';
+import Everything from './pages/shop/everything.component';
+import Chairs from './pages/shop/chairs.component';
+import Sofas from './pages/shop/sofas.component';
+import Stools from './pages/shop/stools.components'
+import Lights from './pages/shop/lights.component';
+import Ottomans from './pages/shop/ottomans.component';
 
-import {auth, createUserProfileDocument} from './firebase/firebase.utils'
+import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 
 class App extends React.Component {
   constructor(props){
@@ -44,7 +49,7 @@ if (userAuth){
 }
 
 componentWillUnmount(){
-  this.unsubscribefromAuth()
+  this.unsubscribefromAuth();
 }
 
   render() {
@@ -60,11 +65,16 @@ componentWillUnmount(){
         <Route exact path= "/"component= {Homepage} />
         <Route  path= "/login" component= {LogIn} />
         <Route  path= "/signup" component= {SignUp} />
-        <Route path= "/collection" component= {Collection} />
+        <Route exact path= "/collection/" component= {Everything} />
+        <Route exact path= "/category/chairs" component= {Chairs} />
+        <Route exact  path= "/category/lights" component= {Lights} />
+        <Route exact  path= "/category/sofas" component= {Sofas} />
+        <Route exact  path= "/category/stools" component= {Stools} />
+        <Route exact  path= "/category/ottomans" component= {Ottomans} />
       </Switch>
       </div>
     );
   }
 }
 
-export default withRouter( App)
+export default withRouter( App);

@@ -4,60 +4,92 @@ import {Link} from "react-router-dom"
 
 import ShopItem from '../shop-item/shop-item.component' 
 
-import SHOP_DATA from '../../pages/shop/shop.data'
+import SHOP_DATA from '../../pages/shop/shop.data' 
 
-class Showcase extends React.Component{
-    constructor(){
-        super();
+ class ItemsShowcase extends React.Component{
+    constructor(props){
+        super(props);
 
         this.state={
             furniture:SHOP_DATA,
         }
     }
-componentDidMount(){
-    console.log(this.state.furniture[0].id);
-
-}
+   
+   
+   
     render(){
+     let itemsToRender =   this.props.itemsToRender;
+     let furnitureItemsData = this.state.furniture;
+        let isFiltered = this.props.filtered;
+        let category = furnitureItemsData.find(x => x.id === itemsToRender )
 
-        return(
-<React.Fragment>      
-          <div className="filter">
-                <ul>
-                    <li><Link to= "/collection">Everything</Link></li>
-                    {
-                        this.state.furniture.map(({category})=>(
-                        <li>   <Link to= {`/${category}`}>{category}</Link></li>
-
-                        ))
-                    }
-                
-                
-                </ul>
-            </div>
-            <div className="showcase">
-                    {/* {
-
-                    this.state.furniture.map().map() => (
+      if (!isFiltered)  {
+        return(<>        
+            <div className="filter">
+                           <ul>
+                               <li><Link to= "/collection">Everything</Link></li>
+                               {
+                                   furnitureItemsData.map(({category})=>(
+                                   <li>   <Link key={category.id} to= {`/category/${category.toLowerCase()}`}>{category}</Link></li>
+                                   ))
+                               }
+                           
+                           
+                           </ul>
+                       </div>
+                       <div className="showcase">
+                           {
+                             this.state.furniture.map(el =>(
+                               el.items.map(({id, imageUrl, name,price})=>{
+                            return  <ShopItem key= {id} imageUrl= {imageUrl} category = {el.category} name = {name} price = {price} ></ShopItem> 
                         
-                    <ShopItem key= {items.id} {...otherFurnitureProps} ></ShopItem>
-                    ))} */}
+                                                     }) 
+               
+                           ) )    
+                       }
+                    
+                                       </div>
+           
+                                       
+                           </>         );
 
-                    {
-                        this.state.furniture.map(el =>(
-                             el.items.map(({id, imageUrl, name,price})=>{
-                           return     <ShopItem key= {id} imageUrl= {imageUrl} category = {el.category} name = {name} price = {price} ></ShopItem>
-                      
-                                                   }) 
+                           
+      }
+       else{
+           return(
+               <> 
+            <div className="filter">
+            <ul>
+                <li><Link to= "/collection">Everything</Link></li>
+                {
+                    this.state.furniture.map(({category})=>(
+                    <li>   <Link to= {`/category/${category.toLowerCase()}`}>{category}</Link></li>
+                    ))
+                }
+            
+            
+            </ul>
+        </div>
+        <div className="showcase">
+                           {
+                               
+                               category.items.map(({id,imageUrl,name, price}) => {
+                               return  <ShopItem key= {id} imageUrl= {imageUrl} category = {category.category} name = {name} price = {price} ></ShopItem> })
 
-                         ) ) 
-                        }
-                </div>
-</React.Fragment>        );
+                       }
+                    
+                                       </div>
+</>
+           )
+      
+
+        }
+       } 
     }
     
-}
 
 
 
-export default Showcase;
+
+
+export default ItemsShowcase;

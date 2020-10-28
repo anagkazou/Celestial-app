@@ -6,29 +6,31 @@ import {auth} from '../../firebase/firebase.utils'
 
 
 class Header extends React.Component {
-  constructor({currentUser}){
-    super({currentUser})
-
-    
+  constructor(props){
+    super(props)
   }
+
   componentDidMount() {
     InitHamburgerAnimation();
   }
+  
   render() {
+    const currentUser = this.props.currentUser;
     return (
       <div className="header">
         <div className="header__right">
           <Link to= "/#"  className="header__link ">Home</Link>
-          <Link to= "/collection" className="header__link">Collection</Link>
+          <Link to= "/collection/" className="header__link">Collection</Link>
           <Link to= "/#" className="header__link">About</Link>
-          {    console.log(this.props.currentUser)
+          {  
+          //  console.log(this.props.currentUser)
 }
-{         this.props.currentUser ?
+{         currentUser ?
 <div className="header__link" onClick= {() => auth.signOut()}>
 Logout
 </div>:
  <Link to="/login" className="header__link">Login </Link>
-}          <div className="hamburger" id="hamburger">
+}         <div className="hamburger" id="hamburger">
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
