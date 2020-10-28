@@ -13,7 +13,7 @@ class Chairs extends React.Component{
         return(   
             <>   
           <ShopTile category= "Chairs"/>
-            <ItemsShowcase category= "chairs"/>
+            <ItemsShowcase category= "chairs" itemsToRender = {1} filtered/>
 
             {/* <Switch>
         <Route exact path= "/"component= {Homepage} />
