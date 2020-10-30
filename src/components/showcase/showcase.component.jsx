@@ -47,7 +47,6 @@ import SHOP_DATA from '../../pages/shop/shop.data'
                
                            ) )    
                        }
-                    
                                        </div>
            
                                        

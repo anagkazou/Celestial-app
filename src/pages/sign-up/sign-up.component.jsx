@@ -12,59 +12,89 @@ class SignUp extends React.Component {
 
     constructor(props){
         super(props);
-
-
         this.state= {
-            name: "",
+            displayName: "",
             email:"",
             password:"",
             confirmPassword:"",
         }
     }
-    handleChange = (event) => {
+    
+   
+
+    handleSubmit = async (event) => {
+        event.preventDefault();
+        const { displayName, email, password, confirmPassword } = this.state;
+    
+        if (password !== confirmPassword) {
+            console.log(confirmPassword, password)
+        //   alert("Passwords dont match");
+          return;
+          //We return because we dont want the function to do anything else if passwords dont match
+        }
+    
+        try {
+          const { user } = await auth.createUserWithEmailAndPassword(
+            email,
+           // name,
+            password
+          );
+    
+          await createUserProfileDocument(user, { displayName });
+    
+          this.setState({
+            displayName: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+          });
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
+
+       handleChange = (event) => {
     const {name, value} = event.target;
     this.setState({[name]:value});
+    console.log(this.state)
     }
-    handleSubmit = async (event) =>{
-        event.preventDefault();
-        const { name, email, password, confirmPassword} = this.state;
-
-        if (password !==confirmPassword){
-            alert("Passwords don't match");
-            return;
-        } try{
-            //create new user
-        const { user} = await auth.createUserWithEmailAndPassword(
-            email,password
-        );
-
-        await createUserProfileDocument (user, {name});
-
-        this.setState({
-            name: "",
-            email:"",
-            password:"",
-            confirmPassword:"",
-        });
-    }
-    catch(error){
-console.log(error)    }
-}
-
    
 
     render(){
-        const { name, email, password, confirmPassword} = this.state;
+        const { displayName, email, password, confirmPassword} = this.state;
         return(
             <div className="sign-up">
       
         <div className="left">
-            <div className="group">
+            <form className="group" onSubmit={ this.handleSubmit}>
                  <h2>Sign Up</h2>
-                    <FormInput type = "text" placeholder= "Full Name" value = {name}/>
-                    <FormInput type = "email" placeholder= "Email" value = {email}/>
-                    <FormInput type = "password" placeholder= "Password" value = {password}/>
-                    <FormInput type = "password" placeholder= "Confirm Password" value = {confirmPassword}/>
+                    <FormInput type = "text"
+                     placeholder= "Full Name"
+                     name = "displayName"
+                      value = {displayName}
+                      handleChange={this.handleChange}/>
+
+                    <FormInput 
+                    type = "email" 
+                    placeholder= "Email" 
+                    value = {email }  
+                    name = "email"
+                    handleChange={this.handleChange}/>
+
+                    <FormInput 
+                    type ="password" 
+                    placeholder= "Password" 
+                    value = {password}  
+                    name = "password"
+                    handleChange={this.handleChange}/>
+
+                    <FormInput 
+                    type = "password" 
+                    placeholder= "Confirm Password" 
+                    value = {confirmPassword}
+                    name = "confirmPassword"
+                    handleChange={this.handleChange}/>
 
                     <CustomButton type= "submit" >Signup</CustomButton>
                     Or
@@ -74,7 +104,7 @@ console.log(error)    }
                             <span className= "btn-txt">Continue with Google</span>
                         </div>
                     </CustomButton>
-            </div>
+            </form>
         </div>
 
         

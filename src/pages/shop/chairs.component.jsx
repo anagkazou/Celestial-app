@@ -14,14 +14,6 @@ class Chairs extends React.Component{
             <>   
           <ShopTile category= "Chairs"/>
             <ItemsShowcase category= "chairs" itemsToRender = {1} filtered/>
-
-            {/* <Switch>
-        <Route exact path= "/"component= {Homepage} />
-        <Route  path= "/category/lights" component= {} />
-        <Route  path= "/category/sofas" component= {} />
-        <Route  path= "/category/stools" component= {} />
-        <Route  path= "/category/ottomans" component= {} />
-      </Switch> */}
             </>
            
            
