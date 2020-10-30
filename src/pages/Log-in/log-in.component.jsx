@@ -53,12 +53,14 @@ class LogIn extends React.Component {
                     <FormInput type = "email" placeholder= "Email"
                                 value={this.state.email}
                                 handleChange={this.handleChange}
+                                name="email"
                                 required
 
                                 />
                     <FormInput type = "password" placeholder= "Password"
                     value={this.state.password}
                     handleChange={this.handleChange} 
+                    name="password"
                     required/>
 
                     <CustomButton  >Login</CustomButton>

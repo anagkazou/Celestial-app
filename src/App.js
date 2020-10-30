@@ -28,6 +28,7 @@ class App extends React.Component {
 
 componentDidMount(){
  this.unsubscribefromAuth= auth.onAuthStateChanged(async (userAuth) => {
+
 if (userAuth){
   const userRef = await createUserProfileDocument(userAuth);
 
@@ -71,7 +72,7 @@ componentWillUnmount(){
         <Route exact  path= "/category/sofas" component= {Sofas} />
         <Route exact  path= "/category/stools" component= {Stools} />
         <Route exact  path= "/category/ottomans" component= {Ottomans} />
-      </Switch>
+ </Switch>
       </div>
     );
   }
