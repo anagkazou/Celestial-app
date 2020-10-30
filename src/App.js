@@ -62,17 +62,17 @@ componentWillUnmount(){
       >     
       { this.props.location.pathname!=='/login' &&
        this.props.location.pathname!== "/signup" ? <Header currentUser= { this.state.currentUser}/>:null  }
-<Switch>
-        <Route exact path= "/"component= {Homepage} />
-        <Route  path= "/login" component= {LogIn} />
-        <Route  path= "/signup" component= {SignUp} />
-        <Route exact path= "/collection/" component= {Everything} />
-        <Route exact path= "/category/chairs" component= {Chairs} />
-        <Route exact  path= "/category/lights" component= {Lights} />
-        <Route exact  path= "/category/sofas" component= {Sofas} />
-        <Route exact  path= "/category/stools" component= {Stools} />
-        <Route exact  path= "/category/ottomans" component= {Ottomans} />
- </Switch>
+  <Switch>
+          <Route exact path= "/"component= {Homepage} />
+          <Route  path= "/login" component= {LogIn} />
+          <Route  path= "/signup" component= {SignUp} />
+          <Route exact path= "/collection/" component= {Everything} />
+          <Route exact path= "/category/chairs" component= {Chairs} />
+          <Route exact  path= "/category/lights" component= {Lights} />
+          <Route exact  path= "/category/sofas" component= {Sofas} />
+          <Route exact  path= "/category/stools" component= {Stools} />
+          <Route exact  path= "/category/ottomans" component= {Ottomans} />
+  </Switch>
       </div>
     );
   }
