@@ -61,7 +61,7 @@ componentWillUnmount(){
         }}
       >     
       { this.props.location.pathname!=='/login' &&
-       this.props.location.pathname!== "/signup" ? <Header currentUser= { this.state.currentUser}/>:null  }
+       this.props.location.pathname!== "/signup" ? <Header />:null  }
   <Switch>
           <Route exact path= "/"component= {Homepage} />
           <Route  path= "/login" component= {LogIn} />

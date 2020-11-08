@@ -3,6 +3,7 @@ import "./header.styles.scss";
 import { InitHamburgerAnimation } from "../../js/animations";
 import { Link } from "react-router-dom";
 import {auth} from '../../firebase/firebase.utils'
+import {connect} from "react-redux"
 
 
 class Header extends React.Component {
@@ -41,4 +42,7 @@ Logout
   }
 }
 
-export default Header;
+const mapStateToProps = state => ({
+  currentUser:state.user.currentUser
+})
+export default connect(mapStateToProps)( Header);
