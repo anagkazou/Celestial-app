@@ -13,27 +13,26 @@ import Stools from './pages/shop/stools.components'
 import Lights from './pages/shop/lights.component';
 import Ottomans from './pages/shop/ottomans.component';
 
+import {connect} from 'react-redux';
+
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
+import { setCurrentUser } from "./redux/user/user.actions";
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      currentUser:null
-    }
-  }
+  
 
   unsubscribefromAuth = null;
 
 componentDidMount(){
+  const {setCurrentUser} = this.props;
+
  this.unsubscribefromAuth= auth.onAuthStateChanged(async (userAuth) => {
 
 if (userAuth){
   const userRef = await createUserProfileDocument(userAuth);
 
   userRef.onSnapshot((snapShot) => {
-    this.setState({
+    setCurrentUser({
       currentUser: {
         id: snapShot.id,
         ...snapShot.data(),
@@ -44,7 +43,7 @@ if (userAuth){
   });
 
 }else {
-  this.setState({ currentUser: userAuth });
+  setCurrentUser(userAuth );
 }
   })
 }
@@ -78,4 +77,8 @@ componentWillUnmount(){
   }
 }
 
-export default withRouter( App);
+const matchDispatchToProps = dispatch => ({
+  setCurrentUser : user => dispatch(setCurrentUser (user))
+})
+
+export default connect(null, matchDispatchToProps)(withRouter( App));
