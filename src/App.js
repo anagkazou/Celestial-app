@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import "./scss/main.scss";
-import {Switch, Route, withRouter} from 'react-router-dom';
+import {Switch, Route, withRouter, Redirect} from 'react-router-dom';
 import Header from "./components/header/header.component";
 import Homepage from "./pages/homepage";
 import LogIn from './pages/log-in/log-in.component';
@@ -63,8 +63,8 @@ componentWillUnmount(){
        this.props.location.pathname!== "/signup" ? <Header />:null  }
   <Switch>
           <Route exact path= "/"component= {Homepage} />
-          <Route  path= "/login" component= {LogIn} />
-          <Route  path= "/signup" component= {SignUp} />
+          <Route  path= "/login"  render= {() =>this.props.currentUser ? (<Redirect to= "/"/>) : <LogIn/>}  />
+          <Route  path= "/signup" render= {() =>this.props.currentUser ? (<Redirect to= "/"/>) : <SignUp/>} />
           <Route exact path= "/collection/" component= {Everything} />
           <Route exact path= "/category/chairs" component= {Chairs} />
           <Route exact  path= "/category/lights" component= {Lights} />
@@ -77,8 +77,11 @@ componentWillUnmount(){
   }
 }
 
+const matchStateToProps = ({user}) => ({
+  currentUser:user.currentUser
+})
 const matchDispatchToProps = dispatch => ({
   setCurrentUser : user => dispatch(setCurrentUser (user))
 })
 
-export default connect(null, matchDispatchToProps)(withRouter( App));
+export default connect(matchStateToProps, matchDispatchToProps)(withRouter( App));
