@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import {auth} from '../../firebase/firebase.utils'
 import {connect} from "react-redux"
 
+import CartIcon from '../cart-icon/cart-icon.component'
 
 class Header extends React.Component {
   constructor(props){
@@ -22,7 +23,7 @@ class Header extends React.Component {
         <div className="header__right">
           <Link to= "/#"  className="header__link ">Home</Link>
           <Link to= "/collection/" className="header__link">Collection</Link>
-          <Link to= "/#" className="header__link">About</Link>
+          <Link to= "/#" className="header__link" >About</Link>
           {  
           //  console.log(this.props.currentUser)
 }
@@ -31,7 +32,11 @@ class Header extends React.Component {
 Logout
 </div>:
  <Link to="/login" className="header__link">Login </Link>
-}         <div className="hamburger" id="hamburger">
+}   
+<Link  to= "/#"  className="header__link "><CartIcon/></Link>    
+
+
+  <div className="hamburger" id="hamburger">
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>

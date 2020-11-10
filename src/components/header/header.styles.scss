@@ -15,6 +15,7 @@
   &__right {
     display: inherit;
     justify-content: center;
+    align-items: center;
     margin-left: auto;
 
     .hamburger {
@@ -41,6 +42,7 @@
   &__link {
     font-size: $font-size-small;
     color: $color-primary;
+    font-weight: 100;
     cursor: pointer;
     &:not(:last-child) {
       margin-right: 4rem;
