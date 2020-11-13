@@ -6,7 +6,7 @@ import {auth} from '../../firebase/firebase.utils'
 import {connect} from "react-redux"
 
 import CartIcon from '../cart-icon/cart-icon.component'
-
+import CartPreview from '../cart-preview/cart-preview.component'
 class Header extends React.Component {
   constructor(props){
     super(props)
@@ -42,6 +42,7 @@ Logout
             <span className="line"></span>
           </div>
         </div>
+        <CartPreview/> 
       </div>
     );
   }

@@ -1,0 +1,26 @@
+.cart-preview {
+  position: absolute;
+  height: 100vh;
+  width: 40vw;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  padding: 2rem;
+  background-color: white;
+
+  .cart-items {
+    height: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    // overflow-y: scroll;
+  }
+
+  button {
+    margin: auto auto 0 auto;
+
+    background-color: black;
+    color: white;
+    width: 50%;
+  }
+}
