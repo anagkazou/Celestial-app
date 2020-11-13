@@ -14,15 +14,16 @@
   height: 1.2vw;
   position: absolute;
   border-radius: 50%;
-  background-color: goldenrod;
-  top: -7px;
+  background-color: #6c4f23;
+  top: -8px;
   right: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   & span {
-    font-size: 1vw;
+    font-size: 0.8vw;
     color: white;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
