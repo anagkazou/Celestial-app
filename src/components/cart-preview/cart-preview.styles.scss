@@ -7,8 +7,17 @@
   z-index: 5;
   display: flex;
   padding: 2rem;
-  background-color: white;
-
+  background-color: rgb(235, 228, 228);
+  .btn--close {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: auto;
+    cursor: pointer;
+    img {
+      width: inherit;
+      height: auto;
+    }
+  }
   .cart-items {
     height: 2.4rem;
     display: flex;

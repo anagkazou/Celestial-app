@@ -17,7 +17,7 @@ class Header extends React.Component {
   }
   
   render() {
-    const currentUser = this.props.currentUser;
+    const {currentUser, hidden } = this.props;
     return (
       <div className="header">
         <div className="header__right">
@@ -42,13 +42,14 @@ Logout
             <span className="line"></span>
           </div>
         </div>
-        <CartPreview/> 
-      </div>
+{     hidden?   <CartPreview/>: null 
+}      </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  currentUser:state.user.currentUser
+const mapStateToProps = ({user:{currentUser}, cart:{hidden}}) => ({
+currentUser, 
+hidden
 })
 export default connect(mapStateToProps)( Header);
