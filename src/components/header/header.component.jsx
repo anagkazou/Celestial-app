@@ -42,7 +42,7 @@ Logout
             <span className="line"></span>
           </div>
         </div>
-{     hidden?   <CartPreview/>: null 
+{     hidden?   <CartPreview />: null 
 }      </div>
     );
   }
