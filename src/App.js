@@ -65,7 +65,7 @@ componentWillUnmount(){
           <Route exact path= "/"component= {Homepage} />
           <Route  path= "/login"  render= {() =>this.props.currentUser ? (<Redirect to= "/"/>) : <LogIn/>}  />
           <Route  path= "/signup" render= {() =>this.props.currentUser ? (<Redirect to= "/"/>) : <SignUp/>} />
-          <Route exact path= "/collection/" component= {Everything} />
+          <Route exact path= "/collections" component= {Everything} />
           <Route exact path= "/category/chairs" component= {Chairs} />
           <Route exact  path= "/category/lights" component= {Lights} />
           <Route exact  path= "/category/sofas" component= {Sofas} />

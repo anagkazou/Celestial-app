@@ -39,14 +39,12 @@
     }
   }
 
-  &__link {
+  &__item {
     font-size: $font-size-small;
     color: $color-primary;
     font-weight: 100;
     cursor: pointer;
-    &:not(:last-child) {
-      margin-right: 4rem;
-    }
+    margin-right: 4rem;
   }
 }
 

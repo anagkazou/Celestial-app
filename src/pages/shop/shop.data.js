@@ -10,12 +10,7 @@ const SHOP_DATA= [
                 imageUrl: "https://i.ibb.co/VTtFf7X/kerebi.jpg",
                 price: 25,
          },
-            {
-                id: 2,
-                name: "Monake",
-                imageUrl: "https://i.ibb.co/4VqTWm8/monake.jpg",
-                price: 25,
-         },
+            
             {
                 id: 3,
                 name: "Aphrodite",

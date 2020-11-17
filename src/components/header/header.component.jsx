@@ -8,9 +8,9 @@ import {connect} from "react-redux"
 import CartIcon from '../cart-icon/cart-icon.component'
 import CartPreview from '../cart-preview/cart-preview.component'
 class Header extends React.Component {
-  constructor(props){
-    super(props)
-  }
+  // constructor(props){
+  //   super(props)
+  // }
 
   componentDidMount() {
     InitHamburgerAnimation();
@@ -21,19 +21,19 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="header__right">
-          <Link to= "/#"  className="header__link ">Home</Link>
-          <Link to= "/collection/" className="header__link">Collection</Link>
-          <Link to= "/#" className="header__link" >About</Link>
+          <Link to= "/#"  className="header__item ">Home</Link>
+          <Link to= "/collections" className="header__item">Collection</Link>
+          <Link to= "/#" className="header__item" >About</Link>
           {  
           //  console.log(this.props.currentUser)
 }
 {         currentUser ?
-<div className="header__link" onClick= {() => auth.signOut()}>
+<div className="header__item" onClick= {() => auth.signOut()}>
 Logout
 </div>:
- <Link to="/login" className="header__link">Login </Link>
+ <Link to="/login" className="header__item">Login </Link>
 }   
-<Link  to= "/#"  className="header__link "><CartIcon/></Link>    
+<CartIcon />   
 
 
   <div className="hamburger" id="hamburger">
@@ -42,7 +42,7 @@ Logout
             <span className="line"></span>
           </div>
         </div>
-{     hidden?   <CartPreview />: null 
+{     hidden? null : <CartPreview /> 
 }      </div>
     );
   }

@@ -1,8 +1,8 @@
 @import "../../scss/variables.styles.scss";
 .furniture-item {
   width: calc(100vw / 20 * 3);
-  height: 30vw;
-  margin: 0 2.5vw;
+  height: 25vw;
+  margin: 0 2.5vw 4vw 2.5vw;
   cursor: pointer;
 
   &:nth-child(4n + 1) {
@@ -13,7 +13,7 @@
   }
 
   &__img {
-    height: 50%;
+    height: 15vw;
     background-size: cover;
   }
 

@@ -6,7 +6,7 @@ import ShoppingIcon from '../../assets/svg/shopping-cart.svg';
 import './cart-icon.styles.scss';
 
 const CartIcon = ({toggleCartHidden}) => (
-    <div className="cart-icon" onClick={toggleCartHidden}>
+    <div className="cart-icon header__item" onClick={toggleCartHidden}>
       <img src={`${ShoppingIcon}`} alt="React Logo" />
          <div className="pos-abs">
             <span className="item-count">0</span>
