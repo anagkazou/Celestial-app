@@ -1,9 +1,32 @@
 @import "../../scss/variables.styles.scss";
 .furniture-item {
+  position: relative;
   width: calc(100vw / 20 * 3);
   height: 25vw;
   margin: 0 2.5vw 4vw 2.5vw;
   cursor: pointer;
+
+  &:hover {
+    .furniture-item__img {
+      opacity: 0.8;
+    }
+
+    .button-container .custom-button {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+
+  // &:hover {
+  //   .image {
+  //     opacity: 0.8;
+  //   }
+
+  //   .custom-button {
+  //     opacity: 0.85;
+  //     display: flex;
+  //   }
+  // }
 
   &:nth-child(4n + 1) {
     margin-left: 0;
@@ -45,5 +68,30 @@
     font-size: 1.2vw;
     margin-left: auto;
     align-self: flex-end;
+  }
+
+  .button-container {
+    height: 15vw;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+    .custom-button {
+      position: absolute;
+      bottom: -0.8rem;
+      right: 50%;
+      z-index: 3;
+      opacity: 0;
+      margin-bottom: 1.2rem;
+      background-color: white;
+      color: #343433;
+      width: 60%;
+      border-radius: 0;
+      height: 15%;
+      transform: translateX(50%);
+      font-size: 1vw;
+      transition: all 0.3s;
+    }
   }
 }
