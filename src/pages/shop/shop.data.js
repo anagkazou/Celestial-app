@@ -114,56 +114,56 @@ const SHOP_DATA= [
         items: [
             {
             
-                id: 1,
+                id: 16,
                 name: "Victoria",
                 imageUrl: "https://i.ibb.co/z4svZrF/Victoria.jpg",
                 price: 199,           
         },
             {
             
-                id: 2,
+                id: 17,
                 name: "Dracai",
                 imageUrl: "https://i.ibb.co/wdFBNs4/dracai.jpg",
                 price: 199,           
         },
             {
             
-                id: 3,
+                id: 18,
                 name: "Jason",
                 imageUrl: "https://i.ibb.co/Fn7xzjJ/jason.jpg",
                 price: 199,           
         },
             {
             
-                id: 4,
+                id: 19,
                 name: "Hera",
                 imageUrl: "https://i.ibb.co/TmTqGFw/hera.jpg",
                 price: 199,           
         },
             {
             
-                id: 5,
+                id: 20,
                 name: "Odysseus",
                 imageUrl: "https://i.ibb.co/9nQkSJ3/odysseus.jpg",
                 price: 199,           
         },
             {
             
-                id: 6,
+                id: 21,
                 name: "Odysseus",
                 imageUrl: "https://i.ibb.co/9nQkSJ3/odysseus.jpg",
                 price: 199,           
         },
             {
             
-                id: 7,
+                id: 22,
                 name: "Gagrane",
                 imageUrl: "https://i.ibb.co/xX2j8nj/gagrane.jpg",
                 price: 199,           
         },
             {
             
-                id: 8,
+                id: 23,
                 name: "Gagrane",
                 imageUrl: "https://i.ibb.co/xX2j8nj/gagrane.jpg",
                 price: 199,           
@@ -177,13 +177,13 @@ const SHOP_DATA= [
         items: []
     },
     {
-        id:4,
+        id:24,
         category: "Stools", 
         routeName:"stools", 
         items: []
     },
     {
-        id:5,
+        id:25,
         category: "Ottomans", 
         routeName:"ottomans", 
         items: []
