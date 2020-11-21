@@ -18,6 +18,8 @@ import SHOP_DATA from '../../pages/shop/shop.data'
    
    
     render(){
+
+        //improve this declarations
      let itemsToRender =   this.props.itemsToRender;
      let furnitureItemsData = this.state.furniture;
         let isFiltered = this.props.filtered;
@@ -40,8 +42,8 @@ import SHOP_DATA from '../../pages/shop/shop.data'
                        <div className="showcase">
                            {
                              this.state.furniture.map(el =>(
-                               el.items.map(({id, imageUrl, name,price})=>{
-                            return  <ShopItem key= {id} imageUrl= {imageUrl} category = {el.category} name = {name} price = {price} ></ShopItem> 
+                               el.items.map(item =>{
+                            return  <ShopItem key= {item.id}  category = {el.category} item= { item} ></ShopItem> 
                         
                                                      }) 
                
@@ -72,8 +74,8 @@ import SHOP_DATA from '../../pages/shop/shop.data'
         <div className="showcase">
                            {
                                
-                               category.items.map(({id,imageUrl,name, price}) => {
-                               return  <ShopItem key= {id} imageUrl= {imageUrl} category = {category.category} name = {name} price = {price} ></ShopItem> })
+                               category.items.map(item => {
+                               return  <ShopItem key= {item.id} category = {category.category} item = {item} ></ShopItem> })
 
                        }
                     
