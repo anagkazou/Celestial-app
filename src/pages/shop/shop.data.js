@@ -6,6 +6,7 @@ const SHOP_DATA= [
         items: [
             {
                 id: 1,
+                category: "Chairs", 
                 name: "Kerebi",
                 imageUrl: "https://i.ibb.co/VTtFf7X/kerebi.jpg",
                 price: 25,
@@ -13,12 +14,14 @@ const SHOP_DATA= [
             
             {
                 id: 3,
+                category: "Chairs", 
                 name: "Aphrodite",
                 imageUrl: "https://i.ibb.co/HqFDK4Z/aphrodite.jpg",
                 price: 994,
          },
             {
                 id: 4,
+                category: "Chairs", 
                 name: "Ameira",
                 imageUrl: "https://i.ibb.co/9tF0C7D/Ameira.jpg",
                 price: 25,
@@ -26,59 +29,69 @@ const SHOP_DATA= [
             {
                 id: 5,
                 name: "Paris",
+                category: "Chairs", 
                 imageUrl: "https://i.ibb.co/B2XD5jH/paris.jpg",
                 price: 25,
          },
             {
                 id: 6,
                 name: "Orpheus",
+                category: "Chairs", 
                 imageUrl: "https://i.ibb.co/tpbL397/orpheus.jpg",
                 price: 789,
          },
             {
                 id: 7,
                 name: "Homer",
+                category: "Chairs", 
                 imageUrl: "https://i.ibb.co/2Pspvqc/homer.jpg",
                 price: 25,
          },
             {
                 id: 8,
                 name: "Hermes",
+                category: "Chairs", 
                 imageUrl: "https://i.ibb.co/bFgbn6p/Hermes.jpg",
                 price: 25,
          },
             {
                 id: 9,
                 name: "Icarus",
+                category: "Chairs", 
                 imageUrl: "https://i.ibb.co/zQf07yK/icarus.jpg",
                 price: 25,
          },
             {
                 id: 10,
                 name: "Marbisa",
+                category: "Chairs", 
                 imageUrl: "https://i.ibb.co/kqj9NjJ/mabrisa.jpg",
                 price: 25,
          },
             {
                 id: 11,
                 name: "Harshaw",
+                category: "Chairs", 
                 imageUrl: "https://i.ibb.co/F3p2rY1/harshaw.jpg",
                 price: 25,
          },
             {
                 id: 12,
                 name: "Leander",
+                category: "Chairs", 
                 imageUrl: "https://ibb.co/w7mkWwg",
                 price: 25,
          },
             {
                 id: 13,
+                category: "Chairs", 
                 name: "Brondon",
                 imageUrl: "https://i.ibb.co/7kRVNWF/brondon.jpg",
                 price: 25,
          },
             {
                 id: 14,
+                category: "Chairs", 
                 name: "Baerus",
                 imageUrl: "https://i.ibb.co/sR13b0N/baerus.jpg",
                 price: 25,
@@ -86,6 +99,7 @@ const SHOP_DATA= [
             {
                 id: 15,
                 name: "Athena",
+                category: "Chairs", 
                 imageUrl: "https://i.ibb.co/V2wMJvZ/athena.jpg",
                 price: 25,
          },
@@ -116,6 +130,7 @@ const SHOP_DATA= [
             
                 id: 16,
                 name: "Victoria",
+                category: "Lights",
                 imageUrl: "https://i.ibb.co/z4svZrF/Victoria.jpg",
                 price: 199,           
         },
@@ -123,6 +138,7 @@ const SHOP_DATA= [
             
                 id: 17,
                 name: "Dracai",
+                category: "Lights", 
                 imageUrl: "https://i.ibb.co/wdFBNs4/dracai.jpg",
                 price: 199,           
         },
@@ -130,6 +146,7 @@ const SHOP_DATA= [
             
                 id: 18,
                 name: "Jason",
+                category: "Lights", 
                 imageUrl: "https://i.ibb.co/Fn7xzjJ/jason.jpg",
                 price: 199,           
         },
@@ -137,6 +154,7 @@ const SHOP_DATA= [
             
                 id: 19,
                 name: "Hera",
+                category: "Lights", 
                 imageUrl: "https://i.ibb.co/TmTqGFw/hera.jpg",
                 price: 199,           
         },
@@ -144,30 +162,12 @@ const SHOP_DATA= [
             
                 id: 20,
                 name: "Odysseus",
+                category: "Lights", 
                 imageUrl: "https://i.ibb.co/9nQkSJ3/odysseus.jpg",
                 price: 199,           
         },
-            {
             
-                id: 21,
-                name: "Odysseus",
-                imageUrl: "https://i.ibb.co/9nQkSJ3/odysseus.jpg",
-                price: 199,           
-        },
-            {
             
-                id: 22,
-                name: "Gagrane",
-                imageUrl: "https://i.ibb.co/xX2j8nj/gagrane.jpg",
-                price: 199,           
-        },
-            {
-            
-                id: 23,
-                name: "Gagrane",
-                imageUrl: "https://i.ibb.co/xX2j8nj/gagrane.jpg",
-                price: 199,           
-        },
     ]
     },
     {
