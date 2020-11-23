@@ -1,0 +1,55 @@
+.cart-item {
+  display: flex;
+  flex-direction: row;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  img {
+    width: 8.4vw;
+    height: 8.4vw;
+    display: inline-block;
+  }
+
+  .item {
+    &-details {
+      align-items: center;
+      width: 100%;
+      padding: 1vw;
+      &__block {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &-name {
+      font-size: 1.6vw;
+      font-family: "Cormorant", sans-serif;
+    }
+    &-category {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      font-size: 0.6vw;
+      margin: 1vw 0;
+    }
+
+    &-price {
+      height: 1.2rem;
+      line-height: 2;
+      font-size: 1vw;
+    }
+
+    &-quantity {
+      font-size: 1vw;
+      line-height: 2.2;
+    }
+  }
+
+  .btn-delete {
+    cursor: pointer;
+    line-height: 3.2;
+    font-size: 0.8vw;
+    border-bottom: 1px solid #222;
+  }
+}

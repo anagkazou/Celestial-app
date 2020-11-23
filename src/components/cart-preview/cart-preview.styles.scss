@@ -1,7 +1,7 @@
 .cart-preview {
   position: fixed;
   height: 100vh;
-  width: 40vw;
+  width: 34vw;
   right: 0;
   top: 0;
   z-index: 5;
@@ -21,10 +21,13 @@
     }
   }
   .cart-items {
-    height: 2.4rem;
+    min-height: 2.4rem;
     display: flex;
+    overflow-y: scroll;
     flex-direction: column;
-    // overflow-y: scroll;
+    max-height: 65vh;
+    margin: auto 0;
+    overflow-y: scroll;
   }
 
   button {
