@@ -1,7 +1,8 @@
 .cart-item {
   display: flex;
   flex-direction: row;
-
+  border-bottom: 1px solid #a2a2a2;
+  margin: 1rem 3rem;
   &:not(:last-child) {
     margin-bottom: 2rem;
   }

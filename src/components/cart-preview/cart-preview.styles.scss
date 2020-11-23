@@ -7,34 +7,57 @@
   z-index: 5;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  background-color: rgb(235, 228, 228);
+  background-color: #f2f2f2;
 
-  .btn--close {
-    width: 1.4rem;
-    height: 1.4rem;
-    margin-left: auto;
-    cursor: pointer;
-    img {
-      width: inherit;
+  &__block--top {
+    display: flex;
+    margin: 8vh 1vw 1vh 1vw;
+    align-items: center;
+    padding: 0 2rem;
+    .cart-title {
+      font-size: 1.8vw;
+      font-family: "cormorant", sans-serif;
+      //font-weight: bold;
+    }
+
+    .btn--close {
+      width: 2rem;
       height: auto;
+      margin-left: auto;
+      cursor: pointer;
+
+      img {
+        width: inherit;
+        height: auto;
+      }
     }
   }
+  &__block--bottom {
+    position: relative;
+    margin: 4vh 0;
+    padding: 0 2vw;
+    .promo-text {
+      text-align: center;
+      font-size: 1.2vw;
+    }
+    button {
+      position: absolute;
+      left: 25%;
+      margin: 0.8vh auto 0 auto;
+      font-size: 1vw;
+      background-color: black;
+      color: white;
+      width: 50%;
+    }
+  }
+
   .cart-items {
     min-height: 2.4rem;
     display: flex;
     overflow-y: scroll;
     flex-direction: column;
     max-height: 65vh;
-    margin: auto 0;
+    margin: 1vh 0;
     overflow-y: scroll;
-  }
-
-  button {
-    margin: auto auto 0 auto;
-
-    background-color: black;
-    color: white;
-    width: 50%;
   }
 }
