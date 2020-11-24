@@ -3,7 +3,7 @@ import './cart-preview.styles.scss';
 import CloseButton from '../../assets/svg/cancel.svg';
 import CustomButton from '../custom-button/custom-button.component';
 import {connect} from 'react-redux';
-
+import {selectCartItems} from '../../redux/cart/cart.selectors'
 import {toggleCartHidden} from '../../redux/cart/cart.actions';
 
 import CartItem from '../cart-item/cart-item.component'
@@ -32,8 +32,8 @@ const CartPreview = ({toggleCartHidden, cartItems}) => (
     </div>
 )
 
-const mapStateToProps = ({cart: {cartItems}}) => ({
-cartItems})
+const mapStateToProps = state => ({
+cartItems:selectCartItems(state)})
 
 const mapDispatchToProps = dispatch => ({
     toggleCartHidden: () => dispatch(toggleCartHidden())
