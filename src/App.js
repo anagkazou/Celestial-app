@@ -12,12 +12,13 @@ import Sofas from './pages/shop/sofas.component';
 import Stools from './pages/shop/stools.components'
 import Lights from './pages/shop/lights.component';
 import Ottomans from './pages/shop/ottomans.component';
-
+import CheckoutPage from './pages/checkout/checkout.component'
 import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect'
 
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import { setCurrentUser } from "./redux/user/user.actions";
-
+import {selectCurrentUser} from './redux/user/user.selectors'
 class App extends React.Component {
   
 
@@ -70,15 +71,16 @@ componentWillUnmount(){
           <Route exact  path= "/category/lights" component= {Lights} />
           <Route exact  path= "/category/sofas" component= {Sofas} />
           <Route exact  path= "/category/stools" component= {Stools} />
-          <Route exact  path= "/category/ottomans" component= {Ottomans} />
+          <Route exact  path= "/checkout" component= {CheckoutPage} />
+
   </Switch>
       </div>
     );
   }
 }
 
-const matchStateToProps = ({user}) => ({
-  currentUser:user.currentUser
+const matchStateToProps =createStructuredSelector({
+  currentUser:selectCurrentUser
 })
 const matchDispatchToProps = dispatch => ({
   setCurrentUser : user => dispatch(setCurrentUser (user))

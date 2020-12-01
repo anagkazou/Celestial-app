@@ -15,7 +15,7 @@ $ {price}            </div>
             <div className="item-quantity">
                 {quantity} Piece(s)
             </div>        
-                    <div className="btn-delete">DELETE</div>
+                    <div className="btn-remove">REMOVE</div>
 
             </div>
         </div>

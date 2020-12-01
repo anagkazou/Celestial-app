@@ -59,5 +59,10 @@
     max-height: 65vh;
     margin: 1vh 0;
     overflow-y: scroll;
+
+    .empty-message {
+      margin: 20vh auto;
+      font-size: 1.6vw;
+    }
   }
 }
