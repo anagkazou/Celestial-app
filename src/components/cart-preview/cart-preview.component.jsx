@@ -38,7 +38,12 @@ const CartPreview = ({toggleCartHidden, cartItems,history}) => (
             cartItems.length ?
         <div className="cart-preview__block--bottom">
             <p className="promo-text">Sign up for 10% off your first order. Valid within two days of signup.</p>
-      <CustomButton onClick = {() => {history.push("/checkout")}}>CONTINUE TO CHECKOUT</CustomButton>
+      <CustomButton onClick = {toggleCartHidden => {
+          history.push("/checkout");
+         // mapDispatchToProps.toggleCartHidden;
+        }
+        }
+          >CONTINUE TO CHECKOUT</CustomButton>
         </div>
         :null
           }

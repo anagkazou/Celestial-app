@@ -2,8 +2,8 @@ import React from 'react';
 import './checkout.styles.scss'
 
 const CheckoutPage = ( ) =>( 
-    <div>
-        Checkout!
+    <div className = "checkout-page">
+        Checkout!!
     </div>
 );
 
