@@ -1,3 +1,46 @@
-.checkout-page {
+.checkout {
   color: white;
+  padding: 5vw 10vw;
+
+  .navigation {
+    height: 1vw;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    &-text {
+      font-size: 1vw;
+    }
+    &-arrow {
+      height: 2vw;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  &-container {
+    width: 100%;
+    height: fit-content;
+    background-color: antiquewhite;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .order-items {
+      padding: 1vw;
+      width: 55%;
+      height: 100%;
+      background-color: slategrey;
+    }
+    .order-summary {
+      padding: 1vw;
+      width: 40%;
+      height: 100%;
+
+      background-color: brown;
+    }
+  }
 }

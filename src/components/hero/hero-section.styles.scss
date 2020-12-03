@@ -1,7 +1,7 @@
 @import "../../scss/variables.styles.scss";
 
 .hero {
-  max-height: 110vh;
+  max-height: 85vh;
   width: 100vw;
   overflow-x: unset;
   background-color: black;
@@ -31,7 +31,7 @@
     margin-top: 2.6rem;
   }
   &__slider {
-    padding-top: 80vh;
+    padding-top: 65vh;
   }
   .center-text {
     text-align: center;
