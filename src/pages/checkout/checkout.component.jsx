@@ -4,14 +4,16 @@ import './checkout.styles.scss'
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
 import {selectCartItems} from '../../redux/cart/cart.selectors';
+import {selectCartTotal} from '../../redux/cart/cart.selectors';
 
 import LeftArrow from '../../assets/img/left-arrow.png'
 
+import CheckoutItem from '../../components/checkout-item/checkout-item.component'
 
 
-const CheckoutPage = ({cartI} ) =>( 
+const CheckoutPage = ({cartItems, total} ) =>( 
     <div className = "checkout">
-<a href={"/#"} className="navigation">
+<a href={"/collections"} className="navigation">
     <span className= "navigation-arrow">
         <img src={LeftArrow} alt="left-arr"/>
 </span>
@@ -21,8 +23,10 @@ const CheckoutPage = ({cartI} ) =>(
     
     <div className="checkout-container">
 
-        <div className="order-items">
-
+        <div className="checkout-items">
+{cartItems.map(cartItem => 
+<CheckoutItem key= {cartItem.id} cartItem= {cartItem} />
+   )}
         </div>
 
         <div className="order-summary">
@@ -35,6 +39,7 @@ const CheckoutPage = ({cartI} ) =>(
 
 const mapStateToProps = createStructuredSelector ({
     cartItems: selectCartItems,
+    total:selectCartTotal,
 })
 export default connect(mapStateToProps, null)(CheckoutPage);
 

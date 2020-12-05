@@ -21,15 +21,9 @@
     }
 
     .btn--close {
-      width: 2rem;
-      height: auto;
+      font-size: 1.8vw;
       margin-left: auto;
       cursor: pointer;
-
-      img {
-        width: inherit;
-        height: auto;
-      }
     }
   }
   &__block--bottom {

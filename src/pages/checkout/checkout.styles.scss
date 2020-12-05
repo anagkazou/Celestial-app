@@ -12,7 +12,7 @@
       font-size: 1vw;
     }
     &-arrow {
-      height: 2vw;
+      height: 1.2vw;
 
       img {
         height: 100%;
@@ -23,20 +23,21 @@
   &-container {
     width: 100%;
     height: fit-content;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    .order-items {
+    .checkout-items {
       padding: 1vw;
       width: 55%;
       height: 100%;
-      background-color: slategrey;
+      // background-color: slategrey;
     }
-    .order-summary {
-      padding: 1vw;
+   
+    .checkout-summary {
+      padding: 0.8vw;
       width: 40%;
       height: 100%;
 

@@ -14,22 +14,22 @@ import CartItem from '../cart-item/cart-item.component'
 
 
 
-const CartPreview = ({toggleCartHidden, cartItems,history}) => (
+const CartPreview = ({ cartItems,history, dispatch}) => (
     <div className="cart-preview">
 <div className="cart-preview__block--top">
                 <div className="cart-title">Shopping Cart</div>
-<div className="btn--close" onClick={toggleCartHidden}>
-            <img src={CloseButton} alt="close"/>
-        </div>
+<p className="btn--close" onClick={()=> dispatch(toggleCartHidden())}>
+        &#10005;     
+   </p>
 </div>
-
+        
         
         <div className="cart-items">
         {
             cartItems.length ?
             cartItems.map(cartItem => <CartItem key={cartItem.id} item = {cartItem}/>)
             : <div className="empty-message">
-                You have not items in your cart.
+                You have no items in your cart.
             </div>
         }
         </div>
@@ -40,9 +40,7 @@ const CartPreview = ({toggleCartHidden, cartItems,history}) => (
             <p className="promo-text">Sign up for 10% off your first order. Valid within two days of signup.</p>
       <CustomButton onClick = {() => {
           history.push("/checkout");
-         // mapDispatchToProps.toggleCartHidden;
-         dispatchEvent(toggleCartHidden())
-
+dispatch(toggleCartHidden())         
         }
         }
           >CONTINUE TO CHECKOUT</CustomButton>
@@ -55,8 +53,8 @@ const CartPreview = ({toggleCartHidden, cartItems,history}) => (
 const mapStateToProps = createStructuredSelector ({
 cartItems:selectCartItems})
 
-const mapDispatchToProps = dispatch => ({
-    toggleCartHidden: () => dispatch(toggleCartHidden())
-})
+// const mapDispatchToProps = dispatch => ({
+//     toggleCartHidden: () => dispatch(toggleCartHidden())
+// })
 
-export default  withRouter(connect(mapStateToProps, mapDispatchToProps)(CartPreview));
+export default  withRouter(connect(mapStateToProps, null)(CartPreview));
