@@ -9,7 +9,7 @@ import {selectCartTotal} from '../../redux/cart/cart.selectors';
 import LeftArrow from '../../assets/img/left-arrow.png'
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
-
+import CustomButton from '../../components/custom-button/custom-button.component';
 
 const CheckoutPage = ({cartItems, total} ) =>( 
     <div className = "checkout">
@@ -30,7 +30,28 @@ const CheckoutPage = ({cartItems, total} ) =>(
         </div>
 
         <div className="checkout-summary">
-            
+            <p className="checkout-summary__title">Order Summary</p>
+            <div className="checkout-summary__items">
+                <div className="checkout-summary__item">
+                    <span className= "checkout-summary__item--title">Subtotal</span>
+                    <span className= "checkout-summary__item--info">$232</span>
+                </div>
+                <div className="checkout-summary__item">
+                    <span className= "checkout-summary__item--title">Estimated Shipping</span>
+                    <span className= "checkout-summary__item--info">Free</span>
+                </div>
+                <div className="checkout-summary__item">
+                    <span className= "checkout-summary__item--title">Estimated Tax</span>
+                    <span className= "checkout-summary__item--info">$32</span>
+                </div>
+                <div className="checkout-summary__item">
+                    <span className= "checkout-summary__item--title">Estimated Total</span>
+                    <span className= "checkout-summary__item--total">$232</span>
+                </div>
+            </div>
+
+    <CustomButton>PAY NOW</CustomButton>
+
         </div>
     </div>
 
