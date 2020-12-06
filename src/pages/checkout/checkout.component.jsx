@@ -37,7 +37,7 @@ const CheckoutPage = ({cartItems, total} ) =>(
             <div className="checkout-summary__items">
                 <div className="checkout-summary__item">
                     <span className= "checkout-summary__item--title">Subtotal</span>
-                    <span className= "checkout-summary__item--info">$232</span>
+                    <span className= "checkout-summary__item--info">${total}</span>
                 </div>
                 <div className="checkout-summary__item">
                     <span className= "checkout-summary__item--title">Estimated Shipping</span>
@@ -45,11 +45,11 @@ const CheckoutPage = ({cartItems, total} ) =>(
                 </div>
                 <div className="checkout-summary__item">
                     <span className= "checkout-summary__item--title">Estimated Tax</span>
-                    <span className= "checkout-summary__item--info">$32</span>
+                    <span className= "checkout-summary__item--info">$0</span>
                 </div>
                 <div className="checkout-summary__item">
                     <span className= "checkout-summary__item--title">Estimated Total</span>
-                    <span className= "checkout-summary__item--total">$232</span>
+                    <span className= "checkout-summary__item--total">${total}</span>
                 </div>
             </div>
 
