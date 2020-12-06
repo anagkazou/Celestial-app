@@ -1,8 +1,13 @@
 import React from 'react'
 import "./cart-item.styles.scss"
 
-const CartItem = ({item: {imageUrl,price, name, quantity, category}}) => (
-    <div className="cart-item">
+import {connect} from 'react-redux';
+import {clearItemFromCart} from '../../redux/cart/cart.actions';
+
+const CartItem = ({item, clearItem }) => {
+
+const {imageUrl,price, name, quantity, category} = item
+  return ( <div className="cart-item">
         <img src={imageUrl} alt="item"/>
         <div className="item-details">
             <div className="item-details__block">
@@ -15,11 +20,14 @@ $ {price}            </div>
             <div className="item-quantity">
                 {quantity} Piece(s)
             </div>        
-                    <div className="btn-remove">REMOVE</div>
+                    <div className="btn-remove"
+                     onClick= {() => clearItem(item)}>REMOVE</div>
 
             </div>
         </div>
-    </div>
-);
+    </div>)}
 
-export default CartItem;
+const mapDispatchToProps = dispatch => (
+{    clearItem: item => dispatch(clearItemFromCart(item))
+});
+export default connect(null, mapDispatchToProps)(CartItem);

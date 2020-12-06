@@ -11,7 +11,6 @@ import LeftArrow from '../../assets/img/left-arrow.png'
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
 import CustomButton from '../../components/custom-button/custom-button.component';
 
-import {clearItemFromCart} from '../../redux/cart/cart.actions';
 
 
 
@@ -66,9 +65,7 @@ const mapStateToProps = createStructuredSelector ({
     cartItems: selectCartItems,
     total:selectCartTotal,
 });
-const mapDispatchToProps = dispatch => ({
-    clearItem: item => dispatch(clearItemFromCart(item))
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(CheckoutPage);
+
+export default connect(mapStateToProps, null)(CheckoutPage);
 

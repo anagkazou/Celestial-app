@@ -2,7 +2,6 @@ import React from 'react';
 import './cart-preview.styles.scss';
 import {withRouter} from 'react-router-dom'
 
-import CloseButton from '../../assets/svg/cancel.svg';
 import CustomButton from '../custom-button/custom-button.component';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect'
