@@ -3,7 +3,7 @@
 .section__browse-collections {
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: $color-bg;
   .title {
     text-align: center;
   }
@@ -46,6 +46,8 @@
     display: block;
     text-align: center;
     text-transform: capitalize;
+    color: $color-secondary;
+
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
@@ -57,7 +59,7 @@
   .btn__text {
     margin-top: 4rem;
     text-align: center;
-    color: white;
+    color: $color-secondary;
     letter-spacing: 0.1em;
     transition: letter-spacing 0.3s ease;
 

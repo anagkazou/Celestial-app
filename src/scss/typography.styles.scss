@@ -11,7 +11,7 @@ h4,
 
 h1 {
   font-size: 9.4rem;
-  color: white;
+  color: $color-text-primary;
 }
 
 .title {
@@ -22,7 +22,7 @@ h1 {
   letter-spacing: 0.3em;
 
   &__sub {
-    color: $color-primary;
+    color: $color-secondary;
     line-height: 100%;
     font-size: 4.4vw;
     line-height: 90%;
@@ -36,7 +36,7 @@ h1 {
       position: absolute;
       width: 6.4rem;
       height: 1px;
-      background-color: $color-primary;
+      background-color: $color-secondary;
       bottom: -1rem;
     }
     span {

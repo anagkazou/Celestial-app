@@ -14,7 +14,7 @@
     &__details {
       width: 70%;
       height: fit-content;
-      padding-left: 2vw;
+      padding-left: 1.6vw;
 
       .top,
       .bottom {
@@ -42,11 +42,11 @@
     text-transform: uppercase;
     margin: .8vw 0;
     color: #929292;
-
+    font-weight: 600;
 }
     &__quantity,
     &__price {
-      font-size: 1.2vw;
+      font-size: 1vw;
     }
 
     &__quantity {

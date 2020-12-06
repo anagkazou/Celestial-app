@@ -7,11 +7,11 @@
 
 .shop__title {
   font-size: 5.4vw;
-  color: white;
+  color: $color-text-primary;
   text-transform: none;
 
   &--sub {
-    color: white;
+    color: $color-text-primary;
     line-height: 100%;
     text-transform: uppercase;
     font-size: 0.8vw;
