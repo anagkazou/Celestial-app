@@ -1,3 +1,4 @@
+@import '../../scss/variables.styles.scss';
 .checkout {
   color: white;
   padding: 6vw 16vw;
@@ -7,6 +8,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
+    color: $color-black;
 
     &-text {
       font-size: 1vw;
@@ -23,7 +25,6 @@
   &-container {
     width: 100%;
     height: fit-content;
-    // background-color: antiquewhite;
 
     display: flex;
     flex-direction: row;
@@ -34,7 +35,6 @@
       padding: 1vw;
       width: 65%;
       height: 100%;
-      // background-color: slategrey;
     }
    
     .checkout-summary {
@@ -43,7 +43,8 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      background-color: #0d0d0d;
+      background-color: $color-white-secondary;
+      color: $color-black;
 
       &__title{
         font-weight: 600;
@@ -60,7 +61,7 @@
       justify-content: space-between;
       border-bottom: 1px #76767640 solid;
       padding: 1.2vw 0;
-      font-size: .8vw;
+      font-size: 1vw;
 
         &--title{
 
@@ -75,13 +76,16 @@
 
       }
         button{
-          width: 35%;
+          width: 45%;
           align-self: center;  
           margin-top: 2vw;
           font-size: .8vw;
-          background-color: white;
-          color: black;
+          background-color: $color-primary;
+          color: white;
           font-weight: 600;
+          &:hover{
+            border: none;    
+                }
         }
     }
   }

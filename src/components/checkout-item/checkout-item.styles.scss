@@ -1,10 +1,12 @@
+@import '../../scss/variables.styles.scss';
+
 .checkout-item {
     padding: 1vw 0;
     display: flex;
     flex-direction: row;
 
     &:not(:last-child){
-        border-bottom: 1px #2b2b2b solid;
+        border-bottom: 1px #cccccc solid;
     }
 
     img {
@@ -37,6 +39,7 @@
     &__name {
       font-family: "Cormorant", serif;
       font-size: 1.5vw;
+      color: $color-black;
     }
 &__category{
     text-transform: uppercase;
@@ -47,6 +50,7 @@
     &__quantity,
     &__price {
       font-size: 1vw;
+      color: $color-black;
     }
 
     &__quantity {
