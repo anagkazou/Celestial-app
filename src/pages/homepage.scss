@@ -34,13 +34,13 @@
     .img {
       &-1 {
         width: auto;
-        height: 60rem;
+        height: 40vw;
       }
 
       &-2 {
         position: absolute;
-        width: 22rem;
-        height: 36rem;
+        width: 18vw;
+        height: 24vw;
         left: -25%;
         bottom: 20%;
         z-index: 2;
