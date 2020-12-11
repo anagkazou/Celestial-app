@@ -11,39 +11,19 @@ import {
   imgOtto,
 } from "../../assets/img/images";
 
-class CollectionPreview extends React.Component {
-  constructor(){
-    super();
+import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect';
 
-    this.state = {
-      collections: [
-        {
-            id:1,
-            urlTitle: "chairs"
-        },
-        {
-            id:2,
-            urlTitle: "lights"
-        },
-        {
-            id:3,
-            urlTitle: "sofas"
-        },
-        {
-            id:4,
-            urlTitle: "stools"
-        },
-        {
-            id:5,
-            urlTitle: "ottomans"
-        },
-    ]
-    }
-  }
+import {selectDirectorySection} from '../../redux/directory/directory.selector';
+
+class CollectionPreview extends React.Component {
+  
   componentDidMount() {
     InitPreviewAnimation();
   }
+  
   render() {
+console.log(this.props);
     return (
       <section className="section__browse-collections">
         <p className="title">Browse Collections</p>
@@ -141,7 +121,7 @@ class CollectionPreview extends React.Component {
               Ottomans
             </Link> */}
 {
-  this.state.collections.map(({id, urlTitle }) => {
+  this.props.collections.map(({id, urlTitle }) => {
   return <Link to={`/${urlTitle}`} id= {id} key= {id} className= "collection-title" >{urlTitle}</Link>
   })
 }
@@ -216,4 +196,7 @@ class CollectionPreview extends React.Component {
   }
 }
 
-export default CollectionPreview;
+const mapStateToProps = createStructuredSelector({
+  collections: selectDirectorySection
+});
+export default  connect(mapStateToProps)(CollectionPreview);

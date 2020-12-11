@@ -79,7 +79,7 @@ const SHOP_DATA= [
                 id: 12,
                 name: "Leander",
                 category: "Chairs", 
-                imageUrl: "https://ibb.co/w7mkWwg",
+                imageUrl: "https://i.ibb.co/qCQSsWj/Leander.jpg",
                 price: 25,
          },
             {
