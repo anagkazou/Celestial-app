@@ -8,6 +8,8 @@ import {connect} from "react-redux"
 import {createStructuredSelector} from 'reselect'
 
 import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { setCurrentUser } from "../../redux/user/user.actions";
+
 import { selectCartHidden  } from "../../redux/cart/cart.selectors";
 import CartIcon from '../cart-icon/cart-icon.component'
 import CartPreview from '../cart-preview/cart-preview.component'
@@ -32,7 +34,9 @@ class Header extends React.Component {
           //  console.log(this.props.currentUser)
 }
 {         currentUser ?
-<div className="header__item" onClick= {() => auth.signOut()}>
+<div className="header__item" onClick= {() =>{ 
+  auth.signOut()
+  }}>
 Logout
 </div>:
  <Link to="/login" className="header__item">Login </Link>
@@ -55,5 +59,9 @@ Logout
 const mapStateToProps = createStructuredSelector ({
 currentUser:selectCurrentUser, 
 hidden: selectCartHidden
-})
-export default connect(mapStateToProps)( Header);
+});
+
+const matchDispatchToProps = dispatch => ({
+  setCurrentUser : user => dispatch(setCurrentUser (user))
+});
+export default connect(mapStateToProps, matchDispatchToProps)( Header);

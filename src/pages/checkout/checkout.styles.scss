@@ -54,6 +54,13 @@
 
       &__items{
         
+        button > span{     
+            background-image: none !important;
+
+                // background-color: $color-primary !important;
+
+          }
+        
       }
 
       &__item{
