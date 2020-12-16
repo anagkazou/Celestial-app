@@ -3,7 +3,7 @@
 
 .section__browse-collections {
   width: 100vw;
-  height: 100vh;
+ max-height: 100vh;
   background-color: $color-bg;
 
   @include respond(tab-land){
@@ -73,7 +73,7 @@
   }
 
   .btn__text {
-    margin-top: 4rem;
+    margin-top: 2.2vw;
     text-align: center;
     color: $color-secondary;
     letter-spacing: 0.1em;

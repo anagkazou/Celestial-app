@@ -4,7 +4,7 @@ import Hero from "../components/hero/hero.component";
 import { imgAbout1, imgAbout2 } from "../assets/img/images";
 import CollectionPreview from "../components/collections-preview/collections-preview.component";
 const HomePage = () => (
-  <div>
+  <React.Fragment>
     <Hero />
 
     <section className="section__about">
@@ -28,7 +28,6 @@ const HomePage = () => (
       </div>
     </section>
     <CollectionPreview />
-  </div>
-);
+    </React.Fragment>);
 
 export default HomePage;

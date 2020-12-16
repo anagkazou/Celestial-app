@@ -15,7 +15,7 @@ h1 {
   color: $color-text-primary;
 
   @include respond (phone){
-    font-size: 14.2vw;
+    font-size: 13.2vw;
   }
 }
 
@@ -24,11 +24,10 @@ h1 {
   font-weight: 400;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  color: white;
   letter-spacing: 0.3em;
 
   @include respond (phone){
-    font-size: 3vw;
+    font-size: 2.6vw;
   }
 
   &__sub {
@@ -49,7 +48,7 @@ h1 {
       width: 6vw;
       height: 1px;
       background-color: $color-secondary;
-      bottom: -1rem;
+      bottom: -2vw;
 
       @include respond(phone){
         width: 18vw;
@@ -62,12 +61,13 @@ h1 {
 }
 
 .collection-title {
-  font-size: $font-size-large-mobile;
+  font-size: $font-size-large;
+
   color: $color-primary;
   font-weight: 400;
   font-family: "Cormorant", serif;
 
   @include respond (phone){
-    font-size: 14.2vw;
+    font-size: $font-size-large-mobile;
   }
 }

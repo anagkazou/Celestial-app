@@ -32,8 +32,8 @@
     font-size: 1.6vw;
     color: $color-text-primary;
     @include respond(phone){
-     font-size: 6vw;
-      padding: 3.4vw 6vw;
+     font-size: 5vw;
+      padding: 1vw 10vw;
       font-weight: 100;
   }
 
@@ -49,9 +49,9 @@
     margin-top: 2.6rem;
 
     @include respond(phone){
-      padding: 3.4vw 6vw;
+      padding: 2.6vw 6vw;
       font-size: $font-size-button-mobile;
-      font-weight: 100;
+      font-weight: 200;
   }
   }
   &__slider {
