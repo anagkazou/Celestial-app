@@ -1,11 +1,21 @@
 @import "../../scss/variables.styles.scss";
+@import '../../scss/mixins.scss';
 
 .section__browse-collections {
   width: 100vw;
   height: 100vh;
   background-color: $color-bg;
+
+  @include respond(tab-land){
+    height: 70vh;
+  }
+  @include respond(tab-port){
+    height: 40vh;
+  }
+
   .title {
     text-align: center;
+    color: $color-black;
   }
   .preview {
     width: inherit;
@@ -17,7 +27,10 @@
       width: 20%;
       height: 100%;
       flex-direction: column;
-      padding-top: 4rem;
+      padding-top: 3vw;
+      @include respond (phone){
+       width: 100%;
+      }
     }
 
     &__left,
@@ -25,6 +38,9 @@
       width: 40%;
       height: 100%;
       position: relative;
+      @include respond (phone){
+      display: none;    
+        }
 
       & > * {
         position: absolute;
@@ -49,7 +65,7 @@
     color: $color-secondary;
 
     &:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: .4vw;
     }
     &:hover {
       font-style: italic;

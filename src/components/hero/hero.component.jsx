@@ -1,7 +1,7 @@
 import React from "react";
 import "./hero-section.styles.scss";
 import { Link } from "react-router-dom";
-import SlickSlider from "../slider.component";
+import SlickSlider from "../slider/slider.component";
 const Hero = () => (
   <div className="position-relative-wrap">
     <div className="hero">

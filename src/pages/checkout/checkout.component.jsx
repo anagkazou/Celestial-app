@@ -12,7 +12,7 @@ import LeftArrow from '../../assets/img/left-arrow.png'
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
 import CustomButton from '../../components/custom-button/custom-button.component';
 
-import StripeCheckoutButton from '../../components/stripe-button/stripe-button.ocmponent'
+//import StripeCheckoutButton from '../../components/stripe-button/stripe-button.ocmponent'
 
 //import {useFlutterwave, closePaymentModal} from 'flutterwave-react-v3';
 

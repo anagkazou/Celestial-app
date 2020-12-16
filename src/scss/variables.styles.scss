@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 $color-primary: #6C4F23;
 $color-secondary: #191919;
 $color-dark-grey: #4a4a4a;
@@ -9,8 +11,11 @@ $color-white-secondary: #eeeeee;
 $color-bg: #f3f2f2;
 $color-text-primary: #000;
 // $color-secondary: #062a35;
-$font-size-button: 1.2rem;
+$font-size-button: 1vw;
+$font-size-button-mobile: 4vw;
 $font-size-small: 1vw;
-$font-size-medium: 1.8vw;
-$font-size-large: 6rem;
+$font-size-small-mobile: 5.2vw;
 
+$font-size-medium: 1.8vw;
+$font-size-large: 5vw;
+$font-size-large-mobile: 8vw;

@@ -1,4 +1,5 @@
 @import "../../scss/variables.styles.scss";
+@import "../../scss/mixins.scss";
 
 .hero {
   max-height: 85vh;
@@ -6,6 +7,14 @@
   overflow-x: unset;
   background-color: $color-bg;
   position: relative;
+   @include respond(tab-land){
+        max-height: 40vh;
+    }
+   @include respond(phone){
+        max-height: 80vh;
+        min-height: 80vh;
+    }
+
   &__container {
     // display: flex;
     // justify-content: center;
@@ -15,24 +24,48 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 5;
+   
   }
 
   &__sub {
     font-size: 1.6vw;
     color: $color-text-primary;
+    @include respond(phone){
+     font-size: 6vw;
+      padding: 3.4vw 6vw;
+      font-weight: 100;
+  }
+
   }
 
   &__cta {
     display: inline-block;
     background-color: $color-primary;
     color: white;
-    padding: 2rem 6rem;
+    padding: 1.4vw 3vw;
     font-weight: bold;
     font-size: $font-size-button;
     margin-top: 2.6rem;
+
+    @include respond(phone){
+      padding: 3.4vw 6vw;
+      font-size: $font-size-button-mobile;
+      font-weight: 100;
+  }
   }
   &__slider {
     padding-top: 65vh;
+
+    @include respond(tab-land){
+        padding-top: 30vh;
+
+    }
+    @include respond(phone){
+        padding-top: 63vh;
+
+    }
+
   }
   .center-text {
     text-align: center;

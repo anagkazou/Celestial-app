@@ -1,8 +1,9 @@
 @import "../../scss/variables.styles.scss";
+@import '../../scss/mixins.scss';
 
 .header {
   width: 100vw;
-  height: 10rem;
+  height: 10vw;
   position: sticky;
   background-color: transparent;
   top: 0;
@@ -12,6 +13,10 @@
 
   align-items: center;
 
+        @include respond(phone){
+          height: 26vw;
+        }
+  
   &__right {
     display: inherit;
     justify-content: center;
@@ -23,17 +28,24 @@
         cursor: pointer;
       }
       & .line {
-        width: 3.2rem;
+        width: 2.2vw;
         height: 1px;
-        background-color: #386672;
+        background-color: black;
         display: block;
 
         -webkit-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
 
+        @include respond(phone){
+          width: 8vw;
+        }
+
         &:nth-child(2) {
-          margin: 0.6rem 0;
+          margin: 0.6vw 0;
+          @include respond(phone){
+            margin: 1.4vw 0;
+          }
         }
       }
     }
@@ -44,7 +56,12 @@
     color: $color-black;
     font-weight: 300;
     cursor: pointer;
-    margin-right: 4rem;
+    margin-right: 2vw;
+
+    @include respond(phone){
+      
+    display: none;
+     }
   }
 }
 
@@ -53,15 +70,15 @@
 }
 
 #hamburger.is-active .line:nth-child(1) {
-  -webkit-transform: translateY(0.8rem) rotate(45deg);
-  -ms-transform: translateY(0.8rem) rotate(45deg);
-  -o-transform: translateY(0.8rem) rotate(45deg);
-  transform: translateY(0.8rem) rotate(45deg);
+  -webkit-transform: translateY(0.8vw) rotate(45deg);
+  -ms-transform: translateY(0.8vw) rotate(45deg);
+  -o-transform: translateY(0.8vw) rotate(45deg);
+  transform: translateY(0.8vw) rotate(45deg);
 }
 
 #hamburger.is-active .line:nth-child(3) {
-  -webkit-transform: translateY(-0.6rem) rotate(-45deg);
-  -ms-transform: translateY(-0.6rem) rotate(-45deg);
-  -o-transform: translateY(-0.6rem) rotate(-45deg);
-  transform: translateY(-0.6rem) rotate(-45deg);
+  -webkit-transform: translateY(-0.6vw) rotate(-45deg);
+  -ms-transform: translateY(-0.6vw) rotate(-45deg);
+  -o-transform: translateY(-0.6vw) rotate(-45deg);
+  transform: translateY(-0.6vw) rotate(-45deg);
 }

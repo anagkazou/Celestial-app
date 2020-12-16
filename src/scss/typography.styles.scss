@@ -1,4 +1,5 @@
 @import "./variables.styles.scss";
+@import "./mixins.scss";
 
 h1,
 h2,
@@ -12,14 +13,23 @@ h4,
 h1 {
   font-size: 8.2vw;
   color: $color-text-primary;
+
+  @include respond (phone){
+    font-size: 14.2vw;
+  }
 }
 
 .title {
   font-size: 0.8vw;
+  font-weight: 400;
   margin-bottom: 2rem;
   text-transform: uppercase;
   color: white;
   letter-spacing: 0.3em;
+
+  @include respond (phone){
+    font-size: 3vw;
+  }
 
   &__sub {
     color: $color-secondary;
@@ -29,15 +39,21 @@ h1 {
     margin-bottom: 4rem;
     font-weight: 200;
     position: relative;
-
+    @include respond(phone){
+      font-size: 14vw;
+    }
     &::after {
       content: " ";
       display: block;
       position: absolute;
-      width: 6.4rem;
+      width: 6vw;
       height: 1px;
       background-color: $color-secondary;
       bottom: -1rem;
+
+      @include respond(phone){
+        width: 18vw;
+      }
     }
     span {
       font-style: italic;
@@ -46,7 +62,12 @@ h1 {
 }
 
 .collection-title {
-  font-size: $font-size-large;
+  font-size: $font-size-large-mobile;
   color: $color-primary;
+  font-weight: 400;
   font-family: "Cormorant", serif;
+
+  @include respond (phone){
+    font-size: 14.2vw;
+  }
 }

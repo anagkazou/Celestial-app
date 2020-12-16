@@ -1,49 +1,84 @@
 @import "../scss/variables.styles.scss";
+@import '../scss//mixins.scss';
 
 .section__about {
-  padding: 50rem 0 20rem 0;
+  padding: 36vw 0 20vw 0;
   min-height: 100vh;
   max-width: 100vw;
   background-color: $color-bg;
 
+  @include respond(tab-land){
+    min-height: 70vh;
+
+  }
+  @include respond(phone){
+    padding: 70vw 0 20vw 0;
+
+  }
   .about__content {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 15%;
 
+    @include respond(phone){
+      flex-direction: column-reverse;
+    }
     &--text {
-      width: 20rem;
+      width: 16vw;
+      @include respond(phone){
+        width: 66vw;
+        margin-top: 16vw;
+        margin-right: auto;
+      }
     }
     .title {
       color: $color-secondary;
-      margin-bottom: 2.6rem;
+      margin-bottom: 2vw;
+      @include respond(phone){
+        font-size: 2.8vw;
+        margin-bottom: 4vw;
+      }
     }
     .paragraph {
       color: $color-secondary;
       font-size: $font-size-small;
       line-height: 1.6em;
+      @include respond(phone){
+        font-size: $font-size-small-mobile;
+      }
     }
 
     &--img {
       margin-left: auto;
       width: fit-content;
       position: relative;
+
+      @include respond(phone){
+        margin-left: 16vw;
+      }
     }
 
     .img {
       &-1 {
         width: auto;
         height: 40vw;
+        @include respond(phone){
+          height: 80vw;
+        }
       }
 
       &-2 {
         position: absolute;
-        width: 18vw;
+        width: 30vw;
         height: 24vw;
         left: -25%;
-        bottom: 20%;
+        bottom: 35%;
         z-index: 2;
+
+        @include respond(phone){
+          height: 42vw;
+        }
       }
     }
   }
