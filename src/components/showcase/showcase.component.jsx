@@ -29,7 +29,7 @@ import SHOP_DATA from '../../pages/shop/shop.data'
         return(<>        
             <div className="filter">
                            <ul>
-                               <li><Link to= "/collection">Everything</Link></li>
+                               <li><Link to= "/collections">Everything</Link></li>
                                {
                                    furnitureItemsData.map(({category})=>(
                                    <li>   <Link key={category.id} to= {`/category/${category.toLowerCase()}`}>{category}</Link></li>
