@@ -5,13 +5,11 @@
   width: 100vw;
  max-height: 100vh;
   background-color: $color-bg;
-
+margin-bottom: 10vw;
   @include respond(tab-land){
-    height: 70vh;
+   // max-height: 90vh;
   }
-  @include respond(tab-port){
-    height: 40vh;
-  }
+  
 
   .title {
     text-align: center;
@@ -36,7 +34,7 @@
     &__left,
     &__right {
       width: 40%;
-      height: 100%;
+      height: initial;
       position: relative;
       @include respond (phone){
       display: none;    
@@ -54,6 +52,7 @@
       .img__small {
         width: 35%;
         height: auto;
+        
       }
     }
   }
@@ -63,7 +62,7 @@
     text-align: center;
     text-transform: capitalize;
     color: $color-secondary;
-
+    
     &:not(:last-child) {
       margin-bottom: .4vw;
     }

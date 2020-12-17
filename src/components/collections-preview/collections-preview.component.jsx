@@ -36,13 +36,7 @@ console.log(this.props);
               style={{ left: "50%", top: "12%", opacity: "1" }}
               id="1"
             />
-            <img
-              alt=""
-              src={imgChair.third}
-              className="img__small"
-              style={{ bottom: "20%", left: "20%", opacity: "1" }}
-              id="1"
-            />{" "}
+            
             <img
               alt=""
               src={imgLight.third}
@@ -66,7 +60,7 @@ console.log(this.props);
               alt=""
               src={imgSofa.second}
               className="img__large"
-              style={{ right: "45%", top: "10%", opacity: "0" }}
+              style={{ right: "45%", top: "-10%", opacity: "0" }}
               id="3"
             />
             <img

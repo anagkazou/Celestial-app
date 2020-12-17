@@ -70,14 +70,15 @@
 
       &-2 {
         position: absolute;
-        width: 30vw;
+        width: 16vw;
         height: 24vw;
         left: -25%;
-        bottom: 35%;
+        bottom: 30%;
         z-index: 2;
 
         @include respond(phone){
           height: 42vw;
+          width: 30vw;
         }
       }
     }
