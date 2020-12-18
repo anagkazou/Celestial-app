@@ -9,6 +9,7 @@
     margin: 0 calc(100vw / 12 * 1);
     border-bottom: 1px solid black;
     padding-bottom: 1vw;
+    padding-top: 36vw;
   }
 }
 
@@ -24,6 +25,22 @@
     font-size: 13vw;
   }
 
+  &--icon{
+    display: none;
+position: relative;
+    img{
+      width: 8vw;
+      height: 8vw;
+    }
+    @include respond(phone){
+      position: absolute;
+      right: 0;
+      font-size: 13vw;
+      margin-right: 0;
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
   &--sub {
     color: $color-text-primary;
     line-height: 100%;

@@ -7,6 +7,7 @@ export const fifth = require("./carousel-5.png");
 export const imgAbout1 = require("./about-1.jpg");
 export const imgAbout2 = require("./about-2.jpg");
 
+
 export const imgChair = {
   first: require("./chair-1.jpg"),
   second: require("./chair-2.jpg"),
@@ -32,3 +33,5 @@ export const imgOtto = {
   second: require("./otto-2.jpg"),
   third: require("./otto-3.jpg"),
 };
+
+export const iconArrow = require("./arrow-down.png");

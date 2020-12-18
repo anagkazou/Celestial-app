@@ -17,6 +17,7 @@
     margin-top: unset;
     top: 0;
     z-index: 9;
+    display: none;
 }
 
     &__hide{
@@ -31,7 +32,7 @@
       color: $color-dark-grey;
       display: none;
       cursor: pointer;
-      
+
       @include respond(phone){
         display: block;
          } 
@@ -67,10 +68,14 @@
     @include respond(phone){
       margin: 24vw calc(100vw / 12 * 1) 19.444vw;
       width: calc(100vw / 12 * 10);
+      margin-left: 0;
     }
 
     &-container{
       margin: 9.375vw calc(100vw / 20 * 1);
 
+      @include respond(phone){
+        margin: 27.778vw calc(100vw / 12 * 1) 19.444vw;
+      }
     }
 }
