@@ -27,7 +27,9 @@ import SHOP_DATA from '../../pages/shop/shop.data'
 
       if (!isFiltered)  {
         return(<>        
-            <div className="filter">
+            <div className="filter">        
+                    <div className="filter__hide" onClick= {() => {}}>&#10005;</div>
+                     <div className="title">Browse Collections</div>
                            <ul>
                                <li><Link to= "/collections">Everything</Link></li>
                                {
@@ -39,19 +41,19 @@ import SHOP_DATA from '../../pages/shop/shop.data'
                            
                            </ul>
                        </div>
-                       <div className="showcase">
+                       <div className="showcase-container">
+                           <div className="showcase">
                            {
                              this.state.furniture.map(el =>(
                                el.items.map(item =>{
                             return  <ShopItem key= {item.id}  category = {el.category} item= { item} ></ShopItem> 
-                        
-                                                     }) 
+                               }) 
                
                            ) )    
                        }
-                                       </div>
-           
-                                       
+                         </div>
+                       </div>
+                                                              
                            </>         );
 
                            
@@ -71,15 +73,18 @@ import SHOP_DATA from '../../pages/shop/shop.data'
             
             </ul>
         </div>
-        <div className="showcase">
+        <div className="showcase-container">
+            <div className="showcase">
                            {
-                               
-                               category.items.map(item => {
+                            category.items.map(item => {
                                return  <ShopItem key= {item.id} category = {category.category} item = {item} ></ShopItem> })
 
                        }
                     
                                        </div>
+
+        </div>
+        
 </>
            )
       

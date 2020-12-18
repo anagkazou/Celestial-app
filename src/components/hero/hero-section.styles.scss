@@ -2,16 +2,17 @@
 @import "../../scss/mixins.scss";
 
 .hero {
-  max-height: 85vh;
+  max-height: 100vh;
   width: 100vw;
   overflow-x: unset;
   background-color: $color-bg;
   position: relative;
-   @include respond(tab-land){
-        max-height: 40vh;
-    }
+  //  @include respond(tab-land){
+  //       max-height: 60vh;
+  //   }
+   
    @include respond(phone){
-        max-height: 80vh;
+        max-height: 100vh;
         min-height: 80vh;
     }
 
@@ -55,14 +56,18 @@
   }
   }
   &__slider {
-    padding-top: 65vh;
+    padding-top: 75vh;
 
-    @include respond(tab-land){
-        padding-top: 30vh;
+    // @include respond(tab-land){
+    //     padding-top: 38vh;
+
+    // }
+    @include respond(tab-port){
+        padding-top: 34vh;
 
     }
     @include respond(phone){
-        padding-top: 63vh;
+        padding-top: 74vh;
 
     }
 

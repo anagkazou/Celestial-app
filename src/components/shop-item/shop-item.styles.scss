@@ -1,4 +1,6 @@
 @import "../../scss/variables.styles.scss";
+@import "../../scss/mixins.scss";
+
 .furniture-item {
   position: relative;
   width: calc(100vw / 20 * 3);
@@ -6,6 +8,19 @@
   margin: 0 2.5vw 4vw 2.5vw;
   cursor: pointer;
 
+
+  @include respond(phone){
+      width: calc(100vw / 12 * 4.5);
+      height: 70vw;
+      margin: unset;
+
+     &:nth-child(odd) {
+        margin-right: calc(100vw / 12 * 0.5);
+    }
+
+    &:nth-child(even) {
+      margin-left: calc(100vw / 12 * 0.5);
+    }
   &:hover {
     .furniture-item__img {
       opacity: 0.8;
@@ -18,16 +33,25 @@
   }
 
 
+  }
   &:nth-child(4n + 1) {
     margin-left: 0;
+
+    @include respond(phone){
+    margin-left: unset;    }
   }
   &:nth-child(4n + 4) {
     margin-right: 0;
-  }
-
+    @include respond(phone){
+      margin-right: unset;    }
+        }
   &__img {
     height: 15vw;
     background-size: cover;
+
+    @include respond(phone){
+      height: 40vw;
+    }
   }
 
   &__category {
@@ -43,6 +67,9 @@
     flex-direction: row;
     margin-top: 6%;
     font-size: $font-size-medium;
+    @include respond(phone){
+      font-size: $font-size-medium-mobile;
+    }
   }
   &__name {
     display: inline-block;
@@ -58,6 +85,10 @@
     font-size: 1.2vw;
     margin-left: auto;
     align-self: flex-end;
+
+    @include respond(phone){
+      font-size: 4vw;
+    }
   }
 
   .button-container {

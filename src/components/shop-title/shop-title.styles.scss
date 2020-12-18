@@ -1,14 +1,28 @@
 @import "../../scss/variables.styles.scss";
+@import "../../scss/mixins.scss";
 
 .header-container {
   margin: 0 calc(100vw / 20 * 4);
-  padding-top: 10vw;
+  padding-top: 12vw;
+
+  @include respond(phone){
+    margin: 0 calc(100vw / 12 * 1);
+    border-bottom: 1px solid black;
+    padding-bottom: 1vw;
+  }
 }
+
+
 
 .shop__title {
   font-size: 5.4vw;
   color: $color-text-primary;
   text-transform: none;
+
+  @include respond(phone){
+    margin-top: 3vw;
+    font-size: 13vw;
+  }
 
   &--sub {
     color: $color-text-primary;
@@ -19,5 +33,11 @@
     line-height: 90%;
     font-family: "Libre Franklin", sans-serif;
     margin-bottom: 2.4vw;
+
+    @include respond(phone){
+      font-size: 2.6vw;
+      font-weight: 600;
+  
+    }
   }
 }

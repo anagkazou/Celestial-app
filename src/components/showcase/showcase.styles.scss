@@ -1,10 +1,48 @@
 @import '../../scss/variables.styles.scss';
+@import '../../scss/mixins.scss';
 
 .filter {
   position: fixed;
   left: calc(100vw / 20);
   width: calc(100vw / 20 * 3);
   margin-top: 6vw;
+  padding-top: 4vw;
+
+
+@include respond(phone){
+  background-color: white;
+    width: 100vw;
+    height: 100vh;
+    left: unset;
+    margin-top: unset;
+    top: 0;
+    z-index: 9;
+}
+
+    &__hide{
+      width: 15vw;
+      height: 15vw;
+      border-radius: 50%;
+      background-color: $color-bg;
+      padding: 3vw;
+      margin: 0 auto 22vw;
+      text-align: center;
+      font-size: 6vw;
+      color: $color-dark-grey;
+      display: none;
+      cursor: pointer;
+      
+      @include respond(phone){
+        display: block;
+         } 
+    }
+  .title{
+    display: none;
+    @include respond(phone){
+      text-align: center; 
+      display: block;
+       } 
+  }
 
   ul > li > a {
     font-family: "Cormorant", serif;
@@ -12,12 +50,27 @@
     line-height: 1.2;
     color: $color-text-primary;
 
+    @include respond(phone){
+      font-size: 13.4vw;
+      display: flex;
+      justify-content: center; 
+       }
   }
 }
 
 .showcase {
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(100vw / 20 * 15);
-  margin: 6vw calc(100vw / 20 * 1) 6vw calc(100vw / 20 * 4);
+    width: calc(100vw / 20 * 15);
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(100vw / 20 * 3);
+
+    @include respond(phone){
+      margin: 24vw calc(100vw / 12 * 1) 19.444vw;
+      width: calc(100vw / 12 * 10);
+    }
+
+    &-container{
+      margin: 9.375vw calc(100vw / 20 * 1);
+
+    }
 }
