@@ -27,7 +27,8 @@
 
   &--icon{
     display: none;
-position: relative;
+    position: relative;
+    transform: translateX(-100%);
     img{
       width: 8vw;
       height: 8vw;
@@ -35,6 +36,7 @@ position: relative;
     @include respond(phone){
       position: absolute;
       right: 0;
+      
       font-size: 13vw;
       margin-right: 0;
       vertical-align: middle;
