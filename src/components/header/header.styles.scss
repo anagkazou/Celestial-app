@@ -17,6 +17,9 @@
           height: 26vw;
         }
   
+        img{
+          height: 1.4vw;
+        }
   &__right {
     display: inherit;
     justify-content: center;
@@ -55,7 +58,7 @@
   &__item {
     font-size: 1vw;
     color: $color-black;
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
     margin-right: 2vw;
     @include respond(tab-port){

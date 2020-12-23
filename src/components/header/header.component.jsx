@@ -11,8 +11,11 @@ import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { setCurrentUser } from "../../redux/user/user.actions";
 
 import { selectCartHidden  } from "../../redux/cart/cart.selectors";
-import CartIcon from '../cart-icon/cart-icon.component'
-import CartPreview from '../cart-preview/cart-preview.component'
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartPreview from '../cart-preview/cart-preview.component';
+
+import {logo} from '../../assets/img/images';
+
 class Header extends React.Component {
   // constructor(props){
   //   super(props)
@@ -26,6 +29,8 @@ class Header extends React.Component {
     const {currentUser, hidden } = this.props;
     return (
       <div className="header">
+        <Link to="/#"> <img src={logo} alt="logo" className= "header__logo"/>
+</Link>
         <div className="header__right">
           <Link to= "/#"  className="header__item ">Home</Link>
           <Link to= "/collections" className="header__item">Collection</Link>
