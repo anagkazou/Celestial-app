@@ -1,3 +1,5 @@
+@import '../../scss/mixins.scss';
+
 .cart-item {
   display: flex;
   flex-direction: row;
@@ -10,6 +12,11 @@
     width: 8.4vw;
     height: 8.4vw;
     display: inline-block;
+
+    @include respond(phone){
+      width: 20vw;
+      height: 20vw;
+    }
   }
 
   .item {
@@ -26,6 +33,10 @@
     &-name {
       font-size: 1.6vw;
       font-family: "Cormorant", sans-serif;
+      @include respond(phone){
+        font-size: 4.6vw;
+        
+      }
     }
 
     &-category {
@@ -34,17 +45,26 @@
       font-weight: 600;
       font-size: 0.6vw;
       margin: 1vw 0;
+      @include respond(phone){
+        font-size: 1.8vw;
+      }
     }
 
     &-price {
       height: 1.2rem;
       line-height: 2;
       font-size: 1vw;
+      @include respond(phone){
+        font-size: 3.4vw;
+      }
     }
 
     &-quantity {
       font-size: 1vw;
       line-height: 2.2;
+      @include respond(phone){
+        font-size: 2.6vw;
+      }
     }
   }
 
@@ -53,15 +73,19 @@
     line-height: 3.2;
     font-size: 0.8vw;
     position: relative;
+    @include respond(phone){
+      line-height: 2.2;
+      font-size: 2.8vw;
 
-    &::after{
-      position: absolute;
-      width: 3vw;
-      height: 1px;
-      content: "";
-      background-color: #636363;
-      bottom: 6px;
-      left: 6%;
     }
+    // &::after{
+    //   position: absolute;
+    //   width: 3vw;
+    //   height: 1px;
+    //   content: "";
+    //   background-color: #636363;
+    //   bottom: 6px;
+    //   left: 6%;
+    // }
   }
 }

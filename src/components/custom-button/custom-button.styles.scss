@@ -11,6 +11,9 @@
   color: $color-black;
   margin-bottom: 2rem;
 
+  @include respond(phone){
+    height: 8vw;    
+  }
   cursor: pointer;
   &:hover {
     background-color: white;
