@@ -2,13 +2,13 @@
 .custom-button {
   //padding: 2rem 5rem;
   outline: none;
-  height: 4rem;
+  height: 2vw;
   //border-radius: 1rem;
   width: 100%;
 
-  border: 1px solid $color-primary;
+  border: 1px solid $color-black;
   background-color: transparent;
-  color: white;
+  color: $color-black;
   margin-bottom: 2rem;
 
   cursor: pointer;
@@ -20,7 +20,7 @@
 
   & + .google-sign-in {
     margin: 2rem 0 0 0;
-
+    color: $color-black;
     .container img {
       width: 1.2rem;
       vertical-align: middle;

@@ -79,7 +79,8 @@ class LogIn extends React.Component {
         <div className="right" style = {{
             backgroundImage: `url(${banner})`,
             backgroundSize:"cover",
-            width:"50%"
+            width:"47vw",
+            marginLeft:"auto",
         }}
         />
 

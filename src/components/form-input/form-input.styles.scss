@@ -3,15 +3,18 @@
   background: none;
   border: none;
   border-bottom: 1px solid $color-dark-grey;
-  padding: 1rem;
-  color: $color-primary;
+  padding: .6em;
+  color: $color-black;
   width: 100%;
+  font-size: 1vw;
 
-  margin-bottom: 4rem;
 
-  //   &:not(:last-child) {
-  //     margin-bottom: 2rem;
-  //   }
+  margin-bottom: 2vw;
+
+    &:first-of-type{
+      margin-bottom: 2.6vw;
+      
+    }
 
   &:focus {
     outline: none;

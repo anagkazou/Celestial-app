@@ -1,29 +1,45 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables.styles.scss';
+
 .LogIn {
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: $color-bg;
   display: flex;
   flex-direction: row;
-
+  
   .left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    color: $color-black;
     width: 50%;
     h2 {
       text-align: left;
-      font-size: 3rem;
-      margin-bottom: 3rem;
+      font-size: 2vw;
+      margin-bottom: 1.4vw;
+      color: $color-black;
+
     }
     .group {
       width: 50%;
       // background-color: brown;
       text-align: center;
-      color: white;
+      color: $color-black;
+
       h2 {
-        color: white;
+        color: $color-black;
+      }
+
+      button{
+        height: 3vw;
+        font-size: 1vw;
+        &:first-of-type:hover{
+            background-color: $color-primary;
+            border: 1px solid $color-primary;
+            color: white;
+           }
       }
     }
   }
