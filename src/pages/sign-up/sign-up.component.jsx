@@ -6,6 +6,10 @@ import CustomButton from '../../components/custom-button/custom-button.component
 import googleLogo from '../../assets/svg/google.svg'
 import banner from '../../assets/img/login-banner.jpg'
 
+import {logo} from '../../assets/img/images';
+
+import {Link} from 'react-router-dom';
+
 import {auth, createUserProfileDocument, signInWithGoogle } from '../../firebase/firebase.utils'
 
 class SignUp extends React.Component {
@@ -64,9 +68,11 @@ class SignUp extends React.Component {
     render(){
         const { displayName, email, password, confirmPassword} = this.state;
         return(
-            <div className="sign-up">
+            <div className="signup">
       
         <div className="left">
+        <Link to="/#"> <img src={logo} alt="logo" className= "header__logo"/>
+</Link>
             <form className="group" onSubmit={ this.handleSubmit}>
                  <h2>Sign Up</h2>
                     <FormInput type = "text"
@@ -105,13 +111,15 @@ class SignUp extends React.Component {
                         </div>
                     </CustomButton>
             </form>
+            <p className="signup__cta">Already have an account? <Link to="/login">Login.</Link></p>
+
         </div>
 
         
         <div className="right" style = {{
             backgroundImage: `url(${banner})`,
             backgroundSize:"cover",
-            width:"50%" 
+            width:"46vw" 
         }}
         />
     </div>

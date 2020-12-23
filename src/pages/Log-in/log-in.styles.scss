@@ -1,7 +1,7 @@
 @import '../../scss/mixins.scss';
 @import '../../scss/variables.styles.scss';
 
-.LogIn {
+.logIn {
   width: 100vw;
   height: 100vh;
   background-color: $color-bg;
@@ -14,14 +14,23 @@
     justify-content: center;
     align-items: center;
     color: $color-black;
-    width: 50%;
+    width: 54vw;
+    position: relative;
+
+    .header__logo{
+      position: absolute;
+      top: 10%;
+      left: 6vw;
+      width: 10vw;
+      height: auto;
+    }
     h2 {
       text-align: left;
       font-size: 2vw;
       margin-bottom: 1.4vw;
       color: $color-black;
-
     }
+
     .group {
       width: 50%;
       // background-color: brown;
@@ -42,8 +51,16 @@
            }
       }
     }
+    .login__cta{
+      margin-top: 2vw;
+     & > a{
+        color: $color-primary;
+        border-bottom: 1px solid $color-primary;
+      }
+    }
   }
 
+ 
   .right {
     height: 100%;
   }
