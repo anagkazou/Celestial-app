@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './checkout.styles.scss'
 
 import {connect} from 'react-redux';
@@ -7,10 +7,8 @@ import {selectCartItems} from '../../redux/cart/cart.selectors';
 import {selectCartTotal} from '../../redux/cart/cart.selectors';
 import {selectCurrentUser} from '../../redux/user/user.selectors'
 
-import LeftArrow from '../../assets/img/left-arrow.png'
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
-import CustomButton from '../../components/custom-button/custom-button.component';
 
 //import StripeCheckoutButton from '../../components/stripe-button/stripe-button.ocmponent'
 
@@ -22,39 +20,7 @@ import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 //Trying to get currentUservalue only after the page loads
 
 const CheckoutPage = ({cartItems, total, currentUser} ) =>{
-    // useEffect(() => {
-    //     var currentUserEmail = currentUser.currentUser.email
-    // }, []);
-    // window.onload = () => { 
-    //        let currentUserEmail = currentUser.currentUser.email;
-
-    //     console.log(currentUserEmail)
-    // }
-   // console.log(currentUserEmail)
-   
-//     let config;
-
-//     let currentUserEmail = currentUser.currentUser.email;
-//      config = {
-//         public_key: 'FLWPUBK-c2b4173873f46e8ddc0f2e8b438f4710-X',
-//         tx_ref: Date.now(),
-//         amount: total,
-//         currency: 'USD',
-//         payment_options: 'card,mobilemoney,ussd',
-//         customer: {
-//           email: currentUserEmail
-//         },
-//         customizations: {
-//           title: 'my Payment Title',
-//           description: 'Payment for items in cart',
-//           logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
-//         },
-//  }
-//  return config;
-// })
-//    const handleFlutterPayment = useFlutterwave(config);
-
-    const config = {
+        const config = {
             public_key: 'FLWPUBK-c2b4173873f46e8ddc0f2e8b438f4710-X',
             tx_ref: Date.now(),
             amount: total,

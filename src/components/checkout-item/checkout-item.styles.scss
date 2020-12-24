@@ -15,9 +15,7 @@
     img {
       width: 25%;
       height: auto;
-      @include respond(phone){
-        width: 30%;
-      }
+      
     }
     &__details {
       width: 70%;
@@ -50,7 +48,7 @@
       font-size: 1.5vw;
       color: $color-black;
       @include respond(phone){
-        font-size: 5.6vw;
+        font-size: 5vw;
       }
     }
 &__category{

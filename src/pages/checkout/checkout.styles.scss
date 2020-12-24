@@ -56,7 +56,7 @@
       height: 100%;
       @include respond(phone){
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 8vw auto;
         }
     }
    
@@ -71,6 +71,7 @@
       @include respond(phone){
         width: 90%;
         margin: 0 auto;
+        background-color: unset;
         }
       &__title{
         font-weight: 600;
@@ -102,15 +103,13 @@
         font-size: 4vw;
         padding: 3.2vw 0;
         }
-        &--title{
-
-        }
-        &--info{
-
-        }
+        
         &--total{
           font-size: 1.2vw;
           font-weight: 600;
+          @include respond(phone){
+            font-size: 4.2vw;
+          }
         }
 
       }
