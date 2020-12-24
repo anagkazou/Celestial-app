@@ -4,6 +4,9 @@
     padding: 1vw 0;
     display: flex;
     flex-direction: row;
+    @include respond(phone){
+      padding: 3vw 0;
+    }
 
     &:not(:last-child){
         border-bottom: 1px #cccccc solid;
@@ -12,6 +15,9 @@
     img {
       width: 25%;
       height: auto;
+      @include respond(phone){
+        width: 30%;
+      }
     }
     &__details {
       width: 70%;
@@ -32,6 +38,9 @@
             font-size: 1vw;
             color: #929292;
             cursor: pointer;
+            @include respond(phone){
+              font-size: 4vw;
+            }
         }
       }
     }
@@ -40,6 +49,9 @@
       font-family: "Cormorant", serif;
       font-size: 1.5vw;
       color: $color-black;
+      @include respond(phone){
+        font-size: 5.6vw;
+      }
     }
 &__category{
     text-transform: uppercase;
@@ -51,6 +63,9 @@
     &__price {
       font-size: 1vw;
       color: $color-black;
+      @include respond(phone){
+        font-size: 4vw;
+      }
     }
 
     &__quantity {
@@ -62,14 +77,24 @@
         font-size: larger;
         cursor: pointer;
         color: #929292;
-
+        @include respond(phone){
+          font-size: 8vw;
+        }
       }
       
       &--minus {
         margin-right: 0.6vw;
+        @include respond(phone){
+          margin-right: 1.2vw;
+          line-height: .6em;
+          vertical-align: middle;
+        }
       }
       &--plus {
         margin-left: 0.6vw;
+        @include respond(phone){
+          margin-left: 1.2vw;
+        }
       }
     }
   }

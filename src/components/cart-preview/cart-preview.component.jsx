@@ -14,8 +14,11 @@ import CartItem from '../cart-item/cart-item.component'
 
 
 
-const CartPreview = ({ cartItems,history,currentUser, dispatch}) => (
-    <div className="cart-preview">
+const CartPreview = ({ cartItems,history,currentUser, dispatch}) => {
+
+    
+
+  return  (<div className="cart-preview">
 <div className="cart-preview__block--top">
                 <div className="cart-title">Shopping Cart</div>
 <p className="btn--close" onClick={()=> dispatch(toggleCartHidden())}>
@@ -39,16 +42,17 @@ const CartPreview = ({ cartItems,history,currentUser, dispatch}) => (
         <div className="cart-preview__block--bottom">
             <p className="promo-text">Sign up for 10% off your first order and 5% off the second. Valid within five days of signup.</p>
       <CustomButton onClick = {() => {
-        currentUser ?  history.push("/checkout"): history.push("/login");
-dispatch(toggleCartHidden())         
+          
+        currentUser ?  window.location.href="/checkout": window.location.href="/signup";
+dispatch(toggleCartHidden());         
         }
         }
           >CONTINUE TO CHECKOUT</CustomButton>
         </div>
         :null
           }
-    </div>
-)
+    </div>)
+}
 
     const mapStateToProps = createStructuredSelector ({
     cartItems:selectCartItems,

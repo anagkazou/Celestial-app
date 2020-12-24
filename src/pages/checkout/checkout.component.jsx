@@ -61,8 +61,12 @@ const CheckoutPage = ({cartItems, total, currentUser} ) =>{
             currency: 'USD',
             payment_options: 'card,mobilemoney,ussd',
             customer: {
-              email: currentUser.currentUser.email, 
-              name:currentUser.currentUser.name,
+              email: "youremail@gmail.com", 
+              name:"Your name",
+            //   This shouldnt be typically. The user's email was meant to be fed into this object from the "currentUser" prop
+            //   but I cannot seem to do that without triggering an error. 
+            //   Redux persist rehydrates the redux currentUser prop after the initial value of null has
+            //   already been received as the value 
             },
             customizations: {
               title: 'my Payment Title',
@@ -82,13 +86,12 @@ const CheckoutPage = ({cartItems, total, currentUser} ) =>{
 
     return( 
     <div className = "checkout">
-<a href={"/collections"} className="navigation">
-    <span className= "navigation-arrow">
-        <img src={LeftArrow} alt="left-arr"/>
-</span>
-<span className="navigation-text">Back to Shopping</span>
-
-    </a>    
+        <a href={"/collections"} className="navigation">
+            <span className= "navigation-arrow">
+            &#8592;
+            </span>
+            <span className="navigation-text">Back to Shopping</span>
+        </a>
     
     <div className="checkout-container">
 

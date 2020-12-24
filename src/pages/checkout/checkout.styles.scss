@@ -1,27 +1,42 @@
 @import '../../scss/variables.styles.scss';
 .checkout {
   color: white;
-  padding: 6vw 16vw;
-
+  padding: 12vw 16vw;
+  @include respond(phone){
+    margin-top: 20vw;
+    padding: 12vw 0;
+    }
   .navigation {
     height: 1vw;
     width: fit-content;
     display: flex;
     align-items: center;
     color: $color-black;
+    @include respond(phone){
+       height: 6vw;   
+       width: 80%;
+        margin: 0 auto;
 
+      }
     &-text {
       font-size: 1vw;
+      @include respond(phone){
+        font-size: 3vw;
+        }
     }
     &-arrow {
-      height: 1.2vw;
+      font-size: 1.2vw;
+      margin-right: .4vw;
+      @include respond(phone){
+        font-size: 7.2vw;
+        height: 1.4em;      margin-right: 2vw;
 
-      img {
-        height: 100%;
+        vertical-align: middle;
       }
     }
   }
 
+  
   &-container {
     width: 100%;
     height: fit-content;
@@ -31,10 +46,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    	@include respond(phone){
+        flex-direction: column;
+        }
+
     .checkout-items {
       padding: 1vw;
       width: 65%;
       height: 100%;
+      @include respond(phone){
+        width: 90%;
+        margin: 0 auto;
+        }
     }
    
     .checkout-summary {
@@ -45,11 +68,17 @@
       flex-direction: column;
       background-color: $color-white-secondary;
       color: $color-black;
-
+      @include respond(phone){
+        width: 90%;
+        margin: 0 auto;
+        }
       &__title{
         font-weight: 600;
         font-size: 1.2vw;
         text-align: center;
+        @include respond(phone){
+          font-size: 4.2vw;
+          }
       }
 
       &__items{
@@ -69,7 +98,10 @@
       border-bottom: 1px #76767640 solid;
       padding: 1.2vw 0;
       font-size: 1vw;
-
+      @include respond(phone){
+        font-size: 4vw;
+        padding: 3.2vw 0;
+        }
         &--title{
 
         }
@@ -83,13 +115,22 @@
 
       }
         button{
-          width: 45%;
+          width: 50%;
           align-self: center;  
           margin-top: 2vw;
           font-size: .8vw;
           background-color: $color-primary;
           color: white;
           font-weight: 600;
+          height: 3vw;
+          border: none;
+          @include respond(phone){
+            height: 10vw;
+            width: 60%;
+            font-size: 3vw;
+            margin-top: 8vw;
+
+            }
           &:hover{
             border: none;    
                 }

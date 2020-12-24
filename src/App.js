@@ -71,7 +71,7 @@ componentWillUnmount(){
           <Route exact  path= "/category/lights" component= {Lights} />
           <Route exact  path= "/category/sofas" component= {Sofas} />
           <Route exact  path= "/category/stools" component= {Stools} />
-          <Route exact  path= "/checkout" render = { () => this.props.currentUser ? <CheckoutPage/>: (<Redirect to="/login"/>) }  />
+          <Route exact  path= "/checkout"  component= {CheckoutPage} />
 
   </Switch>
       </div>
