@@ -1,4 +1,5 @@
 @import "../../scss/variables.styles.scss";
+@import "../../scss/mixins.scss";
 .form-input {
   background: none;
   border: none;
@@ -7,10 +8,13 @@
   color: $color-black;
   width: 100%;
   font-size: 1vw;
+  margin-bottom: 3vw;
 
+  @include respond(phone){
+    font-size: 3vw;
+    margin-bottom: 8vw;
 
-  margin-bottom: 2vw;
-
+  }
     // &:first-of-type{
     //   margin-bottom: 2.6vw;
       

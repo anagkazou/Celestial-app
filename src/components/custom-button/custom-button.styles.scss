@@ -9,10 +9,12 @@
   border: 1px solid $color-black;
   background-color: transparent;
   color: $color-black;
-  margin-bottom: 2rem;
+  margin-bottom: 1vw;
 
   @include respond(phone){
-    height: 8vw;    
+    height: 8vw;  
+    margin-bottom: 2vw;
+
   }
   cursor: pointer;
   &:hover {
@@ -22,8 +24,11 @@
   }
 
   & + .google-sign-in {
-    margin: 2rem 0 0 0;
+    margin: 1vw 0 0 0;
     color: $color-black;
+    @include respond(phone){
+      margin:3vw 0 0 0;
+     }
     .container img {
       width: 1.2rem;
       vertical-align: middle;
