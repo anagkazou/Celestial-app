@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.styles.scss";
-import { InitHamburgerAnimation } from "../../js/animations";
+import { InitHamburgerAnimation, menuAnimation } from "../../js/animations";
 import { Link } from "react-router-dom";
 import {auth} from '../../firebase/firebase.utils'
 import {connect} from "react-redux"
@@ -13,8 +13,7 @@ import { setCurrentUser } from "../../redux/user/user.actions";
 import { selectCartHidden  } from "../../redux/cart/cart.selectors";
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartPreview from '../cart-preview/cart-preview.component';
-
-import {logo} from '../../assets/img/images';
+import {logo, menu1} from '../../assets/img/images';
 
 class Header extends React.Component {
   // constructor(props){
@@ -23,7 +22,9 @@ class Header extends React.Component {
 
   componentDidMount() {
     InitHamburgerAnimation();
+    menuAnimation()
   }
+
   
   render() {
     const {currentUser, hidden } = this.props;
@@ -49,14 +50,47 @@ Logout
 <CartIcon />   
 
 
-  <div className="hamburger" id="hamburger">
+  <div className="hamburger" id="hamburger" >
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
           </div>
         </div>
 {     hidden? null : <CartPreview /> 
-}      </div>
+}    
+
+  <nav className="menu-nav">
+      <div className="menu-nav__left">
+         <div className="menu-nav__left--imgs">
+        
+        <img src={menu1} alt="" id="1" className="menu-nav__left--img"/>
+      </div>
+      </div>
+
+      <div className="menu-nav__right">
+        <header className="menu-nav__head">
+        <img src={logo} alt="logo" className="menu-logo"/>
+        </header>
+
+        <div className="menu-nav__main">
+          <Link to="/#" ><h2 className="menu-nav__link" >Home</h2></Link>
+          <Link to="/collections" ><h2 className="menu-nav__link" >Collection</h2></Link>
+          <Link to="/#" ><h2 className="menu-nav__link" >About</h2></Link>
+            {     
+                  currentUser ?
+      <h2 className="menu-nav__link" onClick= {() =>{ 
+        auth.signOut()
+        }}>
+      Logout
+      </h2>:
+      <Link to="/login" className="menu-nav__link"><h2 >Login</h2> </Link>
+      }
+
+        </div>
+      </div>
+  </nav>
+  </div>
+
     );
   }
 }

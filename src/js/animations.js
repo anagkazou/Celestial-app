@@ -33,10 +33,56 @@ export function InitPreviewAnimation() {
 
 export function InitHamburgerAnimation() {
   $(document).ready(function () {
+    
     $(".hamburger").click(function () {
       $(this).toggleClass("is-active");
+
     });
-  });
+      });
 }
 
-export default { InitHamburgerAnimation, InitPreviewAnimation };
+  export function menuAnimation(){
+    
+    const $menuNav = $(".menu-nav");
+    const $menuLeft = $(".menu-nav__left");
+    const $menuRight = $(".menu-nav__right");
+    const $menuMainLinks = $(".menu-nav__main");
+    const $menuHead = $(".menu-nav__head");
+   const tl = new gsap.timeline({reversed:true});
+
+      tl
+      .to($menuNav, {
+        autoAlpha:1,
+        duration:.1
+      })
+      .to($menuLeft, {
+        height: "100vh",
+        ease:"power4.in",
+      })
+      .to($menuRight, {
+        height: "100%",
+        ease:"power4.out",
+      })
+      .to($menuHead, {
+        autoAlpha:1,
+        duration: .2
+      })
+      .to($menuMainLinks, {
+         autoAlpha:1,
+         duration: .2
+
+      })
+
+
+
+      console.log("clicked",tl)
+
+      $(".hamburger").click(function () {
+        if (tl.reversed()) {
+          tl.play();
+        } else {
+          tl.reverse();
+        }      });
+    }
+
+export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation };

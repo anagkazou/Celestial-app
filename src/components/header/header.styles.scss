@@ -17,7 +17,7 @@
           height: 26vw;
         }
   
-        img{
+        &__logo{
           width: 10vw;
           height: auto;
 
@@ -32,6 +32,7 @@
     margin-left: auto;
 
     .hamburger {
+      z-index: 9;
       &:hover {
         cursor: pointer;
       }
@@ -93,3 +94,92 @@
   -o-transform: translateY(-0.6vw) rotate(-45deg);
   transform: translateY(-0.6vw) rotate(-45deg);
 }
+  .menu-logo{
+    width: 12vw;
+  }
+  .menu-nav{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: absolute;
+  z-index: 7;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  visibility: hidden;
+ // background-color:rosybrown;
+
+  &__left{
+    width: 40%;
+    //height: fit-content;
+    background-color: antiquewhite;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    height: 0;
+    &--imgs{
+      width: 100% ;
+      height:0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      position: absolute;
+     // object-fit: cover;
+
+      
+    }
+    &--img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+  }
+
+  &__right{
+    width: 60%;
+    height: 0%;
+    background-color: white;
+    position: relative;
+  }
+
+  &__head{
+    left: 10vw;
+    top: 4.5vw;
+    z-index: 7;
+    height: 1.25vw;
+    position: absolute;
+    visibility: hidden;
+    
+  }
+
+  &__main{
+    width: 25%;
+    margin: 15vw 10vw;
+    visibility: hidden;
+
+    
+    }
+  &__link{
+    color: $color-black; 
+    font-family: "Cormorant", serif;
+    font-size: 5vw;
+
+    font-weight: 200 ; 
+    cursor: pointer;
+    width: fit-content;
+    
+    &:hover{
+      font-style: italic;
+      color: $color-primary;
+    }
+
+    
+  
+  }
+
+ }
