@@ -83,7 +83,7 @@ Logout
         }}>
       Logout
       </h2>:
-      <Link to="/login" className="menu-nav__link"><h2 >Login</h2> </Link>
+      <Link to="/login" ><h2 className="menu-nav__link">Login</h2> </Link>
       }
 
         </div>

@@ -1,6 +1,10 @@
 html {
 overflow-x: hidden;
 }
+
+html.touch *:hover{
+  all:unset !important;
+}
 body {
   margin: 0;
   overflow-x: hidden;
