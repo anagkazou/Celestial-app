@@ -5,16 +5,15 @@ import "slick-carousel/slick/slick.css";
 
 import { first, second, third, fourth, fifth } from "../../assets/img/images.js";
 import "./slider.styles.scss"; 
-    let deviceWidth = () =>  window.innerWidth > 1024 ? 5000 : 10000;
 
 export default class SlickSlider extends React.Component {
 
   render() {
     const settings = {
       infinite: true,
-      speed: deviceWidth(),
+      speed: 18000,
       autoplay: true,
-      autoplaySpeed: 0,
+      autoplaySpeed: 100,
       slidesToShow: 4,
       slidesToScroll: 1,
       dots: false,

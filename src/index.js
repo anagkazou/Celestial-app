@@ -17,7 +17,7 @@ ReactDOM.render(
     <Provider store = {store}>
     <BrowserRouter>
       <PersistGate persistor ={persistor}>  
-      <Scrollbars style={{ width: "100vw", height: "100vh" }}>
+      <Scrollbars style={{ width: "100vw", height: "100vh" }} autoHide >
         <App />
         </Scrollbars>  
     </PersistGate>
