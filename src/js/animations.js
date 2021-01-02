@@ -85,4 +85,55 @@ export function InitHamburgerAnimation() {
         }      });
     }
 
-export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation };
+    export function shopFilterAnimation (){
+      const $filterDropdown = $(".filter");
+     
+      const tl = new gsap.timeline({reversed:true});
+
+    if ( window.innerWidth < 600){
+        tl
+        .fromTo($filterDropdown, .4, {
+          autoAlpha:0,
+          y:-80
+        },
+        {
+          autoAlpha:1,
+        y:0});
+        
+  
+  
+  
+        console.log("clicked",tl)
+  
+        $(".shop__title, .filter__hide ").click(function () {
+          if (tl.reversed()) {
+            tl.play();
+          } else {
+            tl.reverse();
+          }      });}
+      }
+
+      export function cartPreviewAnimation(){
+     console.log("cart clicked");
+      const tl = new gsap.timeline({reversed:true});
+
+        tl
+        .fromTo(".cart-preview", .4, {
+          autoAlpha:0,
+          x:-30
+        },
+        {
+          autoAlpha:1,
+        x:0});
+        
+        console.log("clicked",tl)
+  
+        $(".btn--close, .cart-icon").click(function () {
+          if (tl.reversed()) {
+            tl.play();
+          } else {
+            tl.reverse();
+          }      });}
+    
+
+export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation, shopFilterAnimation, cartPreviewAnimation };

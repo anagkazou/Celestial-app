@@ -82,17 +82,30 @@
 }
 
 #hamburger.is-active .line:nth-child(1) {
-  -webkit-transform: translateY(2.7vw) rotate(45deg);
+  -webkit-transform: translateY(0.7vw) rotate(45deg);
+  -ms-transform: translateY(0.7vw) rotate(45deg);
+  -o-transform: translateY(0.7vw) rotate(45deg);
+  transform: translateY(0.7vw) rotate(45deg);
+
+  @include respond(phone){
+    -webkit-transform: translateY(2.7vw) rotate(45deg);
   -ms-transform: translateY(2.7vw) rotate(45deg);
   -o-transform: translateY(2.7vw) rotate(45deg);
   transform: translateY(2.7vw) rotate(45deg);
+  }
 }
 
 #hamburger.is-active .line:nth-child(3) {
-  -webkit-transform: translateY(-0.6vw) rotate(-45deg);
-  -ms-transform: translateY(-0.6vw) rotate(-45deg);
-  -o-transform: translateY(-0.6vw) rotate(-45deg);
-  transform: translateY(-0.6vw) rotate(-45deg);
+  -webkit-transform: translateY(-0.7vw) rotate(-45deg);
+  -ms-transform: translateY(-0.7vw) rotate(-45deg);
+  -o-transform: translateY(-0.7vw) rotate(-45deg);
+  transform: translateY(-0.7vw) rotate(-45deg);
+  @include respond(phone){
+    -webkit-transform: translateY(-0.6vw) rotate(-45deg);
+    -ms-transform: translateY(-0.6vw) rotate(-45deg);
+    -o-transform: translateY(-0.6vw) rotate(-45deg);
+    transform: translateY(-0.6vw) rotate(-45deg);
+  }
 }
   .menu-logo{
     width: 12vw;
@@ -184,21 +197,24 @@
   &__link{
     color: $color-black; 
     font-family: "Cormorant", serif;
-    font-size: 5vw;
+    font-size: 4vw;
 
     font-weight: 200 ; 
     cursor: pointer;
     width: fit-content;
 
     @include respond(phone){
-      font-size: 16vw;
+      font-size: 15vw;
       font-weight: 300;
+     
     }
-    
-    &:hover{
+    @include respond (desktop){
+      &:hover{
       font-style: italic;
       color: $color-primary;
+      }
     }
+    
 
     
   

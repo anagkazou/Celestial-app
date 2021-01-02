@@ -17,7 +17,7 @@
     margin-top: unset;
     top: 0;
     z-index: 9;
-    display: none;
+    visibility: hidden;
 }
 
     &__hide{
@@ -52,7 +52,7 @@
     color: $color-text-primary;
 
     @include respond(phone){
-      font-size: 13.4vw;
+      font-size: 11.4vw;
       display: flex;
       justify-content: center; 
        }

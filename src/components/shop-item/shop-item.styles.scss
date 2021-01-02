@@ -21,18 +21,19 @@
     &:nth-child(even) {
       margin-left: calc(100vw / 12 * 0.5);
     }
-  &:hover {
-    .furniture-item__img {
-      opacity: 0.8;
-    }
+   
 
-    .button-container .custom-button {
+    
+  }
+  @include respond(desktop){
+    &:hover {
+     .furniture-item__img {
+       opacity: 0.8;
+     }}
+     .button-container .custom-button {
       opacity: 1;
       bottom: 0;
     }
-  }
-
-
   }
   &:nth-child(4n + 1) {
     margin-left: 0;

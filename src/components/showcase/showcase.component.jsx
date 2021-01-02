@@ -6,6 +6,8 @@ import ShopItem from '../shop-item/shop-item.component'
 
 import SHOP_DATA from '../../pages/shop/shop.data' 
 
+import {shopFilterAnimation} from "../../js/animations";
+
  class ItemsShowcase extends React.Component{
     constructor(props){
         super(props);
@@ -15,7 +17,9 @@ import SHOP_DATA from '../../pages/shop/shop.data'
         }
     }
    
-   
+   componentDidMount(){
+    shopFilterAnimation();
+   }
    
     render(){
 
@@ -28,7 +32,7 @@ import SHOP_DATA from '../../pages/shop/shop.data'
       if (!isFiltered)  {
         return(<>        
             <div className="filter">        
-                    <div className="filter__hide" onClick= {() => {}}>&#10005;</div>
+            <div className="filter__hide" >&#10005;</div>
                      <div className="title">Browse Collections</div>
                            <ul>
                                <li><Link to= "/collections">Everything</Link></li>
@@ -62,8 +66,10 @@ import SHOP_DATA from '../../pages/shop/shop.data'
            return(
                <> 
             <div className="filter">
+            <div className="filter__hide" >&#10005;</div>
+                     <div className="title">Browse Collections</div>
             <ul>
-                <li><Link to= "/collection">Everything</Link></li>
+                <li><Link to= "/collections">Everything</Link></li>
                 {
                     this.state.furniture.map(({category})=>(
                     <li>   <Link to= {`/category/${category.toLowerCase()}`}>{category}</Link></li>

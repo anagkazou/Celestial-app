@@ -66,9 +66,10 @@ margin-bottom: 10vw;
     &:not(:last-child) {
       margin-bottom: .4vw;
     }
+  @include respond(desktop){
     &:hover {
-      font-style: italic;
-    }
+    font-style: italic;
+  }}
   }
 
   .btn__text {
