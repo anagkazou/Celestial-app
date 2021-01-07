@@ -9,6 +9,9 @@ import {store, persistor} from './redux/store';
 
 import {PersistGate} from 'redux-persist/integration/react';
 
+import Scrollbar from "smooth-scrollbar";
+
+Scrollbar.init(document.querySelector("#customScroll"));
 
 ReactDOM.render(
   <>
