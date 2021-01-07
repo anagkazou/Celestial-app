@@ -1,5 +1,9 @@
 import $ from "jquery";
-import { gsap } from "gsap";
+import { gsap , TimelineMax} from "gsap"; //Improve this import!!
+
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
+
 
 export function InitPreviewAnimation() {
   $(".collection-title").each(function (index, el) {
@@ -135,5 +139,26 @@ export function InitHamburgerAnimation() {
             tl.reverse();
           }      });}
     
+          export function ScrollTriggerAnimations(){
+           
+            gsap.registerPlugin(ScrollTrigger);
+              let scroller = document.querySelector(".custom-scroll");
+            ScrollTrigger.defaults({
+              toggleActions: "restart pause resume pause",
+              markers:true, 
+            });
+              ScrollTrigger.scrollerProxy({scroller:".custom-scroll"})
+                            gsap.to(".header__item", {
+                              scrollTrigger: {
+                                trigger: ".header",
+                                start: "bottom 10%",
+                                toggleActions: "play none none reset",
+                                markers:true,
+                              },
+                              autoAlpha:0,
 
-export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation, shopFilterAnimation, cartPreviewAnimation };
+                            }, );
+          }
+
+
+export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation, shopFilterAnimation, cartPreviewAnimation, ScrollTriggerAnimations };

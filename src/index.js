@@ -9,7 +9,6 @@ import {store, persistor} from './redux/store';
 
 import {PersistGate} from 'redux-persist/integration/react';
 
-import {Scrollbars} from 'react-custom-scrollbars';
 
 ReactDOM.render(
   <>
@@ -17,9 +16,7 @@ ReactDOM.render(
     <Provider store = {store}>
     <BrowserRouter>
       <PersistGate persistor ={persistor}>  
-      <Scrollbars style={{ width: "100vw", height: "100vh" }} autoHide >
         <App />
-        </Scrollbars>  
     </PersistGate>
     </BrowserRouter>
     </Provider>

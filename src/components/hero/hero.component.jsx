@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./hero-section.styles.scss";
 import { Link } from "react-router-dom";
 import SlickSlider from "../slider/slider.component";
-const Hero = () => (
+
+import {ScrollTriggerAnimations} from '../../js/animations';
+
+const Hero = () =>{
+  useEffect( ()=>{
+    ScrollTriggerAnimations();
+});
+  return(
   <div className="position-relative-wrap">
     <div className="hero">
       <div className="hero__container center-text">
@@ -20,6 +27,6 @@ const Hero = () => (
       </div>
     </div>
   </div>
-);
+)};
 
 export default Hero;
