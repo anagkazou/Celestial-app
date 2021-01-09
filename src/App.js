@@ -19,6 +19,10 @@ import {createStructuredSelector} from 'reselect'
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import { setCurrentUser } from "./redux/user/user.actions";
 import {selectCurrentUser} from './redux/user/user.selectors'
+
+import { Scrollbars } from 'react-custom-scrollbars';
+
+
 class App extends React.Component {
   
 
@@ -55,11 +59,12 @@ componentWillUnmount(){
 
   render() {
     return (
+
       <div
         style={{
           position: "relative",
         }}
-      >     
+      >    
       { this.props.location.pathname!=='/login' &&
        this.props.location.pathname!== "/signup" ? <Header />:null  }
   <Switch>
@@ -74,6 +79,7 @@ componentWillUnmount(){
           <Route exact  path= "/checkout"  component= {CheckoutPage} />
 
   </Switch>
+
       </div>
     );
   }

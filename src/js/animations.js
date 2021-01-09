@@ -3,6 +3,7 @@ import { gsap , TimelineMax} from "gsap"; //Improve this import!!
 
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
+import Scrollbars from "react-custom-scrollbars";
 
 
 export function InitPreviewAnimation() {
@@ -142,16 +143,25 @@ export function InitHamburgerAnimation() {
           export function ScrollTriggerAnimations(){
            
             gsap.registerPlugin(ScrollTrigger);
-              let scroller = document.querySelector(".custom-scroll");
             ScrollTrigger.defaults({
               toggleActions: "restart pause resume pause",
               markers:true, 
             });
-              ScrollTrigger.scrollerProxy({scroller:".custom-scroll"})
-                            gsap.to(".header__item", {
+
+
+              // ScrollTrigger.scrollerProxy("body", {
+              //   scrollTop(value){
+              //     if(arguments.length){
+              //       bodySc
+              //     }
+              //   }
+              // })
+
+
+                            gsap.to(".anim__hide", {
                               scrollTrigger: {
                                 trigger: ".header",
-                                start: "bottom 10%",
+                                start: "bottom 15%",
                                 toggleActions: "play none none reset",
                                 markers:true,
                               },

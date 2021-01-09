@@ -22,7 +22,9 @@ const HomePage = () => (
         </div>
 
         <div className="about__content--img img">
-          <img src={imgAbout1} alt="" className="img-1" />
+         <div className= "img-1__banner">
+            <img src={imgAbout1} alt="" className="img-1" />
+            </div>
           <img src={imgAbout2} alt="" className="img-2" />
         </div>
       </div>

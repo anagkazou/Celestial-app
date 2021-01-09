@@ -30,22 +30,21 @@ class Header extends React.Component {
     const {currentUser, hidden } = this.props;
     return (
       <div className="header">
-        <Link to="/#"> <img src={logo} alt="logo" className= "header__logo"/>
+        <Link to="/#" className= "anim__hide"> <img src={logo} alt="logo" className= "header__logo "/>
 </Link>
         <div className="header__right">
-          <Link to= "/#"  className="header__item ">Home</Link>
-          <Link to= "/collections" className="header__item">Collection</Link>
-          <Link to= "/#" className="header__item" >About</Link>
+          <Link to= "/#"  className="header__item anim__hide ">Home</Link>
+          <Link to= "/collections" className="header__item anim__hide">Collection</Link>
+          <Link to= "/#" className="header__item anim__hide" >About</Link>
           {  
-          //  console.log(this.props.currentUser)
 }
 {         currentUser ?
-<div className="header__item" onClick= {() =>{ 
+<div className="header__item anim__hide" onClick= {() =>{ 
   auth.signOut()
   }}>
 Logout
 </div>:
- <Link to="/login" className="header__item">Login </Link>
+ <Link to="/login" className="header__item anim__hide">Login </Link>
 }   
 <CartIcon />   
 

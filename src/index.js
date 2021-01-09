@@ -9,10 +9,10 @@ import {store, persistor} from './redux/store';
 
 import {PersistGate} from 'redux-persist/integration/react';
 
-import Scrollbar from "smooth-scrollbar";
-Scrollbar.init(document.querySelector('#scrollbar'));
+import 'simplebar/dist/simplebar.min.css';
 
-
+import { Scrollbars } from 'react-custom-scrollbars';
+ 
 
 ReactDOM.render(
   <>
@@ -20,7 +20,9 @@ ReactDOM.render(
     <Provider store = {store}>
     <BrowserRouter>
       <PersistGate persistor ={persistor}>  
+{/* <Scrollbars style={{ height: "100vh",}}> */}
         <App />
+        {/* </Scrollbars> */}
     </PersistGate>
     </BrowserRouter>
     </Provider>
