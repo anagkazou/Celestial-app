@@ -6,7 +6,7 @@
   //border-radius: 1rem;
   width: 100%;
 
-  border: 1px solid $color-black;
+  border: none;
   background-color: transparent;
   color: $color-black;
   margin-bottom: 1vw;
@@ -20,7 +20,6 @@
   &:hover {
     background-color: white;
     color: black;
-    border: 1px solid black;
   }
 
   & + .google-sign-in {

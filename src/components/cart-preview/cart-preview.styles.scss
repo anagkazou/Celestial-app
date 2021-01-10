@@ -62,7 +62,7 @@
     button {
       position: absolute;
       left: 25%;
-      margin: 0.8vh auto 0 auto;
+      margin: 2vh auto 0 auto;
       font-size: 0.8vw;
       background-color: $color-primary;
       color: white;
@@ -81,7 +81,7 @@
     display: flex;
     overflow-y: scroll;
     flex-direction: column;
-    max-height: 65vh;
+    max-height: 60vh;
     margin: 1vh 0;
     overflow-y: scroll;
 
