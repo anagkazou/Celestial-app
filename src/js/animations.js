@@ -3,7 +3,6 @@ import { gsap , TimelineMax} from "gsap"; //Improve this import!!
 
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
-import Scrollbars from "react-custom-scrollbars";
 
 
 export function InitPreviewAnimation() {
@@ -170,7 +169,6 @@ export function InitHamburgerAnimation() {
                 start: "30% top",
                 toggleActions: "play none none reset",
                 scrub: 1,
-              //  markers:true
 
               },
               scale:1.2,   
@@ -181,7 +179,6 @@ export function InitHamburgerAnimation() {
                 start: "30% top",
                 toggleActions: "play none none reset",
                 scrub: 2,
-                markers:true
 
               },
               y: 60, 

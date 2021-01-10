@@ -11,7 +11,6 @@ import {PersistGate} from 'redux-persist/integration/react';
 
 import 'simplebar/dist/simplebar.min.css';
 
-import { Scrollbars } from 'react-custom-scrollbars';
  
 
 ReactDOM.render(
