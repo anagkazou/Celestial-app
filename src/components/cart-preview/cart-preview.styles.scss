@@ -1,4 +1,5 @@
 @import '../../scss/mixins.scss';
+@import '../../scss/variables.styles.scss';
 
 .cart-preview {
   position: fixed;
@@ -53,7 +54,7 @@
       text-align: center;
       font-size: 1.1vw;
       @include respond(phone){
-        font-size: 3.6vw;
+        font-size: 3.2vw;
         padding: 0 2vw;
         
       }
@@ -63,11 +64,14 @@
       left: 25%;
       margin: 0.8vh auto 0 auto;
       font-size: 0.8vw;
-      background-color: black;
+      background-color: $color-primary;
       color: white;
       width: 50%;
+      height: 3.2vw;
       @include respond(phone){
         font-size: 2.2vw;
+        height: 7.2vw;
+
       }
     }
   }
