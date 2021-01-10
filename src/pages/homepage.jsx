@@ -1,9 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./homepage.scss";
 import Hero from "../components/hero/hero.component";
 import { imgAbout1, imgAbout2 } from "../assets/img/images";
 import CollectionPreview from "../components/collections-preview/collections-preview.component";
-const HomePage = () => (
+
+import {ScrollTriggerAnimations} from '../js/animations';
+
+  
+
+const HomePage = () => {
+  useEffect( ()=>{
+    ScrollTriggerAnimations();
+});
+  return(
   <React.Fragment>
     <Hero />
 
@@ -22,14 +31,17 @@ const HomePage = () => (
         </div>
 
         <div className="about__content--img img">
-         <div className= "img-1__banner">
             <img src={imgAbout1} alt="" className="img-1" />
-            </div>
+
+          <div className= "img-2__banner">
           <img src={imgAbout2} alt="" className="img-2" />
+          </div>
+
         </div>
       </div>
     </section>
     <CollectionPreview />
-    </React.Fragment>);
+    </React.Fragment>)
+    }
 
 export default HomePage;

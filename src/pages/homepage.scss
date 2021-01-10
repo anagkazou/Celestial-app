@@ -65,9 +65,7 @@
     }
 
     .img {
-      &-1__banner{
-        
-      }
+     
       &-1 {
         width: auto;
         height: 40vw;
@@ -77,18 +75,25 @@
         }
       }
 
-      &-2 {
+      &-2__banner{
         position: absolute;
         width: 16vw;
         height: 24vw;
         left: -25%;
         bottom: 30%;
         z-index: 2;
-
+        overflow: hidden;
         @include respond(phone){
           height: 42vw;
           width: 30vw;
         }
+      }
+      &-2 {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+
+        
       }
     }
   }

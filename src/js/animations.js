@@ -144,30 +144,48 @@ export function InitHamburgerAnimation() {
            
             gsap.registerPlugin(ScrollTrigger);
             ScrollTrigger.defaults({
-              toggleActions: "restart pause resume pause",
-              markers:true, 
+             // markers:true, 
             });
 
+        let headerAnim = new TimelineMax();
 
-              // ScrollTrigger.scrollerProxy("body", {
-              //   scrollTop(value){
-              //     if(arguments.length){
-              //       bodySc
-              //     }
-              //   }
-              // })
+            headerAnim.to(".anim__hide", {
+              scrollTrigger: {
+                trigger: ".header",
+                start: "bottom top",
+                toggleActions: "play none none reset",
+                
+                markers:true,
+              },
+              autoAlpha:0,
 
+            }, );
 
-                            gsap.to(".anim__hide", {
-                              scrollTrigger: {
-                                trigger: ".header",
-                                start: "bottom 15%",
-                                toggleActions: "play none none reset",
-                                markers:true,
-                              },
-                              autoAlpha:0,
+            let aboutSectionAnim = new TimelineMax();
 
-                            }, );
+            aboutSectionAnim
+            .to(".img-2", {
+              scrollTrigger:{               
+                trigger:".section_about",
+                start: "30% top",
+                toggleActions: "play none none reset",
+                scrub: 1,
+              //  markers:true
+
+              },
+              scale:1.2,   
+            })
+            .to(".img-2__banner",{
+              scrollTrigger:{               
+                trigger:".section_about",
+                start: "30% top",
+                toggleActions: "play none none reset",
+                scrub: 2,
+                markers:true
+
+              },
+              y: 60, 
+            })
           }
 
 
