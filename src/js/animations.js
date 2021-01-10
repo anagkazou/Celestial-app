@@ -154,7 +154,6 @@ export function InitHamburgerAnimation() {
                 start: "bottom top",
                 toggleActions: "play none none reset",
                 
-                markers:true,
               },
               autoAlpha:0,
 
