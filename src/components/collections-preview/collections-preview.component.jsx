@@ -116,10 +116,10 @@ console.log(this.props);
             </Link> */}
 {
   this.props.collections.map(({id, urlTitle }) => {
-  return <Link to={`/${urlTitle}`} id= {id} key= {id} className= "collection-title" >{urlTitle}</Link>
+  return <Link to={`/category/${urlTitle}`}  key= {id} className= "collection-title" >{urlTitle}</Link>
   })
 }
-            <Link to="/#" className="btn btn__text">
+            <Link to="/collections" className="btn btn__text">
               View everything
             </Link>
           </div>

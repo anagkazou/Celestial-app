@@ -126,7 +126,7 @@
           color: white;
           font-weight: 600;
           height: 3vw;
-          border: none;
+          border: 1px solid $color-black;
           @include respond(phone){
             height: 10vw;
             width: 60%;
@@ -134,9 +134,9 @@
             margin-top: 8vw;
 
             }
-          &:hover{
-            border: none;    
-                }
+          // &:hover{
+          //   border: none;    
+          //       }
         }
     }
   }
