@@ -13,16 +13,18 @@ class Ottomans extends React.Component{
     // }
 
     render(){
+        
         return(   
             <>   
-         <ShopTile category= "Ottomans"/>
-            <ItemsShowcase/>
+         <ShopTile  category= "Ottomans"/>
+            <ItemsShowcase category= "Ottomans"  itemsToRender = {5} filtered/>
 
             
             </>
            
            
 );
+
 
         
     }

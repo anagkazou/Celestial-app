@@ -16,9 +16,7 @@ class Sofas extends React.Component{
         return(   
             <>   
          <ShopTile category= "Sofas"/>
-            <ItemsShowcase/>
-
-            
+            <ItemsShowcase category= "sofas" itemsToRender = {3} filtered/>          
             </>
            
            

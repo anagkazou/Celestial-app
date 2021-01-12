@@ -13,12 +13,11 @@ class Stools extends React.Component{
     // }
 
     render(){
-        const {pathname} = this.props.location;
-console.log(pathname)
+        
         return(   
             <>   
-         <ShopTile category= "Stools"/>
-            <ItemsShowcase/>
+         <ShopTile  category= "Stools"/>
+            <ItemsShowcase category= "Stools"  itemsToRender = {4} filtered/>
 
             
             </>

@@ -19,6 +19,7 @@ import {createStructuredSelector} from 'reselect'
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import { setCurrentUser } from "./redux/user/user.actions";
 import {selectCurrentUser} from './redux/user/user.selectors'
+import Ottomans from "./pages/shop/ottomans.component";
 
 
 
@@ -75,6 +76,7 @@ componentWillUnmount(){
           <Route exact  path= "/category/lights" component= {Lights} />
           <Route exact  path= "/category/sofas" component= {Sofas} />
           <Route exact  path= "/category/stools" component= {Stools} />
+          <Route exact  path= "/category/ottomans" component= {Ottomans} />
           <Route exact  path= "/checkout"  component= {CheckoutPage} />
 
   </Switch>

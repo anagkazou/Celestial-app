@@ -170,23 +170,271 @@ const SHOP_DATA= [
             
     ]
     },
+
+
+
     {
         id:3,
         category: "Sofas", 
         routeName:"sofas", 
-        items: []
+        items: [
+            {
+            
+                id: 21,
+                name: "Carmenta",
+                category: "Sofas",
+                imageUrl: " https://i.ibb.co/CHgQxnQ/carmenta.jpg",
+                price: 19,           
+        },
+            {
+            
+                id: 22,
+                name: "Bachus",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/jRSF2yN/bachus.jpg",
+                price: 19,           
+        },
+        {
+            
+            id: 23,
+            name: "Clementia",
+            category: "Sofas",
+            imageUrl: "https://i.ibb.co/sqb4QT7/clementia.jpg ",
+            price: 219,           
     },
     {
-        id:24,
-        category: "Stools", 
-        routeName:"stools", 
-        items: []
+                
+            id: 24,
+            name: "Epona",
+            category: "Sofas",
+            imageUrl: "https://i.ibb.co/09knDX5/epona.jpg ",
+            price: 19,           
     },
+        {
+                    
+            id: 25,
+            name: "Fides",
+            category: "Sofas",
+            imageUrl: "https://i.ibb.co/J37FPmc/fides.jpg",
+            price: 19,           
+        },
+            {
+                id: 26,
+                name: "Honos",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/jGwGN7F/honos.jpg ",
+                price: 19,           
+        },
+            {
+                id: 27,
+                name: "Libitina",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/bdsV9m0/libitina.jpg ",
+                price: 39,           
+        },
+            {
+                        
+                id: 28,
+                name: "Luna",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/9hrT6qL/luna.jpg ",
+                price: 19,           
+            },
+            {
+            
+                id: 29,
+                name: "Mitras",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/1rP8H9X/mitras.jpg ",
+                price: 19,           
+        },
+            {
+                
+                id: 30,
+                name: "Prosperina",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/CmV0hVB/prosperina.jpg ",
+                price: 19,           
+        },
+            {
+                
+                id: 31,
+                name: "Sancus",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/jLJ1pgp/sancus.jpg ",
+                price: 19,           
+        },
+            {
+                
+                id: 32,
+                name: "Tempestes",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/6yGrmpV/tempestes.jpg ",
+                price: 19,           
+        },
+        ]
+    },
+        {
+            id:4,
+            category: "Stools", 
+            routeName:"stools", 
+            items: [ 
+                {
+                    
+                    id: 33,
+                    name: "Aesir",
+                    category: "Sofas",
+                    imageUrl: "https://i.ibb.co/dML4602/aesir.jpg ",
+                    price: 19,           
+            },
+                {
+                        
+                    id: 34,
+                    name: "Bor",
+                    category: "Sofas",
+                    imageUrl: " https://i.ibb.co/Yp7scHM/bor.jpg ",
+                    price: 19,           
+            },
+
+            {
+                    
+                id: 35,
+                name: "Freyr",
+                category: "Sofas",
+                imageUrl: "https://i.ibb.co/VjsCg8r/freyr.jpg ",
+                price: 19,           
+        },
+        {
+                    
+            id: 36,
+            name: "Heimdall",
+            category: "Sofas",
+            imageUrl: "https://i.ibb.co/G2H61vh/heimdall.jpg ",
+            price: 19,           
+        }, 
+        {
+                    
+        id: 37,
+        name: "Hod",
+        category: "Sofas",
+        imageUrl: "https://i.ibb.co/Ns4MLMQ/hod.jpg ",
+        price: 19,           
+        },
+        {
+                    
+        id: 38,
+        name: "Loki",
+        category: "Sofas",
+        imageUrl: " https://i.ibb.co/hCvztNQ/loki.jpg ",
+        price: 19,           
+        },
+        {
+                    
+        id: 238,
+        name: "Mimir",
+        category: "Sofas",
+        imageUrl: " https://i.ibb.co/mJ8PLKv/mimir.jpg ",
+        price: 19,           
+        },
+        {
+                    
+        id: 39,
+        name: "Saga",
+        category: "Sofas",
+        imageUrl: "https://i.ibb.co/YZJk6gG/saga.jpg ",
+        price: 19,           
+        },           
+        {
+                    
+        id: 40,
+        name: "Vanir",
+        category: "Sofas",
+        imageUrl: "https://i.ibb.co/S5chgQW/vanir.jpg ",
+        price: 19,           
+        },
+        {     
+        id: 41,
+        name: "Ban",
+        category: "Sofas",
+        imageUrl: "https://i.ibb.co/4RjBtRw/ban.jpg",
+        price: 19,           
+        },     
+     ]
+    },
+
     {
-        id:25,
+        id:5,
         category: "Ottomans", 
         routeName:"ottomans", 
-        items: []
+        items: 
+        [
+            
+            {     
+                id: 42,
+                name: "Febris",
+                category: "Ottomans",
+                imageUrl: " https://i.ibb.co/4fV75Hd/febris.jpg ",
+                price: 19,           
+                },
+                {     
+                    id: 43,
+                    name: "Cerburus",
+                    category: "Ottomans",
+                    imageUrl: "https://i.ibb.co/Bw55qtn/cerburus.jpg ",
+                    price: 19,           
+                    },
+                {     
+                    id: 44,
+                    name: "Funus",
+                    category: "Ottomans",
+                    imageUrl: "https://i.ibb.co/R35ZtFf/funus.jpg ",
+                    price: 19,           
+                    },
+                {     
+                    id: 45,
+                    name: "Grateia",
+                    category: "Ottomans",
+                    imageUrl: "https://i.ibb.co/5YKzZ2H/grateia.jpg ",
+                    price: 19,           
+                    },
+                {     
+                    id: 46,
+                    name: "Janus",
+                    category: "Ottomans",
+                    imageUrl: "https://i.ibb.co/MhvNwds/janus.jpg ",
+                    price: 19,           
+                    },
+                {     
+                    id: 47,
+                    name: "Maricus",
+                    category: "Ottomans",
+                    imageUrl: "https://i.ibb.co/LkJj3hM/maricus.jpg ",
+                    price: 19,           
+                    },
+                {     
+                    id: 48,
+                    name: "Nerio",
+                    category: "Ottomans",
+                    imageUrl: " https://i.ibb.co/7JG3LXr/nerio.jpg ",
+                    price: 19,           
+                    },
+                {     
+                    id: 49,
+                    name: "Hercules",
+                    category: "Ottomans",
+                    imageUrl: "  https://i.ibb.co/1zCmJB3/hercules.jpg",
+                    price: 19,           
+                    },
+           
+            
+            
+            
+           
+            
+            
+           
+           
+        ]
     },
 ]
 
