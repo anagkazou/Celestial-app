@@ -37,6 +37,66 @@ export function InitPreviewAnimation() {
   });
 }
 
+export function menuLinkAnimation(){
+  // $(".menu-link").each(function (index, el) {
+  //   const thisId = el.id;
+  //   const $thisPreviewImages = $(".menu-nav__left--img").find(
+  //     `.menu-nav__left--img[id="${thisId}"]`
+  //   );
+  //  // const $allImages = $(".menu-nav__left--img");
+  //   const $otherImages = $(".menu-nav__left--img")
+  //     .find(".menu-nav__left--img")
+  //     .not(`[id="${thisId}"]`);
+
+  //   $(el).on("mouseenter", (el) => {
+  //     // $($otherImages).addClass(".mouseentered");
+  //     console.log("triggered")
+  //     gsap.to($thisPreviewImages, {
+  //       opacity: 1,
+  //       ease: "Power1.easeOut",
+  //       duration: 0.5,
+  //     });
+
+  //     gsap.to($otherImages, {
+  //       opacity: 0,
+  //     });
+  //   });
+  // });
+
+  $(".menu-nav__link").each(function (index, el) {
+  
+    const thisId = el.id;
+    const $thisimg = $(".menu-nav__left--imgs")
+          .find(`img[id="${thisId}"]`);
+    const $otherimgs = $(".menu-nav__left--imgs")
+          .find("img")
+      .not(`[id="${thisId}"]`);
+
+      const $otherImgIndex = $otherimgs.id;
+  
+    $(el)
+      .mouseenter((e) => {
+        console.log(thisId)
+        if (window.innerWidth >= 800) {  
+          // animate in this img
+          gsap.to($thisimg,  {
+            opacity: 1,
+            zIndex: 100
+          });
+  
+          // fade out other imgs
+          gsap.to($otherimgs,  {
+            opacity: 0,
+            zIndex:2
+          });
+        }
+  
+      })
+  
+      
+  });
+}
+
 export function InitHamburgerAnimation() {
   $(document).ready(function () {
     
@@ -91,14 +151,10 @@ export function InitHamburgerAnimation() {
 
         }      });
 
-        return{
-          toggleMenu:() =>{
-            if (tl.reversed()) {
-              tl.play();
-            } else {
-              tl.reverse();
-            }      }
-          }
+        
+        
+
+
         }
   
 

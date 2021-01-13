@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.styles.scss";
-import { InitHamburgerAnimation, menuAnimation } from "../../js/animations";
+import { InitHamburgerAnimation, menuAnimation, menuLinkAnimation } from "../../js/animations";
 import { Link } from "react-router-dom";
 import {auth} from '../../firebase/firebase.utils'
 import {connect} from "react-redux"
@@ -13,7 +13,7 @@ import { setCurrentUser } from "../../redux/user/user.actions";
 import { selectCartHidden  } from "../../redux/cart/cart.selectors";
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartPreview from '../cart-preview/cart-preview.component';
-import {logo, menu1} from '../../assets/img/images';
+import {logo, menuImages} from '../../assets/img/images';
 
 class Header extends React.Component {
   // constructor(props){
@@ -22,7 +22,8 @@ class Header extends React.Component {
 
   componentDidMount() {
     InitHamburgerAnimation();
-    menuAnimation()
+    menuAnimation();
+    menuLinkAnimation();
   }
 
   
@@ -61,9 +62,10 @@ Logout
   <nav className="menu-nav">
       <div className="menu-nav__left">
          <div className="menu-nav__left--imgs">
-        
-        <img src={menu1} alt="" id="1" className="menu-nav__left--img"/>
-        <img src={menu1} alt="" id="1" className="menu-nav__left--img"/>
+        <img src={menuImages.first} alt="" id="1" className="menu-nav__left--img"/>
+        <img src={menuImages.second} alt="" id="2" className="menu-nav__left--img"/>
+        <img src={menuImages.third} alt="" id="3" className="menu-nav__left--img"/>
+        <img src={menuImages.fourth} alt="" id="4" className="menu-nav__left--img"/>
       </div>
       </div>
 
@@ -73,17 +75,17 @@ Logout
         </header>
 
         <div className="menu-nav__main">
-          <Link to="/#" ><h2 className="menu-nav__link" >Home</h2></Link>
-          <Link to="/collections" ><h2 className="menu-nav__link" onClick={menuAnimation.toggleMenu} >Collection</h2></Link>
-          <Link to="/#" ><h2 className="menu-nav__link" >About</h2></Link>
+          <Link to="/#"  className="menu-link"><h2 id="1" className="menu-nav__link" >Home</h2></Link>
+          <Link to="/collections" className="menu-link"><h2 id="2"  className="menu-nav__link" onClick={menuAnimation.toggleMenu} >Collection</h2></Link>
+          <Link to="/#" className="menu-link"><h2 id="3" className="menu-nav__link" >About</h2></Link>
             {     
                   currentUser ?
-      <h2 className="menu-nav__link" onClick= {() =>{ 
+      <Link className="menu-link"><h2 id="4" className="menu-nav__link" onClick= {() =>{ 
         auth.signOut()
         }}>
       Logout
-      </h2>:
-      <Link to="/login" ><h2 className="menu-nav__link">Login</h2> </Link>
+      </h2> </Link>:
+      <Link to="/login" className="menu-link"><h2 id="4"className="menu-nav__link">Login</h2> </Link>
       }
 
         </div>
