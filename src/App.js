@@ -12,7 +12,7 @@ import Sofas from './pages/shop/sofas.component';
 import Stools from './pages/shop/stools.components'
 import Lights from './pages/shop/lights.component';
 //import Ottomans from './pages/shop/ottomans.component';
-import CheckoutPage from './pages/checkout/checkout.component'
+import Checkout from './pages/checkout/checkout.component'
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect'
 
@@ -77,7 +77,7 @@ componentWillUnmount(){
           <Route exact  path= "/category/sofas" component= {Sofas} />
           <Route exact  path= "/category/stools" component= {Stools} />
           <Route exact  path= "/category/ottomans" component= {Ottomans} />
-          <Route exact  path= "/checkout"  component= {CheckoutPage} />
+          <Route exact  path= "/checkout"  component= {Checkout} />
 
   </Switch>
 

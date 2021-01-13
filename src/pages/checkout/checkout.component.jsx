@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './checkout.styles.scss'
 
 import {connect} from 'react-redux';
@@ -16,10 +16,13 @@ import CheckoutItem from '../../components/checkout-item/checkout-item.component
 
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 
-
+import {ScrollTriggerAnimations} from "../../js/animations"
 //Trying to get currentUservalue only after the page loads
 
 const CheckoutPage = ({cartItems, total, currentUser} ) =>{
+    useEffect( ()=>{
+        ScrollTriggerAnimations();
+    });
         const config = {
             public_key: 'FLWPUBK-c2b4173873f46e8ddc0f2e8b438f4710-X',
             tx_ref: Date.now(),
@@ -111,5 +114,6 @@ const mapStateToProps = createStructuredSelector ({
 //     cartItems: state.cart.cartItems,
 //   });
 
-export default connect(mapStateToProps, null)(CheckoutPage);
+const Checkout = connect(mapStateToProps, null)(CheckoutPage);
+export default Checkout;
 
