@@ -147,7 +147,7 @@ export function InitHamburgerAnimation() {
                 trigger: ".header",
                 start: "25% top",
                 toggleActions: "play none none reset",
-                markers:true
+                //markers:true
               },
               //autoAlpha:0,
               backdropFilter: "blur(12px) ",
