@@ -150,8 +150,8 @@ export function InitHamburgerAnimation() {
                 //markers:true
               },
               //autoAlpha:0,
-              backdropFilter: "blur(12px) ",
-              height: "15vh"
+              backdropFilter: "blur(18px) ",
+              height: "8vh"
             }, );
 
             let aboutSectionAnim = new TimelineMax();
