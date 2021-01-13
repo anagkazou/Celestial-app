@@ -1,24 +1,21 @@
-import React from 'react';
-
+import React, {useEffect} from 'react';
+import {useLocation} from "react-router-dom";
 import ShopTile from '../../components/shop-title/shop-title.component'
 import ItemsShowcase from '../../components/showcase/showcase.component'
-
 import './shop.styles.scss';
 
+const Everything = () =>{
+   
+    const { pathname } = useLocation();
 
-
-class Everything extends React.Component{
-    // constructor(){
-    //     super()
-    // }
-
-    render(){
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
         return(   
             <>   
-         <ShopTile category= "Everything"/>
-            <ItemsShowcase itemsToRender= "all" filtered= {false}/>
-
-            
+          <ShopTile category= "Everything"/>
+            <ItemsShowcase  itemsToRender = "all" />
             </>
            
            
@@ -27,6 +24,6 @@ class Everything extends React.Component{
         
     }
 
-}
+
 
 export default Everything;

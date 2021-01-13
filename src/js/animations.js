@@ -6,7 +6,7 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 
 export function InitPreviewAnimation() {
-  $(".collection-title").each(function (index, el) {
+    $(".collection-title").each(function (index, el) {
     const thisId = el.id;
     const $thisPreviewImages = $(".preview__left, .preview__right").find(
       `img[id="${thisId}"]`
@@ -15,6 +15,7 @@ export function InitPreviewAnimation() {
     const $otherImages = $(".preview__left, .preview__right")
       .find("img")
       .not(`[id="${thisId}"]`);
+  if ( window.innerWidth > 1024){
 
     $(el).on("mouseenter", (el) => {
       // $($otherImages).addClass(".mouseentered");
@@ -32,15 +33,15 @@ export function InitPreviewAnimation() {
         opacity: 0,
       });
     });
+  }
   });
 }
 
 export function InitHamburgerAnimation() {
   $(document).ready(function () {
     
-    $(".hamburger").click(function () {
-      $(this).toggleClass("is-active");
-
+    $(".hamburger, .menu-nav__link").click(function () {
+      $(".hamburger").toggleClass("is-active");
     });
       });
 }
@@ -81,11 +82,13 @@ export function InitHamburgerAnimation() {
 
       console.log("clicked",tl)
 
-      $(".hamburger").click(function () {
+      $('.hamburger, .menu-nav__link').click(function () {
         if (tl.reversed()) {
           tl.play();
+
         } else {
           tl.reverse();
+
         }      });
 
         return{
