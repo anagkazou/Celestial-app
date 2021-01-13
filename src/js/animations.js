@@ -72,7 +72,6 @@ export function menuLinkAnimation(){
           .find("img")
       .not(`[id="${thisId}"]`);
 
-      const $otherImgIndex = $otherimgs.id;
   
     $(el)
       .mouseenter((e) => {
@@ -81,7 +80,8 @@ export function menuLinkAnimation(){
           // animate in this img
           gsap.to($thisimg,  {
             opacity: 1,
-            zIndex: 100
+            zIndex: 3,
+            duration: 1.5
           });
   
           // fade out other imgs
