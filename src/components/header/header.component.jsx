@@ -63,6 +63,7 @@ Logout
          <div className="menu-nav__left--imgs">
         
         <img src={menu1} alt="" id="1" className="menu-nav__left--img"/>
+        <img src={menu1} alt="" id="1" className="menu-nav__left--img"/>
       </div>
       </div>
 
@@ -73,7 +74,7 @@ Logout
 
         <div className="menu-nav__main">
           <Link to="/#" ><h2 className="menu-nav__link" >Home</h2></Link>
-          <Link to="/collections" ><h2 className="menu-nav__link" >Collection</h2></Link>
+          <Link to="/collections" ><h2 className="menu-nav__link" onClick={menuAnimation.toggleMenu} >Collection</h2></Link>
           <Link to="/#" ><h2 className="menu-nav__link" >About</h2></Link>
             {     
                   currentUser ?

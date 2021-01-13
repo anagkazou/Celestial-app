@@ -99,24 +99,10 @@ console.log(this.props);
           </div>
 
           <div className="preview__text">
-            {/* <Link to="/#" className="collection-title" id="1">
-              Chairs
-            </Link>
-            <Link to="/#" className="collection-title" id="2">
-              Lights
-            </Link>
-            <Link to="/#" className="collection-title" id="3">
-              Sofas
-            </Link>
-            <Link to="/#" className="collection-title" id="4">
-              Stools
-            </Link>
-            <Link to="/#" className="collection-title" id="5">
-              Ottomans
-            </Link> */}
+           
 {
   this.props.collections.map(({id, urlTitle }) => {
-  return <Link to={`/category/${urlTitle}`}  key= {id} className= "collection-title" >{urlTitle}</Link>
+  return <Link to={`/category/${urlTitle}`} id= {id} key= {id} className= "collection-title" >{urlTitle}</Link>
   })
 }
             <Link to="/collections" className="btn btn__text">

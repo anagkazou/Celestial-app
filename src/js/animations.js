@@ -87,7 +87,18 @@ export function InitHamburgerAnimation() {
         } else {
           tl.reverse();
         }      });
-    }
+
+        return{
+          toggleMenu:() =>{
+            if (tl.reversed()) {
+              tl.play();
+            } else {
+              tl.reverse();
+            }      }
+          }
+        }
+  
+
 
     export function shopFilterAnimation (){
       const $filterDropdown = $(".filter");
@@ -117,27 +128,7 @@ export function InitHamburgerAnimation() {
           }      });}
       }
 
-      export function cartPreviewAnimation(){
-     console.log("cart clicked");
-      const tl = new gsap.timeline({reversed:true});
-
-        tl
-        .fromTo(".cart-preview", .4, {
-          autoAlpha:0,
-          x:-30
-        },
-        {
-          autoAlpha:1,
-        x:0});
-        
-        console.log("clicked",tl)
-  
-        $(".btn--close, .cart-icon").click(function () {
-          if (tl.reversed()) {
-            tl.play();
-          } else {
-            tl.reverse();
-          }      });}
+      
     
           export function ScrollTriggerAnimations(){
            
@@ -148,15 +139,16 @@ export function InitHamburgerAnimation() {
 
         let headerAnim = new TimelineMax();
 
-            headerAnim.to(".anim__hide", {
+            headerAnim.to(".header", {
               scrollTrigger: {
                 trigger: ".header",
-                start: "bottom top",
+                start: "25% top",
                 toggleActions: "play none none reset",
-                
+                markers:true
               },
-              autoAlpha:0,
-
+              //autoAlpha:0,
+              backdropFilter: "blur(12px) ",
+              height: "15vh"
             }, );
 
             let aboutSectionAnim = new TimelineMax();
@@ -185,4 +177,4 @@ export function InitHamburgerAnimation() {
           }
 
 
-export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation, shopFilterAnimation, cartPreviewAnimation, ScrollTriggerAnimations };
+export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation, shopFilterAnimation, ScrollTriggerAnimations };
