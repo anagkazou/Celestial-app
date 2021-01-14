@@ -192,10 +192,10 @@ export function InitHamburgerAnimation() {
           export function ScrollTriggerAnimations(){
            
             gsap.registerPlugin(ScrollTrigger);
-            ScrollTrigger.defaults({
-             // markers:true, 
+            
+            ScrollTrigger.config({
+              autoRefreshEvents: "visibilitychange,DOMContentLoaded,load" // notice "resize" isn't in the list
             });
-
         let headerAnim = new TimelineMax();
 
             headerAnim.to(".header", {
@@ -203,11 +203,11 @@ export function InitHamburgerAnimation() {
                 trigger: ".header",
                 start: "25% top",
                 toggleActions: "play none none reset",
-                markers:true
+                //markers:true
               },
               //autoAlpha:0,
               backdropFilter: "blur(18px) ",
-              height: "8vh"
+              height: "12vh"
             }, );
 
             let aboutSectionAnim = new TimelineMax();
