@@ -13,6 +13,9 @@
   transition: height ease-in-out .3s;
   align-items: center;
 
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
         @include respond(phone){
           height: 26vw;
         }

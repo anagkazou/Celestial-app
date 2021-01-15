@@ -21,7 +21,7 @@ import { setCurrentUser } from "./redux/user/user.actions";
 import {selectCurrentUser} from './redux/user/user.selectors'
 import Ottomans from "./pages/shop/ottomans.component";
 
-
+import Modal from './components/modal/added-to-cart.component';
 
 class App extends React.Component {
   
@@ -80,7 +80,7 @@ componentWillUnmount(){
           <Route exact  path= "/checkout"  component= {Checkout} />
 
   </Switch>
-
+          <Modal/>
       </div>
     );
   }

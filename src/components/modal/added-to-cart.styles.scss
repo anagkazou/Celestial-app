@@ -1,0 +1,18 @@
+@import '../../scss/variables.styles.scss';
+
+.modal{
+    width: 30vw;
+    background-color: $color-primary;
+    height: 20vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+        bottom: 1vw;
+    &__svg{
+        width: 10%;
+        height: auto;
+    }
+    &__text{
+        font-size: 1.2vw;
+    }
+}

@@ -207,7 +207,7 @@ export function InitHamburgerAnimation() {
               },
               //autoAlpha:0,
               backdropFilter: "blur(18px) ",
-              height: "12vh"
+              height: "13vh"
             }, );
 
             let aboutSectionAnim = new TimelineMax();
