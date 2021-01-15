@@ -1,18 +1,24 @@
 @import '../../scss/variables.styles.scss';
 
 .modal{
-    width: 30vw;
+    width: 16vw;
     background-color: $color-primary;
-    height: 20vw;
+    height: 3vw;
     display: flex;
     align-items: center;
     position: absolute;
-        bottom: 1vw;
+    bottom: -10vw;
+    right: 6vw;
+    padding: 2vw;
+    opacity: 0;
     &__svg{
-        width: 10%;
+        width: 20%;
         height: auto;
+        margin-right: .6vw;
     }
     &__text{
-        font-size: 1.2vw;
+        font-size: 1vw;
+        color: white;
+
     }
 }

@@ -2,21 +2,21 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './shop-item.styles.scss';
-import CustomButton from '../custom-button/custom-button.component';
 
 import {addItem} from '../../redux/cart/cart.actions';
-
+import {AddedToCartModal} from '../../js/animations';
 const ShopItem = ({item, addItem, category}) =>{
    const {imageUrl, name, price} = item;
 
         return(
             <React.Fragment>
-                <div className="furniture-item" onClick = { () => addItem(item)} >
+                <div className="furniture-item" onClick = { () => {addItem(item)
+                AddedToCartModal();
+                }} >
                     <div className="furniture-item__img" style= {{
                         backgroundImage:`url(${imageUrl})`
                     }}/>
                     <div className="button-container">
-                    <CustomButton>Quick Add</CustomButton>
                     </div>
                     <p className="furniture-item__category">
                         {category}

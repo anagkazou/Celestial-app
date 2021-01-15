@@ -15,6 +15,11 @@ import CartIcon from '../cart-icon/cart-icon.component';
 import CartPreview from '../cart-preview/cart-preview.component';
 import {logo, menuImages} from '../../assets/img/images';
 
+import Modal from '../modal/added-to-cart.component';
+
+
+
+
 class Header extends React.Component {
   // constructor(props){
   //   super(props)
@@ -49,6 +54,7 @@ Logout
 }   
 <CartIcon />   
 
+<Modal/>
 
   <div className="hamburger" id="hamburger" >
             <span className="line"></span>
@@ -90,6 +96,8 @@ Logout
 
         </div>
       </div>
+
+
   </nav>
   </div>
 

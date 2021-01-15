@@ -152,9 +152,6 @@ export function InitHamburgerAnimation() {
         }      });
 
         
-        
-
-
         }
   
 
@@ -235,5 +232,22 @@ export function InitHamburgerAnimation() {
             })
           }
 
+          export function AddedToCartModal(){
 
-export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation, shopFilterAnimation, ScrollTriggerAnimations };
+            let tl = new TimelineMax();
+
+            tl.fromTo(".modal",  {
+              autoAlpha:0,
+              y:80, 
+            },
+            {
+              autoAlpha:1,
+            y:0,
+            duration:.5
+          })
+          .to(".modal",{
+            autoAlpha:0
+          });
+          }
+
+export default { InitHamburgerAnimation, InitPreviewAnimation, menuAnimation, shopFilterAnimation, ScrollTriggerAnimations, AddedToCartModal };
