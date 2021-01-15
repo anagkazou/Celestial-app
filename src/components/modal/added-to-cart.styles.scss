@@ -1,4 +1,5 @@
 @import '../../scss/variables.styles.scss';
+@import '../../scss/mixins.scss';
 
 .modal{
     width: 16vw;
@@ -11,6 +12,11 @@
     right: 6vw;
     padding: 2vw;
     opacity: 0;
+    @include respond (phone){
+        height: 10vw;
+        width: 36vw;
+        bottom: -35vw;
+    }
     &__svg{
         width: 20%;
         height: auto;
@@ -19,6 +25,8 @@
     &__text{
         font-size: 1vw;
         color: white;
-
+            @include respond (phone){
+                font-size: 2.6vw;
+            }
     }
 }
