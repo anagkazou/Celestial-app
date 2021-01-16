@@ -216,19 +216,23 @@ export function InitHamburgerAnimation() {
                 start: "30% top",
                 toggleActions: "play none none reset",
                 scrub: 1,
-
+                
               },
-              scale:1.2,   
-            })
+              scale:1,  
+              ease: "circ.out",
+                        })
             .to(".img-2__banner",{
               scrollTrigger:{               
                 trigger:".section_about",
                 start: "30% top",
+                end:"60% 50%",
                 toggleActions: "play none none reset",
-                scrub: 2,
-
+                scrub: 3,
+                markers:true
               },
-              y: 60, 
+              y: 120, 
+              ease: "linear",
+
             })
           }
 
