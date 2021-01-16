@@ -227,7 +227,6 @@ export function InitHamburgerAnimation() {
                 end:"60% 50%",
                 toggleActions: "play none none reset",
                 scrub: 3,
-                markers:true
               },
               y: 120, 
               ease: "linear",
