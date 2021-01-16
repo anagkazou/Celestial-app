@@ -7,7 +7,7 @@ import googleLogo from '../../assets/svg/google.svg'
 import banner from '../../assets/img/login-banner.jpg'
 
 import {Link} from 'react-router-dom';
-import {logo} from '../../assets/img/images';
+import {logo} from '../../assets/assets';
 
 import {auth,signInWithGoogle} from '../../firebase/firebase.utils'
 

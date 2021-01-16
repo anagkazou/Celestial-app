@@ -6,7 +6,7 @@ import CustomButton from '../../components/custom-button/custom-button.component
 import googleLogo from '../../assets/svg/google.svg'
 import banner from '../../assets/img/login-banner.jpg'
 
-import {logo} from '../../assets/img/images';
+import {logo} from '../../assets/assets';
 
 import {Link} from 'react-router-dom';
 

@@ -98,3 +98,51 @@
     }
   }
 }
+
+.section__video{
+  position: relative;
+  height: fit-content;
+  height: 50vw;
+  overflow: hidden;
+  margin-bottom: 20vw;
+  margin-top: -16vw;
+    @include respond(tab-land){
+      height: 50vw;
+    }
+    @include respond(phone){
+      height: 60vw;
+    }
+  .video__img{
+    width: 100vw;
+    object-fit: cover;
+    top: -20em;
+    position: absolute;
+    @include respond(tab-land){
+      top: -14vw;
+    }
+    @include respond(phone){
+      top: -2vw;
+    }
+  }
+  
+
+  .blur{
+      width: 6vw;
+      height: 6vw;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      background-color: #6c4f235c;
+      //-webkit-backdrop-filter: blur(18px);
+
+      .play{
+        width: 83%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);      
+      }
+    }
+}

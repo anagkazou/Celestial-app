@@ -13,7 +13,7 @@ import { setCurrentUser } from "../../redux/user/user.actions";
 import { selectCartHidden  } from "../../redux/cart/cart.selectors";
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartPreview from '../cart-preview/cart-preview.component';
-import {logo, menuImages} from '../../assets/img/images';
+import {logo, menuImages} from '../../assets/assets';
 
 import Modal from '../modal/added-to-cart.component';
 

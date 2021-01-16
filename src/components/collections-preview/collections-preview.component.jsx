@@ -9,7 +9,7 @@ import {
   imgSofa,
   imgStool,
   imgOtto,
-} from "../../assets/img/images";
+} from "../../assets/assets";
 
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';

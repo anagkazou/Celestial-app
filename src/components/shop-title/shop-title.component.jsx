@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './shop-title.styles.scss';
-import {iconArrow} from '../../assets/img/images';
+import {iconArrow} from '../../assets/assets';
 
 import {shopFilterAnimation} from "../../js/animations";
 

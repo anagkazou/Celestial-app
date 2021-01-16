@@ -1,10 +1,13 @@
 import React, {useEffect} from "react";
 import "./homepage.scss";
 import Hero from "../components/hero/hero.component";
-import { imgAbout1, imgAbout2 } from "../assets/img/images";
+import { imgAbout1, imgAbout2 } from "../assets/assets";
 import CollectionPreview from "../components/collections-preview/collections-preview.component";
 
 import {ScrollTriggerAnimations} from '../js/animations';
+
+import {VideoIsh} from '../assets/assets';
+import {PlaySVG} from '../assets/assets';
 
   
 
@@ -41,6 +44,14 @@ const HomePage = () => {
       </div>
     </section>
     <CollectionPreview />
+
+    <section className="section__video">
+      <img src={VideoIsh} alt="video" className="video__img"/>
+          
+      <div className="blur">
+        <img src={PlaySVG} alt="" className="play"/></div>
+
+    </section>
     </React.Fragment>)
     }
 

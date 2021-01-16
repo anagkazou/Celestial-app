@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 
-import { first, second, third, fourth, fifth } from "../../assets/img/images.js";
+import { first, second, third, fourth, fifth } from "../../assets/assets.js";
 import "./slider.styles.scss"; 
 
 export default class SlickSlider extends React.Component {
