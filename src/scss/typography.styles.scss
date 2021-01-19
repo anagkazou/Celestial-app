@@ -39,7 +39,7 @@ h1 {
     font-weight: 200;
     position: relative;
     @include respond(phone){
-      font-size: 14vw;
+      font-size: $font-size-large-mobile;
     }
     &::after {
       content: " ";
@@ -52,7 +52,9 @@ h1 {
 
       @include respond(phone){
         width: 18vw;
-      }
+        bottom: -4vw;
+        }
+      
     }
     span {
       font-style: italic;
@@ -68,6 +70,6 @@ h1 {
   font-family: "Cormorant", serif;
 
   @include respond (phone){
-    font-size: $font-size-large-mobile;
+    font-size: 14vw;
   }
 }

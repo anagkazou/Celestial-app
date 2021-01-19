@@ -32,7 +32,7 @@
     &--text {
       width: 16vw;
       @include respond(phone){
-        width: 66vw;
+        width: unset;
         margin-top: 16vw;
         margin-right: auto;
       }
@@ -51,6 +51,7 @@
       line-height: 1.6em;
       margin-top: 3vw;
       @include respond(phone){
+          margin-top: 8vw;
         font-size: $font-size-small-mobile;
       }
     }
@@ -107,24 +108,12 @@
   overflow: hidden;
   margin-bottom: 10vw;
   margin-top: -16vw;
-    // @include respond(tab-land){
-    //   height: 50vw;
-    // }
-    // @include respond(phone){
-    //   height: 60vw;
-    // }
+  
   .video__img{
     width: 100vw;
     object-fit: cover;
-   // top: -20em;
      height: auto;
-   // position: absolute;
-    // @include respond(tab-land){
-    //   top: -14vw;
-    // }
-    // @include respond(phone){
-    //   top: -2vw;
-    // }
+   
   }
   
 
@@ -163,13 +152,13 @@
     padding: 0 15%;
 
     @include respond(phone){
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
     &--text {
       width: 16vw;
       margin-left: auto;
       @include respond(phone){
-        width: 66vw;
+        width: unset;
         margin-top: 16vw;
         margin-right: auto;
       }
@@ -179,8 +168,9 @@
       margin-bottom: 2vw;
       @include respond(phone){
         font-size: 2.8vw;
-        margin-bottom: 4vw;
       }
+
+      
     }
     .paragraph {
       color: $color-secondary;
@@ -189,6 +179,7 @@
      // width: 20vw;
       margin-top: 3vw;
       @include respond(phone){
+        margin-top: 8vw;
         font-size: $font-size-small-mobile;
       }
     }
@@ -255,6 +246,10 @@
       &::after{
         all:unset;
       }
+
+      @include respond(phone){
+        width: unset;
+      }
     }
   }
 form{
@@ -264,6 +259,13 @@ form{
     width: 40%;
     margin: 3vw;
     font-size: 1.6vw;
+    @include respond(phone){
+      width: 80%;
+      margin: 6vw auto;
+      display: block;
+      font-size: $font-size-small-mobile;
+
+    }
   }
   button{
     border: none;
@@ -271,5 +273,9 @@ form{
     color: white;
     width: 14vw;
     height: 4vw;
+    @include respond(phone){
+      width: 26vw;
+      height: 8vw;
+    }
   }
 }

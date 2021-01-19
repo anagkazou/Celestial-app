@@ -9,6 +9,8 @@ import {Link} from 'react-router-dom';
 
 const Footer = () => (
     <footer className="footer">
+               <div className="footer__col">
+
         <div className="footer__group">
         <img src={logo} alt="logo" className="footer__logo"/>
         <div className="footer__socials">
@@ -17,6 +19,9 @@ const Footer = () => (
                     <a href="/#" className="footer__socials--link"><img src={Pinterest} alt="facebook" className= "footer__socials--img"/></a>  
                     </div>
         </div>
+        </div>
+        
+        <div className="footer__col">
         <div className="footer__group align-right">
             <Link className="footer__group--title">shop</Link>
             <Link className="footer__group--link">Chairs</Link>
@@ -32,7 +37,10 @@ const Footer = () => (
             <Link className="footer__group--link">About</Link>
             <Link className="footer__group--link">Login</Link>
        </div>
-       <div className="footer__group align-right">
+       </div>
+
+       <div className="footer__col">
+           <div className="footer__group align-right">
             <Link className="footer__group--title">Company</Link>
             <Link className="footer__group--link">Press</Link>
             <Link className="footer__group--link">Affiliates</Link>
@@ -42,6 +50,8 @@ const Footer = () => (
             <Link className="footer__group--link">FAQs</Link>
             <Link className="footer__group--link">Contact us</Link>
        </div>
+       </div>
+       
     </footer>
 )
 
