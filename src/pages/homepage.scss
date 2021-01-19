@@ -49,6 +49,7 @@
       color: $color-secondary;
       font-size: $font-size-small;
       line-height: 1.6em;
+      margin-top: 3vw;
       @include respond(phone){
         font-size: $font-size-small-mobile;
       }
@@ -104,7 +105,7 @@
   height: fit-content;
   //height: 50vw;
   overflow: hidden;
-  margin-bottom: 20vw;
+  margin-bottom: 10vw;
   margin-top: -16vw;
     // @include respond(tab-land){
     //   height: 50vw;
@@ -151,4 +152,124 @@
         transform: translate(-50%, -50%);      
       }
     }
+}
+
+.section__ethos{
+  padding-bottom: 20vw;
+  .ethos__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15%;
+
+    @include respond(phone){
+      flex-direction: column-reverse;
+    }
+    &--text {
+      width: 16vw;
+      margin-left: auto;
+      @include respond(phone){
+        width: 66vw;
+        margin-top: 16vw;
+        margin-right: auto;
+      }
+    }
+    .title {
+      color: $color-secondary;
+      margin-bottom: 2vw;
+      @include respond(phone){
+        font-size: 2.8vw;
+        margin-bottom: 4vw;
+      }
+    }
+    .paragraph {
+      color: $color-secondary;
+      font-size: $font-size-small;
+      line-height: 1.6em;
+     // width: 20vw;
+      margin-top: 3vw;
+      @include respond(phone){
+        font-size: $font-size-small-mobile;
+      }
+    }
+
+    &--img {
+      margin-right: auto;
+      width: fit-content;
+      position: relative;
+
+      @include respond(phone){
+        margin-right: 16vw;
+      }
+      .img {
+     
+        &-1 {
+          width: auto;
+          height: 40vw;
+          position: relative;
+          @include respond(phone){
+            height: 80vw;
+          }
+        }
+  
+        &-2__banner{
+          position: absolute;
+          width: 16vw;
+          height: 24vw;
+          right: -25%;
+          bottom: 30%;
+          z-index: 2;
+          overflow: hidden;
+          @include respond(phone){
+            height: 42vw;
+            width: 30vw;
+          }
+        }
+        &-2 {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transform: scale(1.2);
+          
+        }
+      }
+  
+    }
+
+      }
+
+}
+
+.section__newsletter{
+  background-color: white;
+  padding: 8vw;
+  text-align: center;
+  .title{
+
+
+    &__sub{
+      width: 50vw;
+      margin: 2.4vw auto 0 auto;  
+      line-height: 110%;
+
+      &::after{
+        all:unset;
+      }
+    }
+  }
+form{
+  margin-top: 1.2vw;
+}
+  input{
+    width: 40%;
+    margin: 3vw;
+    font-size: 1.6vw;
+  }
+  button{
+    border: none;
+    background-color: $color-primary;
+    color: white;
+    width: 14vw;
+    height: 4vw;
+  }
 }

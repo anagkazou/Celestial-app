@@ -232,6 +232,30 @@ export function InitHamburgerAnimation() {
               ease: "linear",
 
             })
+            let ethosSectionAnim = new TimelineMax();
+
+            ethosSectionAnim
+            .to(".img-2", {
+              scrollTrigger:{               
+                trigger:".section__ethos",
+                start: "-20% top",
+                toggleActions: "play none none reset",
+                scrub: 1,
+                markers:true,
+              },
+              scale:1,  
+              ease: "circ.out",
+                        })
+            .to(".img-2__banner",{
+              scrollTrigger:{               
+                trigger:".section__ethos",
+                toggleActions: "play none none reset",
+                scrub: 3,
+              },
+              y: 120, 
+              ease: "linear",
+
+            })
           }
 
           export function AddedToCartModal(){

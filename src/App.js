@@ -11,15 +11,15 @@ import Chairs from './pages/shop/chairs.component';
 import Sofas from './pages/shop/sofas.component';
 import Stools from './pages/shop/stools.components'
 import Lights from './pages/shop/lights.component';
-//import Ottomans from './pages/shop/ottomans.component';
+import Ottomans from './pages/shop/ottomans.component';
 import Checkout from './pages/checkout/checkout.component'
+import Footer from './components/footer/footer.component'
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect'
 
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import { setCurrentUser } from "./redux/user/user.actions";
 import {selectCurrentUser} from './redux/user/user.selectors'
-import Ottomans from "./pages/shop/ottomans.component";
 
 
 class App extends React.Component {
@@ -79,6 +79,7 @@ componentWillUnmount(){
           <Route exact  path= "/checkout"  component= {Checkout} />
 
   </Switch>
+          <Footer/>
       </div>
     );
   }
