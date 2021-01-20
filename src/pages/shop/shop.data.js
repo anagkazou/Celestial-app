@@ -438,5 +438,6 @@ const SHOP_DATA= [
     },
 ]
 
+console.log(JSON.parse(JSON.stringify(SHOP_DATA)));
 
 export default SHOP_DATA;

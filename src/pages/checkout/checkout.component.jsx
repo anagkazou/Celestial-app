@@ -27,6 +27,10 @@ const CheckoutPage = ({ cartItems, total, currentUser }) => {
     customer: {
       email: "youremail@gmail.com",
       name: "Your name",
+      //   This shouldnt be typically. The user's email was meant to be fed into this object from the "currentUser" prop
+      //   but I cannot seem to do that without triggering an error.
+      //   Redux persist rehydrates the redux currentUser prop after the initial value of null has
+      //   already been received as the value
     },
     customizations: {
       title: "my Payment Title",

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./added-to-cart.styles.scss";
 
 import Check from "../../assets/svg/check.svg";
