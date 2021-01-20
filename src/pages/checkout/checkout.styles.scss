@@ -1,9 +1,9 @@
-@import '../../scss/variables.styles.scss';
+@import "../../scss/variables.styles.scss";
 .checkout {
   color: white;
   padding: 12vw 16vw;
 
-  @include respond(phone){
+  @include respond(phone) {
     margin-top: 20vw;
     padding: 12vw 0;
   }
@@ -14,32 +14,31 @@
     display: flex;
     align-items: center;
     color: $color-black;
-    @include respond(phone){
-       height: 6vw;   
-       width: 80%;
-        margin: 0 auto;
-      }
+    @include respond(phone) {
+      height: 6vw;
+      width: 80%;
+      margin: 0 auto;
+    }
 
     &-text {
       font-size: 1vw;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 3vw;
-        }
+      }
     }
 
     &-arrow {
       font-size: 1.2vw;
-      margin-right: .4vw;
-      @include respond(phone){
+      margin-right: 0.4vw;
+      @include respond(phone) {
         font-size: 7.2vw;
-        height: 1.4em;     
+        height: 1.4em;
         margin-right: 2vw;
         vertical-align: middle;
       }
     }
   }
 
-  
   &-container {
     width: 100%;
     height: fit-content;
@@ -49,20 +48,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    	@include respond(phone){
-        flex-direction: column;
-        }
+    @include respond(phone) {
+      flex-direction: column;
+    }
 
     .checkout-items {
       padding: 1vw;
       width: 65%;
       height: 100%;
-      @include respond(phone){
+      @include respond(phone) {
         width: 90%;
         margin: 0 auto 8vw auto;
-        }
+      }
     }
-   
+
     .checkout-summary {
       padding: 1.4vw;
       width: 30%;
@@ -71,73 +70,68 @@
       flex-direction: column;
       background-color: $color-white-secondary;
       color: $color-black;
-      @include respond(phone){
+      @include respond(phone) {
         width: 90%;
         margin: 0 auto;
         background-color: unset;
-        }
-        
-      &__title{
+      }
+
+      &__title {
         font-weight: 600;
         font-size: 1.2vw;
         text-align: center;
-        @include respond(phone){
+        @include respond(phone) {
           font-size: 4.2vw;
-          }
-      }
-
-      &__items{
-        
-        button > span{     
-            background-image: none !important;
-
-                // background-color: $color-primary !important;
-
-          }
-        
-      }
-
-      &__item{
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px #76767640 solid;
-      padding: 1.2vw 0;
-      font-size: 1vw;
-      @include respond(phone){
-        font-size: 4vw;
-        padding: 3.2vw 0;
         }
-        
-        &--total{
+      }
+
+      &__items {
+        button > span {
+          background-image: none !important;
+
+          // background-color: $color-primary !important;
+        }
+      }
+
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px #76767640 solid;
+        padding: 1.2vw 0;
+        font-size: 1vw;
+        @include respond(phone) {
+          font-size: 4vw;
+          padding: 3.2vw 0;
+        }
+
+        &--total {
           font-size: 1.2vw;
           font-weight: 600;
-          @include respond(phone){
+          @include respond(phone) {
             font-size: 4.2vw;
           }
         }
-
       }
-        button{
-          width: 50%;
-          align-self: center;  
-          margin-top: 2vw;
-          font-size: .8vw;
-          background-color: $color-primary;
-          color: white;
-          font-weight: 600;
-          height: 3vw;
-          border: none;
-          @include respond(phone){
-            height: 10vw;
-            width: 60%;
-            font-size: 3vw;
-            margin-top: 8vw;
-
-            }
-          // &:hover{
-          //   border: none;    
-          //       }
+      button {
+        width: 50%;
+        align-self: center;
+        margin-top: 2vw;
+        font-size: 0.8vw;
+        background-color: $color-primary;
+        color: white;
+        font-weight: 600;
+        height: 3vw;
+        border: none;
+        @include respond(phone) {
+          height: 10vw;
+          width: 60%;
+          font-size: 3vw;
+          margin-top: 8vw;
         }
+        // &:hover{
+        //   border: none;
+        //       }
+      }
     }
   }
 }

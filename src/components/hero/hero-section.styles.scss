@@ -7,37 +7,29 @@
   overflow-x: unset;
   background-color: $color-bg;
   position: relative;
-  //  @include respond(tab-land){
-  //       max-height: 60vh;
-  //   }
-   
-   @include respond(phone){
-        max-height: 100vh;
-        min-height: 80vh;
-    }
+
+  @include respond(phone) {
+    max-height: 100vh;
+    min-height: 80vh;
+  }
 
   &__container {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     position: absolute;
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-   
   }
 
   &__sub {
     font-size: 1.6vw;
     color: $color-text-primary;
-    @include respond(phone){
-     font-size: 5vw;
+    @include respond(phone) {
+      font-size: 5vw;
       padding: 1vw 10vw;
       font-weight: 100;
-  }
-
+    }
   }
 
   &__cta {
@@ -49,28 +41,21 @@
     font-size: $font-size-button;
     margin-top: 2.6rem;
 
-    @include respond(phone){
+    @include respond(phone) {
       padding: 2.6vw 6vw;
       font-size: $font-size-button-mobile;
       font-weight: 200;
-  }
+    }
   }
   &__slider {
     padding-top: 75vh;
 
-    // @include respond(tab-land){
-    //     padding-top: 38vh;
-
-    // }
-    @include respond(tab-port){
-        padding-top: 34vw;
-
+    @include respond(tab-port) {
+      padding-top: 34vw;
     }
-    @include respond(phone){
-        padding-top: 74vh;
-
+    @include respond(phone) {
+      padding-top: 74vh;
     }
-
   }
   .center-text {
     text-align: center;

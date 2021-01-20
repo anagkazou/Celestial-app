@@ -4,10 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
 import { first, second, third, fourth, fifth } from "../../assets/assets.js";
-import "./slider.styles.scss"; 
+import "./slider.styles.scss";
 
 export default class SlickSlider extends React.Component {
-
   render() {
     const settings = {
       infinite: true,

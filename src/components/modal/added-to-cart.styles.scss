@@ -1,32 +1,32 @@
-@import '../../scss/variables.styles.scss';
-@import '../../scss/mixins.scss';
+@import "../../scss/variables.styles.scss";
+@import "../../scss/mixins.scss";
 
-.modal{
-    width: 16vw;
-    background-color: $color-primary;
-    height: 3vw;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: -10vw;
-    right: 6vw;
-    padding: 2vw;
-    opacity: 0;
-    @include respond (phone){
-        height: 10vw;
-        width: 36vw;
-        bottom: -35vw;
+.modal {
+  width: 16vw;
+  background-color: $color-primary;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -10vw;
+  right: 6vw;
+  padding: 2vw;
+  opacity: 0;
+  @include respond(phone) {
+    height: 10vw;
+    width: 36vw;
+    bottom: -35vw;
+  }
+  &__svg {
+    width: 20%;
+    height: auto;
+    margin-right: 0.6vw;
+  }
+  &__text {
+    font-size: 1vw;
+    color: white;
+    @include respond(phone) {
+      font-size: 2.6vw;
     }
-    &__svg{
-        width: 20%;
-        height: auto;
-        margin-right: .6vw;
-    }
-    &__text{
-        font-size: 1vw;
-        color: white;
-            @include respond (phone){
-                font-size: 2.6vw;
-            }
-    }
+  }
 }

@@ -14,7 +14,7 @@ h1 {
   font-size: 7.6vw;
   color: $color-text-primary;
 
-  @include respond (phone){
+  @include respond(phone) {
     font-size: 13.2vw;
   }
 }
@@ -26,7 +26,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.3em;
 
-  @include respond (phone){
+  @include respond(phone) {
     font-size: 2.6vw;
   }
 
@@ -38,7 +38,7 @@ h1 {
     margin-bottom: 1vw;
     font-weight: 200;
     position: relative;
-    @include respond(phone){
+    @include respond(phone) {
       font-size: $font-size-large-mobile;
     }
     &::after {
@@ -50,11 +50,10 @@ h1 {
       background-color: $color-secondary;
       bottom: -2vw;
 
-      @include respond(phone){
+      @include respond(phone) {
         width: 18vw;
         bottom: -4vw;
-        }
-      
+      }
     }
     span {
       font-style: italic;
@@ -69,7 +68,7 @@ h1 {
   font-weight: 400;
   font-family: "Cormorant", serif;
 
-  @include respond (phone){
+  @include respond(phone) {
     font-size: 14vw;
   }
 }

@@ -1,5 +1,5 @@
-@import '../../scss/mixins.scss';
-@import '../../scss/variables.styles.scss';
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.styles.scss";
 
 .cart-preview {
   position: fixed;
@@ -12,9 +12,8 @@
   flex-direction: column;
   background-color: white;
 
-  @include respond(phone){
+  @include respond(phone) {
     width: 80vw;
-
   }
   &__block--top {
     display: flex;
@@ -27,9 +26,8 @@
       font-family: "cormorant", sans-serif;
       //font-weight: bold;
 
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 5.8vw;
-        
       }
     }
 
@@ -37,9 +35,8 @@
       font-size: 1.6vw;
       margin-left: auto;
       cursor: pointer;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 6.6vw;
-        
       }
     }
   }
@@ -47,16 +44,15 @@
     position: relative;
     margin: 6vh 0;
     padding: 0 2vw;
-    @include respond(phone){
-      margin: 1vh 0;      
+    @include respond(phone) {
+      margin: 1vh 0;
     }
     .promo-text {
       text-align: center;
       font-size: 1.1vw;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 3.2vw;
         padding: 0 2vw;
-        
       }
     }
     button {
@@ -69,10 +65,9 @@
       width: 50%;
       height: 3.2vw;
       border: none;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 2.2vw;
         height: 7.2vw;
-
       }
     }
   }
@@ -89,9 +84,8 @@
     .empty-message {
       margin: 20vh auto;
       font-size: 1.6vw;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 4.6vw;
-        
       }
     }
   }

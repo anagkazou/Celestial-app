@@ -1,106 +1,102 @@
-@import '../../scss/mixins.scss';
-@import '../../scss/variables.styles.scss';
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.styles.scss";
 
+.footer {
+  background-color: $color-black;
+  color: white;
+  // height: 30vw;
+  padding: 10vw 15%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //justify-content: center;
 
-.footer{
-    background-color: $color-black;
-    color: white;
-   // height: 30vw;
-    padding: 10vw 15%;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+  &__logo {
+    width: 12vw;
+    @include respond(phone) {
+      width: 26vw;
+      margin: 0 auto;
+    }
+  }
+  &__col {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    //justify-content: center;
-    
-    @include respond (phone){
-        flex-direction: column;
-     }
-    &__logo{
-        width: 12vw;
-        @include respond (phone){
-            width: 26vw;
-            margin: 0 auto;
-        }
-    }
-    &__col{
-        display: flex;
-        flex-direction: row;
-        
-        &:not(:last-child){
-            margin-right: 4vw;
-            @include respond (phone){
-                margin: 0 auto;
-            }
-       
-        }
 
-        &:not(:first-child){
-            margin-left: auto;
-            @include respond (phone){
-                margin: 10vw auto 0 auto;
-            }
-        }
-        
-        @include respond (phone){
-            margin: 0 auto;
-        }
-
-    }
-    &__group{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        &:not(:last-child){
-            margin-right: 8vw;
-        }
-            &--title, &--link{
-                font-size: $font-size-small;
-                &:not(:last-child){
-                    margin-bottom: .8vw;
-                }
-
-                @include respond (phone){
-                    width: 5vw;
-                    font-size: $font-size-small-mobile;
-                }
-            }
-            @include respond(phone){
-                min-width: 30vw;
-            }
-
-        &--title{
-            color: $color-grey;              
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-        &--link{
-            color: white;
-            text-transform: capitalize;
-        }
-
-        & + .align-right{
-            margin-left: auto;
-        }
-
+    &:not(:last-child) {
+      margin-right: 4vw;
+      @include respond(phone) {
+        margin: 0 auto;
+      }
     }
 
-    &__socials{
-        align-items: center;
-        margin-top: 2vw;
-        justify-content: center;
-        &--link{
-            &:not(:last-child){
-                margin-right: 1vw;
-            }
-        }
-
-        &--img{
-            width: 1.8vw;
-            height: auto;
-            @include respond (phone){
-                width: 4vw;
-            }
-        }
+    &:not(:first-child) {
+      margin-left: auto;
+      @include respond(phone) {
+        margin: 10vw auto 0 auto;
+      }
     }
 
+    @include respond(phone) {
+      margin: 0 auto;
+    }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 8vw;
+    }
+    &--title,
+    &--link {
+      font-size: $font-size-small;
+      &:not(:last-child) {
+        margin-bottom: 0.8vw;
+      }
+
+      @include respond(phone) {
+        width: 5vw;
+        font-size: $font-size-small-mobile;
+      }
+    }
+    @include respond(phone) {
+      min-width: 30vw;
+    }
+
+    &--title {
+      color: $color-grey;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &--link {
+      color: white;
+      text-transform: capitalize;
+    }
+
+    & + .align-right {
+      margin-left: auto;
+    }
+  }
+
+  &__socials {
+    align-items: center;
+    margin-top: 2vw;
+    justify-content: center;
+    &--link {
+      &:not(:last-child) {
+        margin-right: 1vw;
+      }
+    }
+
+    &--img {
+      width: 1.8vw;
+      height: auto;
+      @include respond(phone) {
+        width: 4vw;
+      }
+    }
+  }
 }

@@ -5,7 +5,7 @@
   margin: 0 calc(100vw / 20 * 4);
   padding-top: 12vw;
 
-  @include respond(phone){
+  @include respond(phone) {
     margin: 0 calc(100vw / 12 * 1);
     border-bottom: 1px solid black;
     padding-bottom: 1vw;
@@ -13,30 +13,28 @@
   }
 }
 
-
-
 .shop__title {
   font-size: 5.4vw;
   color: $color-text-primary;
   text-transform: none;
 
-  @include respond(phone){
+  @include respond(phone) {
     margin-top: 3vw;
     font-size: 13vw;
   }
 
-  &--icon{
+  &--icon {
     display: none;
     position: relative;
     transform: translateX(-100%);
-    img{
+    img {
       width: 8vw;
       height: 8vw;
     }
-    @include respond(phone){
+    @include respond(phone) {
       position: absolute;
       right: 0;
-      
+
       font-size: 13vw;
       margin-right: 0;
       vertical-align: middle;
@@ -53,10 +51,9 @@
     font-family: "Libre Franklin", sans-serif;
     margin-bottom: 2.4vw;
 
-    @include respond(phone){
+    @include respond(phone) {
       font-size: 2.6vw;
       font-weight: 600;
-  
     }
   }
 }

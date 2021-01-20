@@ -2,10 +2,10 @@
 
 .slider {
   width: 100vw;
-  @include respond(phone){
+  @include respond(phone) {
     width: 198vw;
   }
- 
+
   &__img {
     height: 100%;
     background-size: cover;
@@ -17,11 +17,11 @@
     width: 20vw;
     height: 32vw;
 
-    @include respond(tab-land){
+    @include respond(tab-land) {
       width: 20vw;
       height: 34vw;
     }
-    @include respond(phone){
+    @include respond(phone) {
       width: 40vw;
       height: 74vw;
     }
@@ -30,11 +30,11 @@
   .large {
     width: 20vw;
     height: 28vw;
-    @include respond(tab-land){
+    @include respond(tab-land) {
       width: 22vw;
       height: 28vw;
     }
-    @include respond(phone){
+    @include respond(phone) {
       width: 40vw;
       height: 60vw;
     }
@@ -43,11 +43,11 @@
   .small {
     width: 18vw;
     height: 18vw;
-    @include respond(tab-land){
+    @include respond(tab-land) {
       width: 20vw;
       height: 20vw;
     }
-    @include respond(phone){
+    @include respond(phone) {
       width: 40vw;
       height: 40vw;
     }

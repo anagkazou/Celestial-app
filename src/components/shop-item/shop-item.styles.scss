@@ -8,29 +8,26 @@
   margin: 0 2.5vw 4vw 2.5vw;
   cursor: pointer;
 
+  @include respond(phone) {
+    width: calc(100vw / 12 * 4.5);
+    height: 70vw;
+    margin: unset;
 
-  @include respond(phone){
-      width: calc(100vw / 12 * 4.5);
-      height: 70vw;
-      margin: unset;
-
-     &:nth-child(odd) {
-        margin-right: calc(100vw / 12 * 0.5);
+    &:nth-child(odd) {
+      margin-right: calc(100vw / 12 * 0.5);
     }
 
     &:nth-child(even) {
       margin-left: calc(100vw / 12 * 0.5);
     }
-   
-
-    
   }
-  @include respond(desktop){
+  @include respond(desktop) {
     &:hover {
-     .furniture-item__img {
-       opacity: 0.8;
-     }}
-     .button-container .custom-button {
+      .furniture-item__img {
+        opacity: 0.8;
+      }
+    }
+    .button-container .custom-button {
       opacity: 1;
       bottom: 0;
     }
@@ -38,19 +35,21 @@
   &:nth-child(4n + 1) {
     margin-left: 0;
 
-    @include respond(phone){
-    margin-left: unset;    }
+    @include respond(phone) {
+      margin-left: unset;
+    }
   }
   &:nth-child(4n + 4) {
     margin-right: 0;
-    @include respond(phone){
-      margin-right: unset;    }
-        }
+    @include respond(phone) {
+      margin-right: unset;
+    }
+  }
   &__img {
     height: 15vw;
     background-size: cover;
 
-    @include respond(phone){
+    @include respond(phone) {
       height: 40vw;
     }
   }
@@ -68,7 +67,7 @@
     flex-direction: row;
     margin-top: 6%;
     font-size: $font-size-medium;
-    @include respond(phone){
+    @include respond(phone) {
       font-size: $font-size-medium-mobile;
     }
   }
@@ -87,7 +86,7 @@
     margin-left: auto;
     align-self: flex-end;
 
-    @include respond(phone){
+    @include respond(phone) {
       font-size: 3.2vw;
     }
   }

@@ -11,19 +11,18 @@ import {
   imgOtto,
 } from "../../assets/assets";
 
-import {connect} from 'react-redux';
-import {createStructuredSelector} from 'reselect';
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
-import {selectDirectorySection} from '../../redux/directory/directory.selector';
+import { selectDirectorySection } from "../../redux/directory/directory.selector";
 
 class CollectionPreview extends React.Component {
-  
   componentDidMount() {
     InitPreviewAnimation();
   }
-  
+
   render() {
-console.log(this.props);
+    console.log(this.props);
     return (
       <section className="section__browse-collections">
         <p className="title">Browse Collections</p>
@@ -36,7 +35,7 @@ console.log(this.props);
               style={{ left: "50%", top: "12%", opacity: "1" }}
               id="1"
             />
-            
+
             <img
               alt=""
               src={imgLight.third}
@@ -99,12 +98,18 @@ console.log(this.props);
           </div>
 
           <div className="preview__text">
-           
-{
-  this.props.collections.map(({id, urlTitle }) => {
-  return <Link to={`/category/${urlTitle}`} id= {id} key= {id} className= "collection-title" >{urlTitle}</Link>
-  })
-}
+            {this.props.collections.map(({ id, urlTitle }) => {
+              return (
+                <Link
+                  to={`/category/${urlTitle}`}
+                  id={id}
+                  key={id}
+                  className="collection-title"
+                >
+                  {urlTitle}
+                </Link>
+              );
+            })}
             <Link to="/collections" className="btn btn__text">
               View everything
             </Link>
@@ -177,6 +182,6 @@ console.log(this.props);
 }
 
 const mapStateToProps = createStructuredSelector({
-  collections: selectDirectorySection
+  collections: selectDirectorySection,
 });
-export default  connect(mapStateToProps)(CollectionPreview);
+export default connect(mapStateToProps)(CollectionPreview);

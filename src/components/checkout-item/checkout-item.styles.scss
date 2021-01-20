@@ -1,98 +1,97 @@
-@import '../../scss/variables.styles.scss';
+@import "../../scss/variables.styles.scss";
 
 .checkout-item {
-    padding: 1vw 0;
-    display: flex;
-    flex-direction: row;
-    @include respond(phone){
-      padding: 3vw 0;
-    }
+  padding: 1vw 0;
+  display: flex;
+  flex-direction: row;
+  @include respond(phone) {
+    padding: 3vw 0;
+  }
 
-    &:not(:last-child){
-        border-bottom: 1px #cccccc solid;
-    }
+  &:not(:last-child) {
+    border-bottom: 1px #cccccc solid;
+  }
 
-    img {
-      width: 25%;
-      height: auto;
-      
-    }
-    &__details {
-      width: 70%;
-      height: fit-content;
-      padding-left: 1.6vw;
+  img {
+    width: 25%;
+    height: auto;
+  }
+  &__details {
+    width: 70%;
+    height: fit-content;
+    padding-left: 1.6vw;
 
-      .top,
-      .bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .top {
-       // margin-bottom: 1.2vw;
-
-        .btn--close{
-            font-size: 1vw;
-            color: #929292;
-            cursor: pointer;
-            @include respond(phone){
-              font-size: 4vw;
-            }
-        }
-      }
-    }
-
-    &__name {
-      font-family: "Cormorant", serif;
-      font-size: 1.5vw;
-      color: $color-black;
-      @include respond(phone){
-        font-size: 5vw;
-      }
-    }
-&__category{
-    text-transform: uppercase;
-    margin: .8vw 0;
-    color: #929292;
-    font-weight: 600;
-}
-    &__quantity,
-    &__price {
-      font-size: 1vw;
-      color: $color-black;
-      @include respond(phone){
-        font-size: 4vw;
-      }
-    }
-
-    &__quantity {
+    .top,
+    .bottom {
       display: flex;
+      justify-content: space-between;
       align-items: center;
+    }
 
-      &--minus,
-      &--plus {
-        font-size: larger;
-        cursor: pointer;
+    .top {
+      // margin-bottom: 1.2vw;
+
+      .btn--close {
+        font-size: 1vw;
         color: #929292;
-        @include respond(phone){
-          font-size: 8vw;
-        }
-      }
-      
-      &--minus {
-        margin-right: 0.6vw;
-        @include respond(phone){
-          margin-right: 1.2vw;
-          line-height: .6em;
-          vertical-align: middle;
-        }
-      }
-      &--plus {
-        margin-left: 0.6vw;
-        @include respond(phone){
-          margin-left: 1.2vw;
+        cursor: pointer;
+        @include respond(phone) {
+          font-size: 4vw;
         }
       }
     }
   }
+
+  &__name {
+    font-family: "Cormorant", serif;
+    font-size: 1.5vw;
+    color: $color-black;
+    @include respond(phone) {
+      font-size: 5vw;
+    }
+  }
+  &__category {
+    text-transform: uppercase;
+    margin: 0.8vw 0;
+    color: #929292;
+    font-weight: 600;
+  }
+  &__quantity,
+  &__price {
+    font-size: 1vw;
+    color: $color-black;
+    @include respond(phone) {
+      font-size: 4vw;
+    }
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+
+    &--minus,
+    &--plus {
+      font-size: larger;
+      cursor: pointer;
+      color: #929292;
+      @include respond(phone) {
+        font-size: 8vw;
+      }
+    }
+
+    &--minus {
+      margin-right: 0.6vw;
+      @include respond(phone) {
+        margin-right: 1.2vw;
+        line-height: 0.6em;
+        vertical-align: middle;
+      }
+    }
+    &--plus {
+      margin-left: 0.6vw;
+      @include respond(phone) {
+        margin-left: 1.2vw;
+      }
+    }
+  }
+}

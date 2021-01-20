@@ -4,21 +4,16 @@
   background: none;
   border: none;
   border-bottom: 1px solid $color-dark-grey;
-  padding: .6em;
+  padding: 0.6em;
   color: $color-black;
   width: 100%;
   font-size: 1vw;
   margin-bottom: 3vw;
 
-  @include respond(phone){
+  @include respond(phone) {
     font-size: 3vw;
     margin-bottom: 8vw;
-
   }
-    // &:first-of-type{
-    //   margin-bottom: 2.6vw;
-      
-    // }
 
   &:focus {
     outline: none;

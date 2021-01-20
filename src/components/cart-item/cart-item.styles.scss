@@ -1,4 +1,4 @@
-@import '../../scss/mixins.scss';
+@import "../../scss/mixins.scss";
 
 .cart-item {
   display: flex;
@@ -13,7 +13,7 @@
     height: 8.4vw;
     display: inline-block;
 
-    @include respond(phone){
+    @include respond(phone) {
       width: 20vw;
       height: 20vw;
     }
@@ -33,9 +33,8 @@
     &-name {
       font-size: 1.6vw;
       font-family: "Cormorant", sans-serif;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 4.6vw;
-        
       }
     }
 
@@ -45,7 +44,7 @@
       font-weight: 600;
       font-size: 0.6vw;
       margin: 1vw 0;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 1.8vw;
       }
     }
@@ -54,7 +53,7 @@
       height: 1.2rem;
       line-height: 2;
       font-size: 1vw;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 3.4vw;
       }
     }
@@ -62,7 +61,7 @@
     &-quantity {
       font-size: 1vw;
       line-height: 2.2;
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 2.6vw;
       }
     }
@@ -73,10 +72,9 @@
     line-height: 3.2;
     font-size: 0.8vw;
     position: relative;
-    @include respond(phone){
+    @include respond(phone) {
       line-height: 2.2;
       font-size: 2.8vw;
-
     }
     // &::after{
     //   position: absolute;

@@ -1,15 +1,14 @@
 @import "../../scss/variables.styles.scss";
-@import '../../scss/mixins.scss';
+@import "../../scss/mixins.scss";
 
 .section__browse-collections {
   width: 100vw;
- max-height: 100vh;
+  max-height: 100vh;
   background-color: $color-bg;
-//margin-bottom: 10vw;
-  @include respond(tab-land){
-   // max-height: 90vh;
+  //margin-bottom: 10vw;
+  @include respond(tab-land) {
+    // max-height: 90vh;
   }
-  
 
   .title {
     text-align: center;
@@ -27,8 +26,8 @@
       height: 100%;
       flex-direction: column;
       padding-top: 3vw;
-      @include respond (phone){
-       width: 100%;
+      @include respond(phone) {
+        width: 100%;
       }
     }
 
@@ -37,9 +36,9 @@
       width: 40%;
       height: initial;
       position: relative;
-      @include respond (phone){
-      display: none;    
-        }
+      @include respond(phone) {
+        display: none;
+      }
 
       & > * {
         position: absolute;
@@ -53,7 +52,6 @@
       .img__small {
         width: 35%;
         height: auto;
-        
       }
     }
   }
@@ -63,14 +61,15 @@
     text-align: center;
     text-transform: capitalize;
     color: $color-secondary;
-    
+
     &:not(:last-child) {
-      margin-bottom: .4vw;
+      margin-bottom: 0.4vw;
     }
-  @include respond(desktop){
-    &:hover {
-    font-style: italic;
-  }}
+    @include respond(desktop) {
+      &:hover {
+        font-style: italic;
+      }
+    }
   }
 
   .btn__text {
