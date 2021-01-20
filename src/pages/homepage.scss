@@ -233,7 +233,7 @@
 
 .section__newsletter{
   background-color: white;
-  padding: 8vw;
+  padding: 12vw 8vw;
   text-align: center;
   .title{
 
@@ -274,8 +274,8 @@ form{
     width: 14vw;
     height: 4vw;
     @include respond(phone){
-      width: 26vw;
-      height: 8vw;
+      width: 40vw;
+      height: 10vw;
     }
   }
 }

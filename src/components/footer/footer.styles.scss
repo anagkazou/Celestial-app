@@ -19,6 +19,7 @@
         width: 12vw;
         @include respond (phone){
             width: 26vw;
+            margin: 0 auto;
         }
     }
     &__col{
@@ -36,7 +37,7 @@
         &:not(:first-child){
             margin-left: auto;
             @include respond (phone){
-                margin: 0 auto;
+                margin: 10vw auto 0 auto;
             }
         }
         
@@ -48,6 +49,7 @@
     &__group{
         display: flex;
         flex-direction: column;
+        text-align: center;
         &:not(:last-child){
             margin-right: 8vw;
         }
@@ -62,6 +64,10 @@
                     font-size: $font-size-small-mobile;
                 }
             }
+            @include respond(phone){
+                min-width: 30vw;
+            }
+
         &--title{
             color: $color-grey;              
             text-transform: uppercase;
