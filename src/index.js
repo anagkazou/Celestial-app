@@ -19,9 +19,7 @@ ReactDOM.render(
     <Provider store = {store}>
     <BrowserRouter>
       <PersistGate persistor ={persistor}>  
-{/* <Scrollbars style={{ height: "100vh",}}> */}
         <App />
-        {/* </Scrollbars> */}
     </PersistGate>
     </BrowserRouter>
     </Provider>
