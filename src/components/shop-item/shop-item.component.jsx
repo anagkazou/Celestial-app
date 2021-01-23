@@ -28,7 +28,7 @@ const ShopItem = ({ item, addItem, category }) => {
 
         <div className="furniture-item__details">
           <p className="furniture-item__name">{name}</p>
-          <p className="furniture-item__price">{`₦${price}`}</p>
+          <p className="furniture-item__price">{`$${price}`}</p>
         </div>
       </div>
     </React.Fragment>

@@ -207,6 +207,7 @@ export function ScrollTriggerAnimations() {
       y: 120,
       ease: "linear",
     });
+
   let ethosSectionAnim = new TimelineMax();
 
   ethosSectionAnim
@@ -272,12 +273,11 @@ export function PageTransitions() {
 
 export const ShopScrollAnimation = () => {
   let tl = new TimelineMax();
-  console.log("CCCLCLCLCLCL");
   if (window.innerWidth > 800) {
     tl.to(".filter", {
       scrollTrigger: {
         trigger: "footer",
-        start: "top 0%",
+        start: "top bottom",
         toggleActions: "play none none reset",
       },
       autoAlpha: 0,
