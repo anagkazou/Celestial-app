@@ -179,9 +179,7 @@ export function ScrollTriggerAnimations() {
       trigger: ".header",
       start: "25% top",
       toggleActions: "play none none reset",
-      //markers:true
     },
-    //autoAlpha:0,
     backdropFilter: "blur(18px) ",
   });
 
@@ -218,7 +216,6 @@ export function ScrollTriggerAnimations() {
         start: "-20% top",
         toggleActions: "play none none reset",
         scrub: 1,
-        markers: true,
       },
       scale: 1,
       ease: "circ.out",
@@ -276,13 +273,12 @@ export function PageTransitions() {
 export const ShopScrollAnimation = () => {
   let tl = new TimelineMax();
   console.log("CCCLCLCLCLCL");
-  if (window.innerWidth > 900) {
+  if (window.innerWidth > 800) {
     tl.to(".filter", {
       scrollTrigger: {
         trigger: "footer",
-        start: "top 90%",
+        start: "top 0%",
         toggleActions: "play none none reset",
-        markers: true,
       },
       autoAlpha: 0,
       ease: "circ.out",
