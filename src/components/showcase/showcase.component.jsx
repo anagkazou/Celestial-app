@@ -6,7 +6,7 @@ import ShopItem from "../shop-item/shop-item.component";
 
 import SHOP_DATA from "../../pages/shop/shop.data";
 
-import { shopFilterAnimation } from "../../js/animations";
+import { shopFilterAnimation, ShopScrollAnimation } from "../../js/animations";
 
 class ItemsShowcase extends React.Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class ItemsShowcase extends React.Component {
 
   componentDidMount() {
     shopFilterAnimation();
+    ShopScrollAnimation();
   }
 
   render() {

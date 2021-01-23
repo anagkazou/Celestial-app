@@ -46,7 +46,6 @@
   &__group {
     display: flex;
     flex-direction: column;
-    text-align: center;
     &:not(:last-child) {
       margin-right: 8vw;
     }
@@ -64,6 +63,7 @@
     }
     @include respond(phone) {
       min-width: 30vw;
+      text-align: center;
     }
 
     &--title {
