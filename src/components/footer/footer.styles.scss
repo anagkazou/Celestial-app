@@ -4,12 +4,10 @@
 .footer {
   background-color: $color-black;
   color: white;
-  // height: 30vw;
   padding: 10vw 15%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  //justify-content: center;
 
   @include respond(phone) {
     flex-direction: column;
