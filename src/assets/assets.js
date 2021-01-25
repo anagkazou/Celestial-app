@@ -6,7 +6,8 @@ export const fifth = require("./img/carousel-5.png");
 
 export const imgAbout1 = require("./img/about-1.jpg");
 export const imgAbout2 = require("./img/about-2.jpg");
-
+export const imgEthos1 = require("./img/ethos-1.jpg");
+export const imgEthos2 = require("./img/ethos-2.jpg");
 
 export const imgChair = {
   first: require("./img/chair-1.jpg"),
@@ -38,11 +39,11 @@ export const iconArrow = require("./img/arrow-down.png");
 export const logo = require("./img/celestial-logo2.png");
 
 export const menuImages = {
-  first:require("./img/menu-1.jpg"),
-second: require("./img/menu-2.jpg"),
-third: require("./img/menu-3.jpg"),
- fourth: require("./img/menu-4.jpg")
-}
+  first: require("./img/menu-1.jpg"),
+  second: require("./img/menu-2.jpg"),
+  third: require("./img/menu-3.jpg"),
+  fourth: require("./img/menu-4.jpg"),
+};
 
 export const VideoIsh = require("./img/video-ish.jpg");
 export const PlaySVG = require("./svg/play-button.svg");

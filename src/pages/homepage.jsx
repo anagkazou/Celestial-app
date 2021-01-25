@@ -3,7 +3,7 @@ import "./homepage.scss";
 import Hero from "../components/hero/hero.component";
 
 import FormInput from "../components/form-input/form-input.component";
-import { imgAbout1, imgAbout2 } from "../assets/assets";
+import { imgAbout1, imgAbout2, imgEthos1, imgEthos2 } from "../assets/assets";
 import CollectionPreview from "../components/collections-preview/collections-preview.component";
 
 import { ScrollTriggerAnimations } from "../js/animations";
@@ -55,20 +55,20 @@ const HomePage = () => {
       <section className="section__ethos">
         <div className="ethos__content">
           <div className="ethos__content--img img">
-            <img src={imgAbout1} alt="" className="img-1" />
+            <img src={imgEthos1} alt="" className="img-1" />
 
             <div className="img-2__banner">
-              <img src={imgAbout2} alt="" className="img-2" />
+              <img src={imgEthos2} alt="" className="img-2" />
             </div>
           </div>
           <div className="ethos__content--text">
             <p className="title">Our ethos</p>
             <h2 className="title__sub">
-              <span>Effortlessly</span> Epic Homes
+              <span>Effortlessly</span> Grande Homes
             </h2>
             <p className="paragraph">
-              Making a luxurious epic furniture accessible for all people is our
-              daily drive.
+              Making luxurious and truly grande furniture accessible for all
+              people is our daily drive.
             </p>
           </div>
         </div>
