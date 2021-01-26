@@ -87,7 +87,10 @@ class App extends React.Component {
           <Route exact path="/category/ottomans" component={Ottomans} />
           <Route exact path="/checkout" component={Checkout} />
         </Switch>
-        <Footer />
+        {this.props.location.pathname !== "/login" &&
+        this.props.location.pathname !== "/signup" ? (
+          <Footer />
+        ) : null}{" "}
       </div>
     );
   }
