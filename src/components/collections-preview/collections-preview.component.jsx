@@ -22,7 +22,6 @@ class CollectionPreview extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <section className="section__browse-collections">
         <p className="title">Browse Collections</p>

@@ -43,7 +43,6 @@ const CheckoutPage = ({ cartItems, total, currentUser }) => {
     ...config,
     text: "Pay Now",
     callback: (response) => {
-      console.log(response);
       closePaymentModal(); // this will close the modal programmatically
     },
     onClose: () => {},

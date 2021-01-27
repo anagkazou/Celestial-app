@@ -22,10 +22,6 @@ import { logo, menuImages } from "../../assets/assets";
 import Modal from "../modal/added-to-cart.component";
 
 class Header extends React.Component {
-  // constructor(props){
-  //   super(props)
-  // }
-
   componentDidMount() {
     InitHamburgerAnimation();
     menuAnimation();

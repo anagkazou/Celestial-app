@@ -35,31 +35,6 @@ export function InitPreviewAnimation() {
 }
 
 export function menuLinkAnimation() {
-  // $(".menu-link").each(function (index, el) {
-  //   const thisId = el.id;
-  //   const $thisPreviewImages = $(".menu-nav__left--img").find(
-  //     `.menu-nav__left--img[id="${thisId}"]`
-  //   );
-  //  // const $allImages = $(".menu-nav__left--img");
-  //   const $otherImages = $(".menu-nav__left--img")
-  //     .find(".menu-nav__left--img")
-  //     .not(`[id="${thisId}"]`);
-
-  //   $(el).on("mouseenter", (el) => {
-  //     // $($otherImages).addClass(".mouseentered");
-  //     console.log("triggered")
-  //     gsap.to($thisPreviewImages, {
-  //       opacity: 1,
-  //       ease: "Power1.easeOut",
-  //       duration: 0.5,
-  //     });
-
-  //     gsap.to($otherImages, {
-  //       opacity: 0,
-  //     });
-  //   });
-  // });
-
   $(".menu-nav__link").each(function (index, el) {
     const thisId = el.id;
     const $thisimg = $(".menu-nav__left--imgs").find(`img[id="${thisId}"]`);
@@ -68,7 +43,6 @@ export function menuLinkAnimation() {
       .not(`[id="${thisId}"]`);
 
     $(el).mouseenter((e) => {
-      console.log(thisId);
       if (window.innerWidth >= 800) {
         // animate in this img
         gsap.to($thisimg, {
@@ -124,8 +98,6 @@ export function menuAnimation() {
       duration: 0.2,
     });
 
-  console.log("clicked", tl);
-
   $(".hamburger, .menu-nav__link").click(function () {
     if (tl.reversed()) {
       tl.play();
@@ -153,8 +125,6 @@ export function shopFilterAnimation() {
         y: 0,
       }
     );
-
-    console.log("clicked", tl);
 
     $(".shop__title, .filter__hide ").click(function () {
       if (tl.reversed()) {
@@ -255,7 +225,6 @@ export function PageTransitions() {
   let tl = new TimelineMax();
   gsap.utils.toArray("a, button").forEach((link, i) => {
     $(link).click(function () {
-      console.log("CLICKEDDDDDDDDDDDDD");
       tl.fromTo(
         ".preloader",
         {

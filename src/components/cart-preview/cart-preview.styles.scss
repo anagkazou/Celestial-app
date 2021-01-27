@@ -24,7 +24,6 @@
     .cart-title {
       font-size: 1.8vw;
       font-family: "cormorant", sans-serif;
-      //font-weight: bold;
 
       @include respond(phone) {
         font-size: 5.8vw;

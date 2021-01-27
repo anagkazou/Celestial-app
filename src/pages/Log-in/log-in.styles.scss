@@ -25,13 +25,12 @@
     }
     .header__logo {
       position: absolute;
-      top: 10%;
+      top: 7%;
       left: 6vw;
       width: 10vw;
       height: auto;
       @include respond(phone) {
         width: 30vw;
-        top: 8%;
       }
     }
 
