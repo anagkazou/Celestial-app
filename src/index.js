@@ -9,8 +9,6 @@ import { store, persistor } from "./redux/store";
 
 import { PersistGate } from "redux-persist/integration/react";
 
-import "simplebar/dist/simplebar.min.css";
-
 ReactDOM.render(
   <>
     <Provider store={store}>
