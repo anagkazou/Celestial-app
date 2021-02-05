@@ -155,51 +155,54 @@ export function ScrollTriggerAnimations() {
 
   let aboutSectionAnim = new TimelineMax();
 
-  aboutSectionAnim
-    .to(".img-2", {
-      scrollTrigger: {
-        trigger: ".section_about",
-        start: "30% top",
-        toggleActions: "play none none reset",
-        scrub: 1,
-      },
-      scale: 1,
-      ease: "circ.out",
-    })
-    .to(".img-2__banner", {
-      scrollTrigger: {
-        trigger: ".section_about",
-        start: "30% top",
-        end: "60% 50%",
-        toggleActions: "play none none reset",
-        scrub: 3,
-      },
-      y: 120,
-      ease: "linear",
-    });
+  aboutSectionAnim.to(".img-2", {
+    scrollTrigger: {
+      trigger: ".section__about",
+      start: "-20% top",
+      toggleActions: "play none none reset",
+      scrub: 1,
+    },
+    scale: 1.3,
+    ease: "linear",
+  });
+
+  aboutSectionAnim.to(".img-2__banner", {
+    scrollTrigger: {
+      trigger: ".section__about",
+      start: "-20% top",
+
+      end: "60% 50%",
+      toggleActions: "play none none reset",
+      scrub: 3,
+    },
+    y: 120,
+    ease: "linear",
+  });
 
   let ethosSectionAnim = new TimelineMax();
 
-  ethosSectionAnim
-    .to(".img-2", {
-      scrollTrigger: {
-        trigger: ".section__ethos",
-        start: "-20% top",
-        toggleActions: "play none none reset",
-        scrub: 1,
-      },
-      scale: 1,
-      ease: "circ.out",
-    })
-    .to(".img-2__banner", {
-      scrollTrigger: {
-        trigger: ".section__ethos",
-        toggleActions: "play none none reset",
-        scrub: 3,
-      },
-      y: 120,
-      ease: "linear",
-    });
+  ethosSectionAnim.to(".img-2", {
+    scrollTrigger: {
+      trigger: ".section__ethos",
+      start: "-10% top",
+      toggleActions: "play none none reset",
+      scrub: 1,
+      markers: true,
+    },
+    scale: 1.3,
+    ease: "linear",
+  });
+
+  ethosSectionAnim.to(".img-2__banner", {
+    scrollTrigger: {
+      trigger: ".section__ethos",
+      start: "-20% top",
+      toggleActions: "play none none reset",
+      scrub: 1,
+    },
+    y: 120,
+    ease: "linear",
+  });
 }
 
 export function AddedToCartModal() {

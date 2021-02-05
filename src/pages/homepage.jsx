@@ -19,8 +19,8 @@ const HomePage = () => {
     <React.Fragment>
       <Hero />
 
-      <section className="section__about">
-        <div className="about__content">
+      <section className="section__about anim-content">
+        <div className="about__content ">
           <div className="about__content--text">
             <p className="title">Who We Are</p>
             <h2 className="title__sub">
@@ -52,8 +52,8 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="section__ethos">
-        <div className="ethos__content">
+      <section className="section__ethos anim-content">
+        <div className="ethos__content ">
           <div className="ethos__content--img img">
             <img src={imgEthos1} alt="" className="img-1" />
 
