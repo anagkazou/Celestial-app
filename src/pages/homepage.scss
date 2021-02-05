@@ -9,7 +9,7 @@
 
   @include respond(tab-land) {
     min-height: 70vh;
-    padding: 30vw 0 20vw 0;
+    padding: 30vw 0 6vw 0;
   }
 
   @include respond(tab-port) {
@@ -152,7 +152,7 @@
 }
 
 .section__ethos {
-  padding-bottom: 20vw;
+  padding-bottom: 10vw;
 
   .ethos__content {
     display: flex;

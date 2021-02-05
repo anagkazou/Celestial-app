@@ -184,12 +184,12 @@ export function ScrollTriggerAnimations() {
   ethosSectionAnim.to(".img-2", {
     scrollTrigger: {
       trigger: ".section__ethos",
-      start: "-10% top",
+      start: "top top",
       toggleActions: "play none none reset",
       scrub: 1,
       markers: true,
     },
-    scale: 1.3,
+    scale: 1.4,
     ease: "linear",
   });
 
