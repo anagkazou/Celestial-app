@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { InitPreviewAnimation } from "../../js/animations";
 
 import "./collection-preview.styles.scss";
@@ -15,14 +15,14 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import { selectDirectorySection } from "../../redux/directory/directory.selector";
+ 
+const CollectionPreview = (props) => {
+  
+  useEffect(() => {
+     InitPreviewAnimation();
+  })
 
-class CollectionPreview extends React.Component {
-  componentDidMount() {
-    InitPreviewAnimation();
-  }
-
-  render() {
-    return (
+     return (
       <section className="section__browse-collections">
         <p className="title">Browse Collections</p>
         <div className="preview">
@@ -97,7 +97,7 @@ class CollectionPreview extends React.Component {
           </div>
 
           <div className="preview__text">
-            {this.props.collections.map(({ id, urlTitle }) => {
+            { props.collections.map(({ id, urlTitle }) => {
               return (
                 <Link
                   to={`/category/${urlTitle}`}
@@ -178,8 +178,7 @@ class CollectionPreview extends React.Component {
       </section>
     );
   }
-}
-
+ 
 const mapStateToProps = createStructuredSelector({
   collections: selectDirectorySection,
 });

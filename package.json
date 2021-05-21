@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "firebase": "^7.23.0",
     "flutterwave-react-v3": "^1.0.9",
-    "gsap": "^3.5.1",
+    "gsap": "^3.6.1",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",

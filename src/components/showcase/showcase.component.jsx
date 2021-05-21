@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./showcase.styles.scss";
 import { Link } from "react-router-dom";
 
@@ -8,26 +8,19 @@ import SHOP_DATA from "../../pages/shop/shop.data";
 
 import { shopFilterAnimation, ShopScrollAnimation } from "../../js/animations";
 
-class ItemsShowcase extends React.Component {
-  constructor(props) {
-    super(props);
+const ItemsShowcase =(props)=> {
+   
+    const [furniture, setFurniture] = useState(SHOP_DATA);
 
-    this.state = {
-      furniture: SHOP_DATA,
-    };
-  }
-
-  componentDidMount() {
+  useEffect(()=> {
     shopFilterAnimation();
     ShopScrollAnimation();
-  }
+  })
 
-  render() {
-    //improve this declarations
-    let itemsToRender = this.props.itemsToRender;
-    let furnitureItemsData = this.state.furniture;
-    let isFiltered = this.props.filtered;
-    let category = furnitureItemsData.find((x) => x.id === itemsToRender);
+     //improve this declarations
+    let itemsToRender =  props.itemsToRender;
+     let isFiltered =  props.filtered;
+    let category = furniture.find((x) => x.id === itemsToRender);
 
     if (!isFiltered) {
       return (
@@ -39,7 +32,7 @@ class ItemsShowcase extends React.Component {
               <li>
                 <Link to="/collections">Everything</Link>
               </li>
-              {furnitureItemsData.map(({ category }) => (
+              {furniture.map(({ category }) => (
                 <li>
                   {" "}
                   <Link
@@ -54,7 +47,7 @@ class ItemsShowcase extends React.Component {
           </div>
           <div className="showcase-container">
             <div className="showcase">
-              {this.state.furniture.map((el) =>
+              {  furniture.map((el) =>
                 el.items.map((item) => {
                   return (
                     <ShopItem
@@ -79,7 +72,7 @@ class ItemsShowcase extends React.Component {
               <li>
                 <Link to="/collections">Everything</Link>
               </li>
-              {this.state.furniture.map(({ category }) => (
+              {  furniture.map(({ category }) => (
                 <li>
                   {" "}
                   <Link to={`/category/${category.toLowerCase()}`}>
@@ -106,6 +99,5 @@ class ItemsShowcase extends React.Component {
       );
     }
   }
-}
-
+ 
 export default ItemsShowcase;
