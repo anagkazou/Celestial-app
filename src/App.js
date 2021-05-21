@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, {useEffect} from "react";
 import "./App.css";
 import "./scss/main.scss";
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import Header from "./components/header/header.component";
 import Homepage from "./pages/homepage";
-import LogIn from "./pages/log-in/log-in.component";
+import LogIn from "./pages/Log-in/log-in.component";
 import SignUp from "./pages/sign-up/sign-up.component";
 import Everything from "./pages/shop/everything.component";
 import Chairs from "./pages/shop/chairs.component";
@@ -20,6 +20,13 @@ import { createStructuredSelector } from "reselect";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
+import createHistory from "history/createBrowserHistory"
+
+export const history = createHistory()
+
+history.listen((location, action) => {
+    window.scrollTo(0, 0)
+})
 
 class App extends React.Component {
   unsubscribefromAuth = null;

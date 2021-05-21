@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./header.styles.scss";
 import {
   InitHamburgerAnimation,
@@ -21,15 +21,14 @@ import { logo, menuImages } from "../../assets/assets";
 
 import Modal from "../modal/added-to-cart.component";
 
-class Header extends React.Component {
-  componentDidMount() {
+const Header = (props) => {
+   useEffect(() => {
     InitHamburgerAnimation();
     menuAnimation();
     menuLinkAnimation();
-  }
+   });
 
-  render() {
-    const { currentUser, hidden } = this.props;
+     const { currentUser, hidden } =  props;
     return (
       <div className="header">
         <Link to="/#" className="anim__hide">
@@ -153,7 +152,7 @@ class Header extends React.Component {
       </div>
     );
   }
-}
+
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
