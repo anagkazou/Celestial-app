@@ -13,46 +13,46 @@ const Footer = () => (
       <div className="footer__group">
         <img src={logo} alt="logo" className="footer__logo" />
         <div className="footer__socials">
-          <a href="/#" className="footer__socials--link">
+          <Link to="/#" className="footer__socials--link">
             <img
               src={facebook}
               alt="facebook"
               className="footer__socials--img"
             />
-          </a>
-          <a href="/#" className="footer__socials--link">
+          </Link>
+          <Link to="/#" className="footer__socials--link">
             <img
               src={Instagram}
               alt="facebook"
               className="footer__socials--img"
             />
-          </a>
-          <a href="/#" className="footer__socials--link">
+          </Link>
+          <Link to="/#" className="footer__socials--link">
             <img
               src={Pinterest}
               alt="facebook"
               className="footer__socials--img"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
 
     <div className="footer__col">
       <div className="footer__group align-right">
-        <Link className="footer__group--title">shop</Link>
-        <Link className="footer__group--link">Chairs</Link>
-        <Link className="footer__group--link">Sofas</Link>
-        <Link className="footer__group--link">stools</Link>
-        <Link className="footer__group--link">lights</Link>
-        <Link className="footer__group--link">Ottomans</Link>
+        <Link to="/category/everything" className="footer__group--title">shop</Link>
+        <Link to="/category/chairs"className="footer__group--link">Chairs</Link>
+        <Link to="/category/sofas"className="footer__group--link">Sofas</Link>
+        <Link to="/category/stools"className="footer__group--link">stools</Link>
+        <Link to="/category/lights"className="footer__group--link">lights</Link>
+        <Link to="/category/ottomans"className="footer__group--link">Ottomans</Link>
       </div>
       <div className="footer__group align-right">
-        <Link className="footer__group--title">Navigate</Link>
-        <Link className="footer__group--link">Home</Link>
-        <Link className="footer__group--link">Collection</Link>
-        <Link className="footer__group--link">About</Link>
-        <Link className="footer__group--link">Login</Link>
+        <Link to="/"className="footer__group--title">Navigate</Link>
+        <Link to="/" className="footer__group--link">Home</Link>
+        <Link to="/collections" className="footer__group--link">Collection</Link>
+        <Link to="/" className="footer__group--link">About</Link>
+        <Link to="/login" className="footer__group--link">Login</Link>
       </div>
     </div>
 
