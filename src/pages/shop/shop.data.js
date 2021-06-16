@@ -1,5 +1,5 @@
-const SHOP_DATA = [
-  {
+const SHOP_DATA = {
+  hats: {
     id: 1,
     category: "Chairs",
     routeName: "chairs",
@@ -106,20 +106,7 @@ const SHOP_DATA = [
     ],
   },
 
-  // {
-  //     id:2,
-  //     name: "Lights",
-  //     routeName: "lights",
-  //     items:[
-  //         {
-  //             id: 1,
-  //             name: "Monake",
-  //             imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-  //             price: 25,
-  //         }
-  //     ]
-  // }
-  {
+  lights: {
     id: 2,
     category: "Lights",
     routeName: "lights",
@@ -162,7 +149,7 @@ const SHOP_DATA = [
     ],
   },
 
-  {
+  sofas: {
     id: 3,
     category: "Sofas",
     routeName: "sofas",
@@ -253,7 +240,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  stools: {
     id: 4,
     category: "Stools",
     routeName: "stools",
@@ -332,7 +319,7 @@ const SHOP_DATA = [
     ],
   },
 
-  {
+  ottomans: {
     id: 5,
     category: "Ottomans",
     routeName: "ottomans",
@@ -395,6 +382,6 @@ const SHOP_DATA = [
       },
     ],
   },
-];
+};
 
 export default SHOP_DATA;

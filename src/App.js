@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import "./scss/main.scss";
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
@@ -20,13 +20,14 @@ import { createStructuredSelector } from "reselect";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
-import createHistory from "history/createBrowserHistory"
+import createHistory from "history/createBrowserHistory";
+import ProductModal from "./components/product-modal/product-modal.component";
 
-export const history = createHistory()
+export const history = createHistory();
 
 history.listen((location, action) => {
-    window.scrollTo(0, 0)
-})
+  window.scrollTo(0, 0);
+});
 
 class App extends React.Component {
   unsubscribefromAuth = null;
@@ -79,6 +80,10 @@ class App extends React.Component {
             render={() =>
               this.props.currentUser ? <Redirect to="/" /> : <LogIn />
             }
+          />
+          <Route
+            path="/category/:id/:slug"
+            component={(props) => <ProductModal></ProductModal>}
           />
           <Route
             path="/signup"
