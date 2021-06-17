@@ -15,19 +15,19 @@ const ItemsShowcase = ({ filtered, category }) => {
   useEffect(() => {
     shopFilterAnimation();
     ShopScrollAnimation();
-    (function getShopCategories() {
-      for (const itemCat in furniture) {
-        shopCategories.push(itemCat);
-      }
-      return shopCategories;
-    })();
   });
 
   //improve this declarations
   let categoryToShow = furniture[category];
   let allItemsInShop = [];
   let shopCategories = [];
-
+  let isFiltered = filtered ? true : false;
+  (function getShopCategories() {
+    for (const itemCat in furniture) {
+      shopCategories.push(itemCat);
+    }
+    return shopCategories;
+  })();
   //self invoking function to populate allStoreItems array.
 
   (function getAllItems() {
@@ -38,9 +38,9 @@ const ItemsShowcase = ({ filtered, category }) => {
     return allItemsInShop;
   })();
 
-  console.log(allItemsInShop);
+  console.log(shopCategories);
 
-  if (!filtered) {
+  if (!isFiltered) {
     return (
       <>
         <div className="filter">
@@ -78,25 +78,22 @@ const ItemsShowcase = ({ filtered, category }) => {
   } else {
     return (
       <>
-        {/* <div className="filter">
+        <div className="filter">
           <div className="filter__hide">&#10005;</div>
           <div className="title">Browse Collections</div>
           <ul>
             <li>
               <Link to="/collections">Everything</Link>
             </li>
-            {furniture.map(({ category }) => (
+            {shopCategories.map((category) => (
               <li>
                 {" "}
-                <Link to={`/category/${category.toLowerCase()}`}>
-                  {category}
-                </Link>
+                <Link to={`/category/${category}`}>{category}</Link>
               </li>
             ))}
           </ul>
         </div>
-       
-        */}
+
         <div className="showcase-container">
           <div className="showcase">
             {categoryToShow.items.map((item) => {
