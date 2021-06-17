@@ -1,5 +1,5 @@
 const SHOP_DATA = {
-  hats: {
+  Chairs: {
     id: 1,
     category: "Chairs",
     routeName: "chairs",
@@ -106,7 +106,7 @@ const SHOP_DATA = {
     ],
   },
 
-  lights: {
+  Lights: {
     id: 2,
     category: "Lights",
     routeName: "lights",
@@ -149,7 +149,7 @@ const SHOP_DATA = {
     ],
   },
 
-  sofas: {
+  Sofas: {
     id: 3,
     category: "Sofas",
     routeName: "sofas",
@@ -240,7 +240,7 @@ const SHOP_DATA = {
       },
     ],
   },
-  stools: {
+  Stools: {
     id: 4,
     category: "Stools",
     routeName: "stools",
@@ -319,7 +319,7 @@ const SHOP_DATA = {
     ],
   },
 
-  ottomans: {
+  Ottomans: {
     id: 5,
     category: "Ottomans",
     routeName: "ottomans",
