@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
- import ShopTile from "../../components/shop-title/shop-title.component";
+import ShopTile from "../../components/shop-title/shop-title.component";
 import ItemsShowcase from "../../components/showcase/showcase.component";
 import "./shop.styles.scss";
 
 const Sofas = () => {
- 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [ ]);
+  }, []);
   return (
     <>
       <ShopTile category="Sofas" />
-      <ItemsShowcase category="sofas" itemsToRender={3} filtered />
+      <ItemsShowcase category="Sofas" itemsToRender={3} filtered />
     </>
   );
 };

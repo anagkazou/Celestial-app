@@ -88,7 +88,9 @@ const ItemsShowcase = ({ filtered, category }) => {
             {shopCategories.map((category) => (
               <li>
                 {" "}
-                <Link to={`/category/${category}`}>{category}</Link>
+                <Link to={`/category/${category.toLowerCase()}`}>
+                  {category}
+                </Link>
               </li>
             ))}
           </ul>

@@ -11,7 +11,7 @@ const Stools = () => {
   return (
     <>
       <ShopTile category="Stools" />
-      <ItemsShowcase category="stools" itemsToRender={4} filtered />
+      <ItemsShowcase category="Stools" itemsToRender={4} filtered />
     </>
   );
 };
