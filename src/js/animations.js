@@ -243,6 +243,8 @@ export function PageTransitions() {
 }
 
 export const ShopScrollAnimation = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   let tl = new TimelineMax();
   if (window.innerWidth > 800) {
     tl.to(".filter", {
