@@ -17,11 +17,17 @@ import Footer from "./components/footer/footer.component";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+import {
+  auth,
+  createUserProfileDocument,
+  addCollectionAndDocuments,
+} from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
+import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
 import createHistory from "history/createBrowserHistory";
 import ProductModal from "./components/product-modal/product-modal.component";
+import SHOP_DATA from "./pages/shop/shop.data";
 
 export const history = createHistory();
 
@@ -33,27 +39,23 @@ class App extends React.Component {
   unsubscribefromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser, collectionsArray } = this.props;
 
     this.unsubscribefromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot((snapShot) => {
-          setCurrentUser(
-            {
-              currentUser: {
-                id: snapShot.id,
-                ...snapShot.data(),
-              },
-            }
-            // () => {
-            //   console.log(this.state);
-            // }
-          );
+          setCurrentUser({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+          });
         });
       } else {
         setCurrentUser(userAuth);
+        addCollectionAndDocuments("collections", collectionsArray);
       }
     });
   }
@@ -110,6 +112,7 @@ class App extends React.Component {
 
 const matchStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
+  collectionsArray: selectCollectionsForPreview,
 });
 const matchDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
