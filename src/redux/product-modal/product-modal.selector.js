@@ -1,12 +1,12 @@
 import { createSelector } from "reselect";
 
-const selectProduct = (state) => state.product;
+const selectProduct = (state) => state.productForModal;
 
-export const selectCartHidden = createSelector(
+export const selectModalHidden = createSelector(
   [selectProduct],
   (product) => product.hidden
 );
-export const selectProductItems = createSelector(
+export const selectProductForModal = createSelector(
   [selectProduct],
-  (product) => product.cartItems
+  (product) => product.product
 );
