@@ -1,7 +1,7 @@
 import React from "react";
 import "./product-modal.styles.scss";
 import { createStructuredSelector } from "reselect";
-import connect from "react-redux/lib/connect/connect";
+import { connect } from "react-redux";
 import {
   selectModalHidden,
   selectProductForModal,

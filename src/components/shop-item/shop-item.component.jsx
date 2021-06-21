@@ -9,7 +9,13 @@ import {
   toggleModalHidden,
 } from "../../redux/product-modal/product-modal.actions";
 import { AddedToCartModal } from "../../js/animations";
-const ShopItem = ({ item, addItem, category, updateProductForModal }) => {
+const ShopItem = ({
+  item,
+  addItem,
+  category,
+  updateProductForModal,
+  toggleModalHidden,
+}) => {
   const { imageUrl, name, price } = item;
 
   return (
@@ -20,6 +26,7 @@ const ShopItem = ({ item, addItem, category, updateProductForModal }) => {
         // AddedToCartModal();
         updateProductForModal(item);
         toggleModalHidden();
+        console.log(item);
       }}
     >
       <div
