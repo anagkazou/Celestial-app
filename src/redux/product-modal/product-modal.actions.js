@@ -1,4 +1,4 @@
-import ProductDetailActionTypes from "./product-details.types";
+import ProductDetailActionTypes from "./product-modal.types";
 
 export const updateProduct = () => ({
   type: ProductDetailActionTypes.UPDATE_PRODUCT,
