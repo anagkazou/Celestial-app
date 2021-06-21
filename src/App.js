@@ -83,10 +83,7 @@ class App extends React.Component {
               this.props.currentUser ? <Redirect to="/" /> : <LogIn />
             }
           />
-          <Route
-            path="/category/:id/:slug"
-            component={(props) => <ProductModal></ProductModal>}
-          />
+
           <Route
             path="/signup"
             render={() =>
@@ -100,6 +97,15 @@ class App extends React.Component {
           <Route exact path="/category/stools" component={Stools} />
           <Route exact path="/category/ottomans" component={Ottomans} />
           <Route exact path="/checkout" component={Checkout} />
+          <Route
+            path={["/category/:cat/:id/:slug"]}
+            component={(props) => (
+              <>
+                <Route path={` /category/${props.match.params.cat}`} />
+                <ProductModal productId={props.match.params.id} />
+              </>
+            )}
+          />
         </Switch>
         {this.props.location.pathname !== "/login" &&
         this.props.location.pathname !== "/signup" ? (

@@ -1,7 +1,7 @@
 import React from "react";
 import "./product-modal.styles.scss";
 
-const ProductModal = ({ id, img, item }) => {
+const ProductModal = ({ id, img, item, m }) => {
   return (
     <div className="product-modal__container">
       <div className="product-modal__modal">

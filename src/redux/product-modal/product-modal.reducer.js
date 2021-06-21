@@ -1,4 +1,4 @@
-import ProductDetailActionTypes from "./product-details.actions";
+import ProductDetailActionTypes from "./product-modal.actions";
 const INITIAL_STATE = {
   hidden: true,
   product: {},
