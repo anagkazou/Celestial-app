@@ -105,6 +105,7 @@ class App extends React.Component {
         this.props.location.pathname !== "/signup" ? (
           <Footer />
         ) : null}{" "}
+        <ProductModal />
       </div>
     );
   }
