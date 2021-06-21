@@ -1,4 +1,4 @@
-import ProductDetailActionTypes from "./product-modal.actions";
+import ProductDetailActionTypes from "./product-modal.types";
 const INITIAL_STATE = {
   hidden: true,
   product: {},
@@ -15,7 +15,7 @@ const productReducer = (state = INITIAL_STATE, action) => {
     case ProductDetailActionTypes.UPDATE_PRODUCT:
       return {
         ...state,
-        cartItems: action.payload,
+        product: action.payload,
       };
     default:
       return state;

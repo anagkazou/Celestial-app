@@ -1,11 +1,24 @@
 import React from "react";
 import "./product-modal.styles.scss";
-
-const ProductModal = ({ id, img, item, m }) => {
+import { createStructuredSelector } from "reselect";
+import connect from "react-redux/lib/connect/connect";
+import {
+  selectModalHidden,
+  selectProductForModal,
+} from "../../redux/product-modal/product-modal.selector";
+import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
+const ProductModal = ({ id, img, item, product, toggleModalHidden }) => {
   return (
     <div className="product-modal__container">
       <div className="product-modal__modal">
-        <button className="product-modal__close-btn">×</button>
+        <button
+          className="product-modal__close-btn"
+          onClick={() => {
+            toggleModalHidden();
+          }}
+        >
+          ×
+        </button>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
           repellendus voluptate, autem doloremque fugiat, ad rerum est
@@ -17,5 +30,11 @@ const ProductModal = ({ id, img, item, m }) => {
     </div>
   );
 };
+const mapStateToProps = createStructuredSelector({
+  product: selectProductForModal,
+});
 
-export default ProductModal;
+const mapDispatchToProps = (dispatch) => ({
+  toggleModalHidden: () => dispatch(toggleModalHidden()),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(ProductModal);
