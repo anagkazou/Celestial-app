@@ -13,6 +13,7 @@ const productReducer = (state = INITIAL_STATE, action) => {
       };
 
     case ProductDetailActionTypes.UPDATE_PRODUCT:
+      console.log(action.payload);
       return {
         ...state,
         product: action.payload,

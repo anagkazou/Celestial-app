@@ -28,6 +28,7 @@ import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
 import createHistory from "history/createBrowserHistory";
 import ProductModal from "./components/product-modal/product-modal.component";
 import SHOP_DATA from "./pages/shop/shop.data";
+import { selectModalHidden } from "./redux/product-modal/product-modal.selector";
 
 export const history = createHistory();
 
@@ -65,6 +66,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.props.productModalHidden);
     return (
       <div
         style={{
@@ -74,7 +76,8 @@ class App extends React.Component {
         {this.props.location.pathname !== "/login" &&
         this.props.location.pathname !== "/signup" ? (
           <Header />
-        ) : null}
+        ) : null}{" "}
+        {!this.props.productModalHidden ? <ProductModal /> : null}{" "}
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route
@@ -83,7 +86,6 @@ class App extends React.Component {
               this.props.currentUser ? <Redirect to="/" /> : <LogIn />
             }
           />
-
           <Route
             path="/signup"
             render={() =>
@@ -105,13 +107,12 @@ class App extends React.Component {
                 <ProductModal productId={props.match.params.id} />
               </>
             )}
-          />
+          />{" "}
         </Switch>
         {this.props.location.pathname !== "/login" &&
         this.props.location.pathname !== "/signup" ? (
           <Footer />
         ) : null}{" "}
-        <ProductModal />
       </div>
     );
   }
@@ -120,6 +121,7 @@ class App extends React.Component {
 const matchStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   collectionsArray: selectCollectionsForPreview,
+  productModalHidden: selectModalHidden,
 });
 const matchDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
