@@ -1,3 +1,5 @@
+@import "../../scss/variables.styles.scss";
+
 .product-modal {
   &__container {
     position: fixed;
@@ -37,8 +39,38 @@
     border: none;
     background-color: transparent;
     font-size: 4vw;
-    font-weight: 100;
+    font-family: Libre Franklin, "arial-sans";
+    font-weight: lighter;
     padding: 2vw;
     cursor: pointer;
+  }
+  &__details {
+    padding-left: 3vw;
+  }
+  &__product-name {
+    font-size: 3vw;
+    font-family: Cormorant, "sans-serif";
+    margin-bottom: 1.4vw;
+  }
+  &__description {
+    font-size: 1.2vw;
+    margin-bottom: 2vw;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.8vw;
+    align-items: flex-end;
+    .add-to-cart {
+      background-color: $color-primary;
+      padding: 1.4vw 4vw;
+      border: none;
+      color: white;
+      font-family: Libre Franklin, "serif";
+      cursor: pointer;
+      width: fit-content;
+      margin-left: 1vw;
+    }
   }
 }
