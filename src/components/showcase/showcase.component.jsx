@@ -34,11 +34,8 @@ const ItemsShowcase = ({ filtered, category }) => {
     for (const itemCat in furniture) {
       allItemsInShop.unshift(...furniture[itemCat].items);
     }
-    console.log(allItemsInShop);
     return allItemsInShop;
   })();
-
-  console.log(shopCategories);
 
   if (!isFiltered) {
     return (

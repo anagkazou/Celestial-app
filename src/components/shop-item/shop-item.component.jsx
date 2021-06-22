@@ -26,7 +26,6 @@ const ShopItem = ({
         // AddedToCartModal();
         updateProductForModal(item);
         toggleModalHidden();
-        console.log(item);
       }}
     >
       <div
