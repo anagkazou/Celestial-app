@@ -7,13 +7,20 @@ const INITIAL_STATE = {
 const productReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ProductDetailActionTypes.TOGGLE_MODAL_HIDDEN:
+      if (action.payload) {
+        return {
+          ...state,
+          hidden: action.payload,
+        };
+      }
+
       return {
         ...state,
         hidden: !state.hidden,
       };
 
     case ProductDetailActionTypes.UPDATE_PRODUCT:
-      console.log(action.payload);
+      //  console.log(action.payload);
       return {
         ...state,
         product: action.payload,

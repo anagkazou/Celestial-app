@@ -32,7 +32,7 @@ class SignUp extends React.Component {
     const { displayName, email, password, confirmPassword } = this.state;
 
     if (password !== confirmPassword) {
-      console.log(confirmPassword, password);
+      //console.log(confirmPassword, password);
       //   alert("Passwords dont match");
       return;
       //We return because we dont want the function to do anything else if passwords dont match
@@ -61,7 +61,7 @@ class SignUp extends React.Component {
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
-    console.log(this.state);
+    //console.log(this.state);
   };
 
   render() {

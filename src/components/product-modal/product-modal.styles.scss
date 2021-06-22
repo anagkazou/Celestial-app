@@ -1,6 +1,6 @@
 .product-modal {
   &__container {
-    position: absolute;
+    position: fixed;
     z-index: 20;
     width: 100%;
     height: 100vh;

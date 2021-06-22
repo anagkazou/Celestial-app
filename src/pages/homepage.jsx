@@ -10,10 +10,12 @@ import { ScrollTriggerAnimations } from "../js/animations";
 
 import { VideoIsh } from "../assets/assets";
 import { PlaySVG } from "../assets/assets";
-
-const HomePage = () => {
+import { connect } from "react-redux";
+import { toggleModalHidden } from "../redux/product-modal/product-modal.actions";
+const HomePage = ({ setModalHidden }) => {
   useEffect(() => {
     ScrollTriggerAnimations();
+    setModalHidden(true);
   });
   return (
     <React.Fragment>
@@ -88,4 +90,7 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+const mapDispatchToProps = (dispatch) => ({
+  setModalHidden: (value) => dispatch(toggleModalHidden(value)),
+});
+export default connect(null, mapDispatchToProps)(HomePage);
