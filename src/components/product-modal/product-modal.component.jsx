@@ -4,6 +4,7 @@ import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 import { selectProductForModal } from "../../redux/product-modal/product-modal.selector";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
+import { Link } from "react-router-dom";
 const ProductModal = ({ id, img, item, product, toggleModalHidden }) => {
   console.log(product);
   return (
@@ -30,6 +31,16 @@ const ProductModal = ({ id, img, item, product, toggleModalHidden }) => {
           <p className="product-modal__product-name">{`${
             product.name
           } ${product.category.slice(0, -1)}`}</p>
+          <p className="product-modal__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, labore
+            eum! Tenetur impedit tempora corporis inventore perferendis. Saepe
+            temporibus delectus maiores nam aspernatur inventore quae tempora
+            sit assumenda.
+          </p>
+          <div className="product-modal__actions">
+            <p className="product-modal__price">₦{product.price}</p>
+            <button className="add-to-cart">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
