@@ -5,27 +5,32 @@ import { connect } from "react-redux";
 import { selectProductForModal } from "../../redux/product-modal/product-modal.selector";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
 const ProductModal = ({ id, img, item, product, toggleModalHidden }) => {
+  console.log(product);
   return (
     <div
       className="product-modal__container"
-      onClick={() => toggleModalHidden()}
+      onClick={() => toggleModalHidden(true)}
     >
       <div className="product-modal__modal">
         <button
           className="product-modal__close-btn"
-          onClick={() => {
-            toggleModalHidden();
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleModalHidden(true);
           }}
         >
           ×
         </button>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          repellendus voluptate, autem doloremque fugiat, ad rerum est
-          accusantium eveniet cum hic itaque esse delectus aperiam aspernatur
-          quisquam ipsum molestias voluptatem rem! Mollitia, inventore ab sunt
-          in maiores tempore obcaecati ipsum!
-        </p>
+        <img
+          className="product-modal__img"
+          src={product.imageUrl}
+          alt="product"
+        />
+        <div className="product-modal__details">
+          <p className="product-modal__product-name">{`${
+            product.name
+          } ${product.category.slice(0, -1)}`}</p>
+        </div>
       </div>
     </div>
   );
