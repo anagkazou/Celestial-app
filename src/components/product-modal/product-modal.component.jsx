@@ -1,19 +1,15 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router";
+import React from "react";
 import "./product-modal.styles.scss";
 import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
-import {
-  selectModalHidden,
-  selectProductForModal,
-} from "../../redux/product-modal/product-modal.selector";
+import { selectProductForModal } from "../../redux/product-modal/product-modal.selector";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
 const ProductModal = ({ id, img, item, product, toggleModalHidden }) => {
-  const location = useLocation();
-  let pathOnRender = location.pathname;
-  useEffect(() => {}, [location]);
   return (
-    <div className="product-modal__container">
+    <div
+      className="product-modal__container"
+      onClick={() => toggleModalHidden()}
+    >
       <div className="product-modal__modal">
         <button
           className="product-modal__close-btn"
