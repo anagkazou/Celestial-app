@@ -12,6 +12,7 @@
     display: block;
     background-color: #3a3a3a80;
     backdrop-filter: blur(2px);
+    animation: display-modal 0.5s ease-in-out;
   }
 
   &__modal {
@@ -25,7 +26,9 @@
     left: 50%;
     display: flex;
     align-items: center;
-    padding: 2%;
+    padding: 4vw;
+    animation: slide-up 0.2s;
+    animation-delay: 0.4s;
   }
   &__img {
     width: 24vw;
@@ -48,13 +51,15 @@
     padding-left: 3vw;
   }
   &__product-name {
-    font-size: 3vw;
+    font-size: 1.6vw;
+    font-weight: 500;
     font-family: Cormorant, "sans-serif";
     margin-bottom: 1.4vw;
   }
   &__description {
     font-size: 1.2vw;
     margin-bottom: 2vw;
+    text-align: justify;
   }
 
   &__actions {
@@ -62,6 +67,8 @@
     flex-direction: row;
     font-size: 1.8vw;
     align-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
     .add-to-cart {
       background-color: $color-primary;
       padding: 1.4vw 4vw;
@@ -72,5 +79,19 @@
       width: fit-content;
       margin-left: 1vw;
     }
+  }
+
+  &__price {
+    font-family: Cormorant, "sans-serif";
+    font-size: 3vw;
+  }
+}
+
+@keyframes display-modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
