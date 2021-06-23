@@ -36,10 +36,10 @@
     }
     @include respond(tab-port) {
       flex-direction: column;
+      justify-content: center;
     }
     @include respond(phone) {
       width: 95%;
-      height: 50rem;
     }
   }
   &__img {
@@ -50,6 +50,10 @@
     }
     @include respond(tab-port) {
       width: 30vw;
+    }
+    @include respond(phone) {
+      width: 50vw;
+      height: auto;
     }
   }
   &__close-btn {
@@ -64,6 +68,11 @@
     font-weight: lighter;
     padding: 2vw;
     cursor: pointer;
+    @include respond(phone) {
+      right: -1vw;
+      top: -12vw;
+      font-size: 3rem;
+    }
   }
   &__details {
     padding-left: 3vw;
@@ -123,7 +132,7 @@
     font-size: 3vw;
     @include respond(phone) {
       font-size: 4rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 }
