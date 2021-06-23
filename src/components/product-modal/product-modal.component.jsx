@@ -4,15 +4,19 @@ import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 import { selectProductForModal } from "../../redux/product-modal/product-modal.selector";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
-import { Link } from "react-router-dom";
-const ProductModal = ({ id, img, item, product, toggleModalHidden }) => {
+import { addItem } from "../../redux/cart/cart.actions";
+import { AddedToCartModal } from "../../js/animations";
+const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
   console.log(product);
   return (
     <div
       className="product-modal__container"
       onClick={() => toggleModalHidden(true)}
     >
-      <div className="product-modal__modal">
+      <div
+        className="product-modal__modal"
+        onClick={(e) => e.stopPropagation()}
+      >
         <button
           className="product-modal__close-btn"
           onClick={(e) => {
@@ -39,7 +43,17 @@ const ProductModal = ({ id, img, item, product, toggleModalHidden }) => {
           </p>
           <div className="product-modal__actions">
             <p className="product-modal__price">₦{product.price}</p>
-            <button className="add-to-cart">Add to Cart</button>
+            <button
+              className="add-to-cart"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleModalHidden();
+                addItemToCart(product);
+                AddedToCartModal();
+              }}
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -52,5 +66,6 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = (dispatch) => ({
   toggleModalHidden: () => dispatch(toggleModalHidden()),
+  addItemToCart: (item) => dispatch(addItem(item)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(ProductModal);
