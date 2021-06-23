@@ -1,5 +1,5 @@
 @import "../../scss/variables.styles.scss";
-
+@import "../../scss//mixins.scss";
 .product-modal {
   &__container {
     position: fixed;
@@ -29,10 +29,28 @@
     padding: 4vw;
     animation: slide-up 0.2s;
     animation-delay: 0.4s;
+    @include respond(tab-land) {
+      width: 80%;
+      height: 50rem;
+      padding: 3vw;
+    }
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+    @include respond(phone) {
+      width: 95%;
+      height: 50rem;
+    }
   }
   &__img {
     width: 24vw;
     height: 70%;
+    @include respond(tab-land) {
+      height: 50%;
+    }
+    @include respond(tab-port) {
+      width: 30vw;
+    }
   }
   &__close-btn {
     top: -6vw;
@@ -49,17 +67,30 @@
   }
   &__details {
     padding-left: 3vw;
+    @include respond(phone) {
+      padding: unset;
+    }
   }
   &__product-name {
     font-size: 1.6vw;
     font-weight: 500;
     font-family: Cormorant, "sans-serif";
     margin-bottom: 1.4vw;
+    @include respond(tab-land) {
+      font-size: 2.2rem;
+    }
+    @include respond(tab-port) {
+      text-align: center;
+      margin: 2rem 0;
+    }
   }
   &__description {
     font-size: 1.2vw;
     margin-bottom: 2vw;
     text-align: justify;
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
   }
 
   &__actions {
@@ -69,6 +100,9 @@
     align-items: flex-end;
     align-items: center;
     justify-content: space-between;
+    @include respond(tab-port) {
+      margin-top: 3rem;
+    }
     .add-to-cart {
       background-color: $color-primary;
       padding: 1.4vw 4vw;
@@ -78,12 +112,19 @@
       cursor: pointer;
       width: fit-content;
       margin-left: 1vw;
+      @include respond(tab-port) {
+        padding: 1.4rem 2.8rem;
+      }
     }
   }
 
   &__price {
     font-family: Cormorant, "sans-serif";
     font-size: 3vw;
+    @include respond(phone) {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
   }
 }
 

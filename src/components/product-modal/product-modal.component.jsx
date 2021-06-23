@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { selectProductForModal } from "../../redux/product-modal/product-modal.selector";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
 import { addItem } from "../../redux/cart/cart.actions";
-import { AddedToCartModal } from "../../js/animations";
+import { AddedToCartModal as addedToCartModal } from "../../js/animations";
 const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
   console.log(product);
   return (
@@ -49,7 +49,7 @@ const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
                 e.stopPropagation();
                 toggleModalHidden();
                 addItemToCart(product);
-                AddedToCartModal();
+                addedToCartModal();
               }}
             >
               Add to Cart
