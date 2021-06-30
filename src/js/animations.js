@@ -216,7 +216,7 @@ export function AddedToCartModal() {
     {
       autoAlpha: 1,
       y: 0,
-      duration: 0.5,
+      duration: 0.8,
     }
   ).to(".modal", {
     autoAlpha: 0,

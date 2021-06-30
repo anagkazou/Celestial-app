@@ -36,7 +36,7 @@ export const imgOtto = {
 };
 
 export const iconArrow = require("./img/arrow-down.png");
-export const logo = require("./img/celestial-logo2.png");
+export const logo = require("./img/CELESTIAL.png");
 
 export const menuImages = {
   first: require("./img/menu-1.jpg"),
