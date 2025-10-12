@@ -2,9 +2,10 @@ import React from "react";
 import "./cart-item.styles.scss";
 
 import { connect } from "react-redux";
-import { clearItemFromCart } from "../../redux/cart/cart.actions";
+import { clearItemFromCartAsync } from "../../redux/cart/cart.actions";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 
-const CartItem = ({ item, clearItem }) => {
+const CartItem = ({ item, clearItem, currentUser }) => {
   const { imageUrl, price, name, quantity, category } = item;
   return (
     <div className="cart-item">
@@ -17,7 +18,7 @@ const CartItem = ({ item, clearItem }) => {
         <div className="item-category">{category}</div>
         <div className="item-details__block">
           <div className="item-quantity">{quantity} Piece(s)</div>
-          <div className="btn-remove" onClick={() => clearItem(item)}>
+          <div className="btn-remove" onClick={() => clearItem(item, currentUser)}>
             REMOVE
           </div>
         </div>
@@ -26,7 +27,11 @@ const CartItem = ({ item, clearItem }) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  clearItem: (item) => dispatch(clearItemFromCart(item)),
+const mapStateToProps = (state) => ({
+  currentUser: selectCurrentUser(state),
 });
-export default connect(null, mapDispatchToProps)(CartItem);
+
+const mapDispatchToProps = (dispatch) => ({
+  clearItem: (item, currentUser) => dispatch(clearItemFromCartAsync(item, currentUser)),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(CartItem);

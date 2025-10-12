@@ -3,12 +3,13 @@ import "./checkout-item.styles.scss";
 
 import { connect } from "react-redux";
 import {
-  clearItemFromCart,
-  addItem,
-  removeItem,
+  clearItemFromCartAsync,
+  addItemAsync,
+  removeItemAsync,
 } from "../../redux/cart/cart.actions";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 
-const CheckoutItem = ({ cartItem, addItem, removeItem, clearItem }) => {
+const CheckoutItem = ({ cartItem, addItem, removeItem, clearItem, currentUser }) => {
   const { name, price, quantity, category, imageUrl } = cartItem;
 
   return (
@@ -18,7 +19,7 @@ const CheckoutItem = ({ cartItem, addItem, removeItem, clearItem }) => {
       <div className="checkout-item__details">
         <div className="top">
           <div className="checkout-item__name">{name}</div>
-          <div className="btn--close" onClick={() => clearItem(cartItem)}>
+          <div className="btn--close" onClick={() => clearItem(cartItem, currentUser)}>
             &#10005;
           </div>
         </div>
@@ -27,14 +28,14 @@ const CheckoutItem = ({ cartItem, addItem, removeItem, clearItem }) => {
           <div className="checkout-item__quantity">
             <span
               className="checkout-item__quantity--minus"
-              onClick={() => removeItem(cartItem)}
+              onClick={() => removeItem(cartItem, currentUser)}
             >
               -
             </span>
             {quantity}
             <span
               className="checkout-item__quantity--plus"
-              onClick={() => addItem(cartItem)}
+              onClick={() => addItem(cartItem, currentUser)}
             >
               +
             </span>
@@ -46,10 +47,14 @@ const CheckoutItem = ({ cartItem, addItem, removeItem, clearItem }) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  clearItem: (item) => dispatch(clearItemFromCart(item)),
-  addItem: (item) => dispatch(addItem(item)),
-  removeItem: (item) => dispatch(removeItem(item)),
+const mapStateToProps = (state) => ({
+  currentUser: selectCurrentUser(state),
 });
 
-export default connect(null, mapDispatchToProps)(CheckoutItem);
+const mapDispatchToProps = (dispatch) => ({
+  clearItem: (item, currentUser) => dispatch(clearItemFromCartAsync(item, currentUser)),
+  addItem: (item, currentUser) => dispatch(addItemAsync(item, currentUser)),
+  removeItem: (item, currentUser) => dispatch(removeItemAsync(item, currentUser)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CheckoutItem);

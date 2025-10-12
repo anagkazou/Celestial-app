@@ -4,19 +4,19 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const config = {
-  apiKey: "AIzaSyAL2aE3yPWkq597a94bby69VSMMHlOOi8Q",
-  authDomain: "e-commerce-app-6955c.firebaseapp.com",
-  databaseURL: "https://e-commerce-app-6955c.firebaseio.com",
-  projectId: "e-commerce-app-6955c",
-  storageBucket: "e-commerce-app-6955c.appspot.com",
-  messagingSenderId: "1040698314680",
-  appId: "1:1040698314680:web:3d8528233160feb342094d",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 export const createUserProfileDocument = async (userAuth) => {
   if (!userAuth) return;
 
-  const userRef = firestore.doc(`users/ ${userAuth.uid}`);
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
 
   const snapShot = await userRef.get();
 
@@ -52,7 +52,27 @@ export const addCollectionAndDocuments = async (
   });
   return await batch.commit();
 };
-firebase.initializeApp(config);
+
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map((doc) => {
+    const { title, items } = doc.data();
+
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items,
+    };
+  });
+
+  return transformedCollection.reduce((accumulator, collection) => {
+    accumulator[collection.title] = collection;
+    return accumulator;
+  }, {});
+};
+if (!firebase.apps.length) {
+  firebase.initializeApp(config);
+}
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
@@ -61,5 +81,69 @@ const provider = new firebase.auth.GoogleAuthProvider();
 
 provider.setCustomParameters({ prompt: "select_account" });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
+
+export const saveUserCart = async (userId, cartItems) => {
+  if (!userId) return;
+  
+  try {
+    const userCartRef = firestore.doc(`users/${userId}`);
+    const userDoc = await userCartRef.get();
+    
+    if (userDoc.exists) {
+      await userCartRef.update({
+        cartItems: cartItems,
+        cartUpdatedAt: new Date()
+      });
+    } else {
+      await userCartRef.set({
+        cartItems: cartItems,
+        cartUpdatedAt: new Date()
+      });
+    }
+  } catch (error) {
+    console.log('Error saving cart to Firebase:', error.message);
+  }
+};
+
+export const loadUserCart = async (userId) => {
+  if (!userId) return [];
+  
+  try {
+    const userCartRef = firestore.doc(`users/${userId}`);
+    const cartSnapshot = await userCartRef.get();
+    
+    if (cartSnapshot.exists) {
+      const userData = cartSnapshot.data();
+      return userData.cartItems || [];
+    }
+    return [];
+  } catch (error) {
+    console.log('Error loading cart from Firebase:', error.message);
+    return [];
+  }
+};
+
+export const clearUserCart = async (userId) => {
+  if (!userId) return;
+  
+  try {
+    const userCartRef = firestore.doc(`users/${userId}`);
+    const userDoc = await userCartRef.get();
+    
+    if (userDoc.exists) {
+      await userCartRef.update({
+        cartItems: [],
+        cartUpdatedAt: new Date()
+      });
+    } else {
+      await userCartRef.set({
+        cartItems: [],
+        cartUpdatedAt: new Date()
+      });
+    }
+  } catch (error) {
+    console.log('Error clearing cart from Firebase:', error.message);
+  }
+};
 
 export default firebase;

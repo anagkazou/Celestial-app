@@ -10,7 +10,6 @@
     "flutterwave-react-v3": "^1.0.9",
     "gsap": "^3.6.1",
     "jquery": "^3.5.1",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.2",
@@ -21,14 +20,20 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
+    "redux-thunk": "^3.1.0",
     "reselect": "^4.0.0",
+    "sass": "^1.69.0",
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
-    "start": "set PORT=3006 && react-scripts start",
-    "build": "react-scripts build",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "migrate-shop": "node migrate-shop-data.js",
+    "migrate-shop-import": "node migrate-shop-data-import.js",
+    "migrate-shop-simple": "node migrate-shop-data-simple.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,5 +49,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "devDependencies": {
+    "@types/history": "^5.0.0",
+    "@types/minimatch": "^6.0.0",
+    "@types/node": "^24.7.2",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
+    "@vitejs/plugin-react": "^5.0.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
   }
 }

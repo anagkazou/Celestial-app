@@ -3,7 +3,7 @@ import ShopTile from "../../components/shop-title/shop-title.component";
 import ItemsShowcase from "../../components/showcase/showcase.component";
 import "./shop.styles.scss";
 
-const Everything = () => {
+const CollectionsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,4 +16,4 @@ const Everything = () => {
   );
 };
 
-export default Everything;
+export default CollectionsPage;

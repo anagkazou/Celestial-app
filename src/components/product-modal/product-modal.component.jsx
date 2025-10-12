@@ -4,10 +4,10 @@ import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 import { selectProductForModal } from "../../redux/product-modal/product-modal.selector";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
-import { addItem } from "../../redux/cart/cart.actions";
+import { addItemAsync } from "../../redux/cart/cart.actions";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { AddedToCartModal as addedToCartModal } from "../../js/animations";
-const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
-  console.log(product);
+const ProductModal = ({ product, toggleModalHidden, addItemToCart, currentUser }) => {
   return (
     <div
       className="product-modal__container"
@@ -36,19 +36,16 @@ const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
             product.name
           } ${product.category.slice(0, -1)}`}</p>
           <p className="product-modal__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, labore
-            eum! Tenetur impedit tempora corporis inventore perferendis. Saepe
-            temporibus delectus maiores nam aspernatur inventore quae tempora
-            sit assumenda.
+            {product.description}
           </p>
           <div className="product-modal__actions">
-            <p className="product-modal__price">₦{product.price}</p>
+            <p className="product-modal__price">${product.price}</p>
             <button
               className="add-to-cart"
               onClick={(e) => {
                 e.stopPropagation();
                 toggleModalHidden();
-                addItemToCart(product);
+                addItemToCart(product, currentUser);
                 addedToCartModal();
               }}
             >
@@ -62,10 +59,11 @@ const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
 };
 const mapStateToProps = createStructuredSelector({
   product: selectProductForModal,
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   toggleModalHidden: () => dispatch(toggleModalHidden()),
-  addItemToCart: (item) => dispatch(addItem(item)),
+  addItemToCart: (item, currentUser) => dispatch(addItemAsync(item, currentUser)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(ProductModal);

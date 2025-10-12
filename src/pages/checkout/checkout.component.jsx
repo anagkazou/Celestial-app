@@ -6,6 +6,7 @@ import { createStructuredSelector } from "reselect";
 import { selectCartItems } from "../../redux/cart/cart.selectors";
 import { selectCartTotal } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
+import { clearCartAsync } from "../../redux/cart/cart.actions";
 
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 
@@ -14,15 +15,15 @@ import { FlutterWaveButton, closePaymentModal } from "flutterwave-react-v3";
 import { ScrollTriggerAnimations } from "../../js/animations";
 //Trying to get currentUservalue only after the page loads
 
-const CheckoutPage = ({ cartItems, total, currentUser }) => {
+const CheckoutPage = ({ cartItems, total, currentUser, clearCart }) => {
   useEffect(() => {
     ScrollTriggerAnimations();
   });
   const config = {
-    public_key: "FLWPUBK-c2b4173873f46e8ddc0f2e8b438f4710-X",
+    public_key: import.meta.env.VITE_FLUTTERWAVE_PUBLIC_KEY,
     tx_ref: Date.now(),
     amount: total,
-    currency: "USD",
+    currency: "NGN",
     payment_options: "card,mobilemoney,ussd",
     customer: {
       email: "youremail@gmail.com",
@@ -33,7 +34,7 @@ const CheckoutPage = ({ cartItems, total, currentUser }) => {
       //   already been received as the value
     },
     customizations: {
-      title: "my Payment Title",
+      title: "Payment for items in cart",
       description: "Payment for items in cart",
       logo:
         "https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg",
@@ -44,6 +45,9 @@ const CheckoutPage = ({ cartItems, total, currentUser }) => {
     text: "Pay Now",
     callback: (response) => {
       closePaymentModal(); // this will close the modal programmatically
+      if (response.status === 'successful') {
+        clearCart(currentUser);
+      }
     },
     onClose: () => {},
   };
@@ -111,5 +115,9 @@ const mapStateToProps = createStructuredSelector({
 //     cartItems: state.cart.cartItems,
 //   });
 
-const Checkout = connect(mapStateToProps, null)(CheckoutPage);
+const mapDispatchToProps = (dispatch) => ({
+  clearCart: (currentUser) => dispatch(clearCartAsync(currentUser)),
+});
+
+const Checkout = connect(mapStateToProps, mapDispatchToProps)(CheckoutPage);
 export default Checkout;
